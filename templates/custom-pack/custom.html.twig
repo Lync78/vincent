@@ -1,0 +1,140 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - personnalisation
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/custom-pack/custom-pack.css') }}">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="perso-pack overflow-a">
+        <div class="container">
+            <article class="title d-flex row-wrap justify-between align-items-baseline">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>personnalisation <span>pack</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="d-flex justify-between row-wrap align-items-center contact-custom">
+                <div class="text-contact">
+                    <p>votre but est d'avoir un pack qui correspond a votre style !?</p>
+                    <p>cette page page vous permet d'étudier votre demande et de réaliser vos envies ></p>
+                    <div class="polygon-box"></div>
+                </div>
+                <a href="{{ path('contact') }}" class="lien-contact">contact</a>
+            </article>
+        </div>
+    </section>
+    <section class="prix-custom overflow-a">
+        <div class="container">
+            <article class="prix-custom-title d-flex row-wrap justify-between align-items-baseline">
+                <div class="element rotate-X">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>prix <span>service</span></h1>
+                <div class="element rotateX-rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="box-custom-price overflow-a">
+                <div class="polygon-box-perso"></div>
+                <div class="tableau-custom-prix">
+                    <div class="tableau">
+                        <h3 class="pack-classique">pack classique <br><span>(aucune animation)</span></h3>
+                        <hr>
+                        <div class="d-flex">
+                            <div class="box-service marge-price">
+                                <h4>service</h4>
+                                <p>Logo (Image Profil), Background (Hors Ligne), Bannière Panneaux déscription, Overlay (Cam + Réseaux Sociaux) Scène début live Scène fin live, Scène pause, Switch scène, Alerts, Badges Sub.</p>
+                            </div>
+                            <div class="prix-service">
+                                <p>Paiement par Paypal</p>
+                                <p class="a-partir-de">a partir de: <span>35euros</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tableau">
+                        <h3 class="pack-edition">pack edition <br><span>(quelques animations)</span></h3>
+                        <hr>
+                        <div class="d-flex">
+                            <div class="box-service marge-price">
+                                <h4>service</h4>
+                                <p>Même éléments que le pack <span class="span-class">classique</span>, ajustement (Scène début de live Scène de pause + Scène fin live + Overlay Cam + Switch Scène + Alerts)<span class="anime">anime !</span></p>
+                            </div>
+                            <div class="prix-service">
+                                <p>Paiement par Paypal</p>
+                                <p class="a-partir-de">a partir de: <span>45euros</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tableau">
+                        <h3 class="pack-prenium">pack prenium <br><span>(full animation)</span><br><span class="cinema">cinéma 4d & after effect</span></h3>
+                        <hr>
+                        <div class="d-flex">
+                            <div class="box-service">
+                                <h4>service</h4>
+                                <p>Logo (Image Profil), Background (Hors Ligne), Bannière Panneaux déscription, Overlay (Cam + Réseaux Sociaux) Scène début live Scène fin live, Scène pause, Switch scène, Alerts, Badges Sub. <br><span class="anime">anime ! possibilite d'avoir du 3D dans les scènes !</span></p>
+                            </div>
+                            <div class="prix-service">
+                                <p>Paiement par Paypal</p>
+                                <p class="a-partir-de">a partir de: <span>55euros</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableau-option">
+                    <div class="options">
+                        <h3 class="options-commande">options commande <br><span>(services)</span></h3>
+                        <hr>
+                        <div class="d-flex">
+                            <div class="box-options">
+                                <h3>option</h3>
+                                <p>Créatif</p>
+                            </div>
+                            <div class="box-options-price">
+                                <p>Paiement par Paypal</p>
+                                <p>a partir de: <span>10euros</span></p>
+                            </div>
+                            <div class="box-options">
+                                <h3>option</h3>
+                                <p>Modifications</p>
+                            </div>
+                            <div class="box-options-price">
+                                <p>Paiement par Paypal</p>
+                                <p>a partir de: <span>5euros</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <p class="abordable">Ce qui permet de pratiquer des  <span>prix abordables,</span> se sont les détails que vous fournirez <br>Lors de votre commande</p>
+            </article>
+            <div class="trait-espacement"></div>
+            <article>
+                <p class="preavis">Après réception de votre commande, vous avez 1 semaine de délais pour d'éventuelles modifications <span>gratuites</span>.<br><span>Au-delà de ce délais toutes modifications sera payante.</span></p>
+            </article>
+            <article class="mt-perso d-flex justify-end">
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="fr-fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ asset('css/reset/reset.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/font/font.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/templates/admin/dashboard/dashboard.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/fontawesome.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/brands.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/solid.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/regular.min.css') }}" type="text/css">
+        <title>{% block title %}{% endblock %}</title>
+        {% block css %}{% endblock %}
+    </head>
+    <body>
+        <header class="header-dashboard">
+            {% block navigation %}{% endblock %}
+            <section class="d-flex profil">
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="avatar">
+                                <img src="{{ asset('image/pack-client/badges/pack-edition-myrockx/badges-1an.png') }}">
+                            </div>
+                            <ul class="d-none">
+                                <li><a href="#">settings</a></li>
+                                <li><a href="{{ path('admin_app_logout') }}">se déconnecter</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main class="page-admin">
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer></footer>
+        <script src="{{ asset('js/general/general.js') }}"></script>
+        <script src="{{ asset('js/admin/dropdown/dropdown.js') }}"></script>
+        {% block js %}
+        {% endblock %}
+    </body>
+</html>

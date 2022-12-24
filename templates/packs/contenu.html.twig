@@ -1,0 +1,378 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    xunidesign - {{ pack.title }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/packs/contenu.css') }}">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('js/Packclient/Packclient.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="overflow-a first-section">
+        <div class="container">
+            <article class="present d-flex justify-between align-items-center">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>présent <span>packs</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="box-client overflow-a">
+                <div class="polygon-box correction"></div>
+                <div class="encadrer">
+                    <div class="photo-encadrement">
+                        <img src="{{ asset('image/pack-client/pack/'~ pack.slug ~'/'~ pack.profil ) }}" alt="profil.png">
+                    </div>
+                    <hr>
+                    <div class="texte">
+                        <h3 class="premium">{{ pack.title }}</h3>
+                        <p>Contenus du packs: <span>Image Profil (logo), Bannière Twitch, Background Hors ligne, Panneaux Overlay (cam + autres), Scènes début Live/Fin/Pause. Switch scène, Alerts. Badges</span></p>
+                        <div class="d-flex">
+                            <p class="type-pack">
+                                {{ pack.description }}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="last-section overflow-a">
+        <div class="container">
+            <article class="d-flex row-wrap justify-between box-background-hors-ligne">
+                <div class="hors-ligne-photo">
+                    <img src="{{ asset("image/pack-client/pack/"~pack.slug~"/"~pack.horsLigne) }}" alt="{{ pack.horsLigne }}">
+                </div>
+                <div class="background-hors-ligne">
+                    <h4>background hors ligne</h4>
+                    <p>Dimmension: <span>1920x1080</span></p>
+                    <p>format: <span>png</span></p>
+                    <p>details: <span>sociaux</span></p>
+                </div>
+            </article>
+            <article class="d-flex row wrap justify-between banniere-profil">
+                <div class="banniere-profil-texte">
+                    <h4>bannière & profil</h4>
+                    <p>dimmension (bannière): <span> 1340x380</span></p>
+                    <p>image profil: <span>1080x1080</span></p>
+                    <p>format: <span>png</span></p>
+                </div>
+                <div class="photo-banniere-profil d-flex">
+                    <img src="{{ asset("image/pack-client/pack/"~pack.slug~"/"~pack.profil) }}" alt="{{ pack.profil }}">
+                    <img src="{{ asset("image/pack-client/pack/"~pack.slug~"/"~pack.banniere) }}" alt="{{ pack.banniere }}">
+                </div>
+            </article>
+            <article class="d-flex row wrap justify-between badges">
+                <div class="box-badges">
+                    <div>
+                        {% if pack.badges.oneMonth is defined and pack.badges.oneMonth is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.oneMonth) }}" alt="{{ pack.badges.oneMonth }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>1mois</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.TwoMonth is defined and pack.badges.TwoMonth is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.TwoMonth) }}" alt="{{ pack.badges.twoMonth }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>2mois</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.ThreeMonth is defined and pack.badges.ThreeMonth is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.ThreeMonth) }}" alt="{{ pack.badges.ThreeMonth }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>3mois</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.sixMonth is defined and pack.badges.sixMonth is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.sixMonth) }}" alt="{{ pack.badges.sixMonth }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>6mois</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.nineMonth is defined and pack.badges.nineMonth is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.nineMonth) }}" alt="{{ pack.badges.nineMonth }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>9mois</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.OneYear is defined and pack.badges.OneYear is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.OneYear) }}" alt="{{ pack.badges.OneYear }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>1an</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.OneYearHalf is defined and pack.badges.OneYearHalf is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.OneYearHalf) }}" alt="{{ pack.badges.OneYearHalf }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>1.5an</span>
+                    </div>
+                    <hr>
+                    <div>
+                        {% if pack.badges.TwoYearMore is defined and pack.badges.TwoYearMore is not null %}
+                            <img src="{{ asset("image/pack-client/badges/"~pack.slug~"/"~pack.badges.TwoYearMore) }}" alt="{{ pack.badges.TwoYearMore }}">
+                        {% else %}
+                            <img src="{{ asset("image/pack-client/plus.png") }}" alt="plus.png">
+                        {% endif %}
+                        <span>2ans+</span>
+                    </div>
+                    <hr>
+                </div>
+                <div class="badges-texte">
+                    <h4>badges</h4>
+                    <p>dimmensions: <span>72x72, 36x36, 18x18</span></p>
+                    <p>format: <span>png</span></p>
+                </div>
+            </article>
+            <article class="panneaux-article">
+                <div class="panneaux-texte">
+                    <h4>panneaux</h4>
+                    <p>dimmension: <span>varier</span></p>
+                    <p>format: <span>png</span></p>
+                </div>
+                <div class="panneaux-box">
+                    <div class="d-flex row-wrap justify-start panneaux-flex">
+                        <div class="a1">
+                            {% if pack.panneaux.slot1 is defined and pack.panneaux.slot1 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot1) }}" alt="{{ pack.panneaux.slot1 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="b1">
+                            {% if pack.panneaux.slot2 is defined and pack.panneaux.slot2 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot2) }}" alt="{{ pack.panneaux.slot2 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="c1">
+                            {% if pack.panneaux.slot3 is defined and pack.panneaux.slot3 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot3) }}" alt="{{ pack.panneaux.slot3 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="d1">
+                            {% if pack.panneaux.slot4 is defined and pack.panneaux.slot4 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot4) }}" alt="{{ pack.panneaux.slot4 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="a2">
+                            {% if pack.panneaux.slot5 is defined and pack.panneaux.slot5 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot5) }}" alt="{{ pack.panneaux.slot5 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="b2">
+                            {% if pack.panneaux.slot6 is defined and pack.panneaux.slot6 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot6) }}" alt="{{ pack.panneaux.slot5 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="c2">
+                            {% if pack.panneaux.slot7 is defined and pack.panneaux.slot7 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot7) }}" alt="{{ pack.panneaux.slot7 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="d2">
+                            {% if pack.panneaux.slot8 is defined and pack.panneaux.slot8 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot8) }}" alt="{{ pack.panneaux.slot8 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="a3">
+                            {% if pack.panneaux.slot9 is defined and pack.panneaux.slot9 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot9) }}" alt="{{ pack.panneaux.slot9 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="b3">
+                            {% if pack.panneaux.slot10 is defined and pack.panneaux.slot10 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot10) }}" alt="{{ pack.panneaux.slot10 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="c3">
+                            {% if pack.panneaux.slot11 is defined and pack.panneaux.slot11 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot11) }}" alt="{{ pack.panneaux.slot11 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                        <div class="d3">
+                            {% if pack.panneaux.slot12 is defined and pack.panneaux.slot12 is not null %}
+                                <img src="{{ asset("image/pack-client/panneaux/"~pack.slug~"/"~pack.panneaux.slot12) }}" alt="{{ pack.panneaux.slot12 }}">
+                            {% else %}
+                                <img src="{{ asset("image/pack-client/panneaux/plus.png") }}" alt="plus.png">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="three-section overflow-a">
+        <div class="container">
+            <article class="scene-debut-live">
+                <div class="video-webm">
+                    <video muted="muted" preload="auto" autoplay="autoplay" loop>
+                        <source src="{{ asset('video/pack/'~ pack.slug ~'/'~ pack.sceneStartLive) }}" type="video/webm">
+                    </video>
+                </div>
+                <div class="texte-block">
+                    <h3>scène début live</h3>
+                    <p>dimmension: <span>1920x1080</span></p>
+                    <p>format: <span>webm</span><span> (anime)</span></p>
+                    <p>details: <span>10 secondes d'animation forme(s) 3d</span></p>
+                </div>
+            </article>
+            <article class="scene-fin-live">
+                <div class="texte-block">
+                    <h3>scène <br>fin live</h3>
+                    <p>dimmension: <span>1920x1080</span></p>
+                    <p>format: <span>webm</span><span> (anime)</span></p>
+                    <p>details: <span>10 secondes d'animation form(s) 3d</span></p>
+                </div>
+                <div class="video-webm">
+                    <video muted="muted" preload="auto" autoplay="autoplay" loop>
+                        <source src="{{ asset('video/pack/'~ pack.slug ~'/' ~ pack.sceneEndLive) }}" type="video/webm">
+                    </video>
+                </div>
+            </article>
+            <article class="scene-pause">
+                <div class="video-webm">
+                    <video muted="muted" preload="auto" autoplay="autoplay" loop>
+                        <source src="{{ asset('video/pack/'~ pack.slug ~'/' ~ pack.sceneBreak) }}" type="video/webm">
+                    </video>
+                </div>
+                <div class="texte-block">
+                    <h3>scène pause</h3>
+                    <p>dimmension: <span>1920x1080</span></p>
+                    <p>format: <span>webm</span><span> (anime)</span></p>
+                    <p>details: <span>10 secondes d'animation forme(s) 3d</span></p>
+                    <p>overlay: <span>contour cam, chatbox + autres</span></p>
+                </div>
+            </article>
+            <article class="scene-jeux">
+                <div class="texte-block">
+                    <h3>scène <br>jeux</h3>
+                    <p>dimmension: <span>1920x1080</span></p>
+                    <p>format: <span>webm</span><span> (anime)</span></p>
+                    <p>details: <span>10 secondes d'animation form(s) 3d</span></p>
+                    <p>overlay: <span>contour cam, chatbox + autres</span></p>
+                </div>
+                <div class="video-webm">
+                    <img src="{{ asset('image/pack-client/pack/scene-jeux.png') }}" alt="scene-jeux.png">
+                    <video muted="muted" preload="auto" autoplay="autoplay" loop>
+                        <source src="{{ asset('video/pack/'~ pack.slug ~'/'~ pack.sceneGame) }}" type="video/webm">
+                    </video>
+                </div>
+            </article>
+            <article class="scene-twitch">
+                <div class="video-webm">
+                    <video muted="muted" preload="auto" autoplay="autoplay" loop>
+                        <source src="{{ asset('video/pack/'~ pack.slug~'/'~ pack.sceneSwitch) }}" type="video/webm">
+                    </video>
+                </div>
+                <div class="texte-block">
+                    <h3>switch scène</h3>
+                    <p>dimmension: <span>1920x1080</span></p>
+                    <p>format: <span>webm</span><span> (anime)</span></p>
+                    <p>details: <span>entre 4/6 secondes d'animation, forme(s) 3d</span></p>
+                </div>
+            </article>
+            <hr>
+            <article class="twitch">
+                <div class="twitch-alerts">
+                    <h4>twich alerts</h4>
+                </div>
+                <div class="texte-block">
+                    <p>dimmension: <span>varier</span></p>
+                    <p>format: <span>webm</span><span> (anime)</span></p>
+                    <p>details: <span>entre 4/6 secondes d'animation, forme(s) 3d</span></p>
+                    <p>alerts liste: <span>follow, donation, bits, subscribe, host, raid, subgift</span></p>
+                </div>
+                <div class="img-twitch-alerts">
+                    <img src="{{ asset('image/pack-client/pack/twitch-scene.png') }}" alt="twitch-scene.png">
+                    <video preload="auto" autoplay="autoplay" loop muted="muted">
+                        <source src="{{ asset('video/pack/'~pack.slug ~'/' ~ pack.alers.alertsFollow) }}" type="video/webm">
+                    </video>
+                    <video class="d-none" preload="auto" autoplay="autoplay" loop muted="muted">
+                        <source src="{{ asset('video/pack/'~pack.slug~'/' ~ pack.alers.alertsDonation) }}" type="video/webm">
+                    </video>
+                    <video class="d-none" preload="auto" autoplay="autoplay" loop muted="muted" >
+                        <source src="{{ asset('video/pack/'~pack.slug~'/' ~ pack.alers.alertsBits) }}" type="video/webm">
+                    </video>
+                    <video class="d-none" preload="auto" autoplay="autoplay" loop muted="muted">
+                        <source src="{{ asset('video/pack/'~pack.slug~'/'~ pack.alers.alertsSubscribe) }}" type="video/webm">
+                    </video>
+                    <video class="d-none" preload="auto" autoplay="autoplay" loop muted="muted">
+                        <source src="{{ asset('video/pack/'~pack.slug~'/'~ pack.alers.alertsHost) }}" type="video/webm">
+                    </video>
+                    <video class="d-none" preload="auto" autoplay="autoplay" loop muted="muted">
+                        <source src="{{ asset('video/pack/'~pack.slug~'/'~ pack.alers.alertsRaid) }}" type="video/webm">
+                    </video>
+                    <video class="d-none" preload="auto" autoplay="autoplay" loop muted="muted">
+                        <source src="{{ asset('video/pack/'~pack.slug~'/' ~ pack.alers.alertsSubgift) }}" type="video/webm">
+                    </video>
+                </div>
+            </article>
+            <article class="article-boutton">
+                <div class="bouttons-liste">
+                    <button class="actif">follow</button>
+                    <button>donation</button>
+                    <button>bits</button>
+                    <button>subscribe</button>
+                    <button>host</button>
+                    <button>raid</button>
+                    <button>subgift</button>
+                </div>
+            </article>
+            <article class="mt-perso">
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}

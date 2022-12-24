@@ -1,0 +1,538 @@
+@media (min-width: 360px) {
+    .element, .section_img {
+        display: none;
+    }
+
+    .section_first_xunidesign h1.presentation {
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        font-size: 31px;
+        line-height: 40px;
+        letter-spacing: 8px;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        width: 330px;
+    }
+
+    .box-cadre{
+        box-shadow: 0 3px 6px #00000029;
+        width: 330px;
+        height: 501px;
+        background: transparent linear-gradient(180deg, #24282B 0%, #1D1D1D 100%) 0 0 no-repeat padding-box;
+    }
+
+
+    .description-xunidesign img{
+        height: 283px;
+        margin : 14px 12px 30px 15px;
+    }
+
+    .description-xunidesign h1 {
+        font-family: Nexa-Bold, sans-serif;
+        font-weight: bold;
+        line-height: 16px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 15px;
+        bottom: 45px;
+        background-color: #00BAFF;
+        padding: 7px 51px 6px 9px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .box-cadre h3{
+        margin-left: 32px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 1.6px;
+        line-height: 35px;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+    }
+
+    .section_first_xunidesign{
+        background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    }
+
+    .box-cadre ~ .trait{
+        border: none;
+        width: 330px;
+        height: 1px;
+        margin-top: 45px;
+        background-color: white;
+    }
+
+    .longueur{
+        width: 330px;
+    }
+
+    .biographie{
+        margin-top: 15px;
+        width: 315px;
+        color: white;
+        font-size: 24px;
+        letter-spacing: 4.8px;
+        line-height: 30px;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .title-xunidesign{
+        width: 330px;
+        margin: 67px auto 70px;
+    }
+
+    .conteneur{
+        width: 330px;
+        margin: 25.5px auto 32.5px;
+
+    }
+
+    .presentation-projet{
+        color: white;
+        text-transform: uppercase;
+        font-size: 31px;
+        line-height: 49px;
+        letter-spacing: 6px;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .box-logiciel {
+        margin: 0 auto;
+        background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+        box-shadow: 15px 15px 20px #00000029;
+        position: relative;
+        height: 1927px;
+    }
+
+    .polygon-box {
+        display: none;
+    }
+
+    .tableau-logiciel {
+        margin: 25px auto 0;
+        width: 330px;
+    }
+
+    .tableau {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+
+    .progress-competence {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 17px;
+    }
+
+    .competences {
+        width: 330px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        margin-left: 11px;
+        align-self: flex-end;
+        margin-top: 15px;
+    }
+
+    .niveau-competences {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+
+    .bar-valid, .bar-no-valid {
+        width: 70px;
+        height: 9px;
+        border: none;
+    }
+
+    .tableau-logiciel .tableau img {
+        margin-left: 11px;
+    }
+
+    .tableau hr.trait {
+        width: 79px;
+        height: 2px;
+        background-color: #00baff;
+        border: none;
+        margin-left: 11px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .competence-texte  p{
+        width: 315px;
+        color: white;
+        font-family: Nexa-Light, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-left: 11px;
+    }
+
+    .box-biographie {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 715px) {
+    .tableau-logiciel {
+        margin: 25px 100px 0;
+        width: auto;
+    }
+
+    .box-logiciel {
+        height: 1310px;
+    }
+
+    .trait {
+        display: none;
+    }
+
+    .competence-texte p {
+        width: auto;
+        margin-top: 15px;
+    }
+}
+
+
+@media (min-width: 772px) {
+    .box-biographie {
+        justify-content: space-between;
+    }
+
+    .biographie {
+        margin-top: 0;
+    }
+
+    .longueur {
+        width: auto;
+    }
+
+    .box-logiciel {
+        height: 1230px;
+    }
+}
+
+@media (min-width: 900px) {
+    .biographie {
+        width: 410px;
+    }
+
+    .box-logiciel {
+        height: 1160px;
+    }
+
+    .conteneur, .title-xunidesign {
+        width: 808px;
+    }
+
+    :is(.conteneur,.title-xunidesign) .element {
+        display: block;
+    }
+
+    .box-biographie {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .biographie {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1080px) {
+    .competence-texte p {
+        width: 880px;
+    }
+}
+
+@media (min-width: 1170px) {
+    .biographie {
+        width: 660px;
+    }
+
+    .box-logiciel {
+        height: 1040px;
+    }
+}
+
+
+@media (min-width: 1220px) {
+    .longueur {
+        width: 64%;
+    }
+
+    .biographie {
+        width: auto;
+    }
+
+    .title-xunidesign {
+        width: 970px;
+    }
+
+    .section_first_xunidesign h1.presentation {
+        width: 910px;
+    }
+
+    .box-cadre ~ .trait {
+        height: 406px;
+        width: 2px;
+    }
+
+    .trait {
+        display: block;
+    }
+}
+
+@media (min-width: 1640px) {
+    .tableau hr.trait {
+        width: 2px;
+        height: 79px;
+    }
+
+    .bar-valid, .bar-no-valid {
+        width: 107px;
+    }
+
+    .tableau-logiciel {
+        margin: 75px 80px 0;
+    }
+
+    .tableau hr.trait {
+        margin-left: 0;
+    }
+
+    .progress-competence, .competences {
+        width: 464px;
+    }
+
+
+}
+
+@media (min-width: 1740px) {
+    .box-logiciel {
+        height: 735px;
+    }
+}
+
+@media (min-width: 1875px) {
+
+    .box-biographie {
+        margin-bottom: 167px;
+    }
+
+    .element, .section_img, .polygon-box, .trait {
+        display: block;
+    }
+
+    .section_first_xunidesign h1.presentation {
+        font-size: 40px;
+        line-height: 49px;
+        width: 1040px;
+        margin: 0 auto;
+    }
+
+    .tableau hr.trait {
+        margin-left: 11px;
+    }
+
+    .box-cadre{
+        margin-left: 206px;
+        width: 416px;
+    }
+
+    .description-xunidesign img{
+        height: 400px;
+    }
+
+    .description-xunidesign h1 {
+        letter-spacing: 2.6px;
+    }
+
+    .box-cadre h3{
+        font-size: 18px;
+        letter-spacing: 3.6px;
+        line-height: 23px;
+    }
+
+    .box-cadre ~ .trait{
+        border: 0.5px white solid;
+        height: 494px;
+        opacity: 50%;
+        margin-left: 87.5px;
+        margin-top: 45px;
+        width: auto;
+        margin-right: 75.5px;
+    }
+
+    .longueur{
+        width: 1025px;
+    }
+
+    .biographie{
+        margin-top: 47px;
+        width: 842px;
+        color: white;
+        font-size: 24px;
+        letter-spacing: 4.8px;
+        line-height: 30px;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+    }
+
+    .title-xunidesign{
+        width: 1020px;
+        margin: 67px auto 70px;
+    }
+
+    .conteneur{
+        width: 900px;
+        margin: 25.5px auto 32.5px;
+
+    }
+
+    .presentation-projet{
+        letter-spacing: 8px;
+    }
+
+    .box-logiciel {
+        width: 1778px;
+        height: 800px;
+        margin: 0 auto;
+        background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+        box-shadow: 15px 15px 20px #00000029;
+        position: relative;
+    }
+
+    .tableau-logiciel {
+        margin: 90px auto 0;
+        width: 1625px;
+    }
+
+    .tableau {
+        width: 1625px;
+        justify-content: space-around;
+    }
+
+    .niveau-competences {
+        display: flex;
+        width: 464px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+
+    .competence-texte p{
+        width: 893px;
+        color: white;
+        font-family: Nexa-Light, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+
+}
+
+.section_img{
+    height: 327px;
+    background-image: url("../../../image/header/header-xunidesign.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 2px white solid;
+}
+
+.section_first_xunidesign h1 span {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+.description-xunidesign h1 span{
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.description-xunidesign {
+    position: relative;
+}
+
+.box-cadre h3 span {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+.section_second_xunideisgn{
+    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.presentation-projet span {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+.mt-perso{
+    margin-bottom: 73px;
+    margin-top: 60px;
+}
+
+.polygon-box {
+    height: 800px !important;
+    width: 150px !important;
+}
+
+.tableau:not(:last-child){
+    margin-bottom: 33px;
+}
+
+.niveau-competences p {
+    color: white;
+}
+
+.bar-valid{
+    background-color: #00baff;
+}
+
+.bar-no-valid{
+    background-color: white;
+}
+
+
+:is(.niveau-competences, .name-logiciel) p {
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+}
+
+.name-logiciel p{
+    color: #00baff;
+}
+
+
+
+
+

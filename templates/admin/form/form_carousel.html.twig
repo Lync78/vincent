@@ -1,0 +1,29 @@
+{% form_theme form _self %}
+
+{%- block form_row -%}
+    {%- set type = type|default('text') -%}
+    {%- if type == 'range' or type == 'color' -%}
+        {# Attribute "required" is not supported #}
+        {%- set required = false -%}
+    {%- endif -%}
+    <label {% if label_attr %}{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}{% endif %}>
+        <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        <div {% with {attr: row_attr} %}{{ block('attributes') }}{% endwith %}>
+            <span>
+                {%- if translation_domain is same as(false) -%}
+                    {%- if label_html is same as(false) -%}
+                        {{- label -}}
+                    {%- else -%}
+                        {{- label|raw -}}
+                    {%- endif -%}
+                {%- else -%}
+                    {%- if label_html is same as(false) -%}
+                        {{- label|trans(label_translation_parameters, translation_domain) -}}
+                    {%- else -%}
+                        {{- label|trans(label_translation_parameters, translation_domain)|raw -}}
+                    {%- endif -%}
+                {%- endif -%}
+            </span>
+        </div>
+    </label>
+{%- endblock form_row -%}

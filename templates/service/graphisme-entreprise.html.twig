@@ -1,0 +1,186 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - Graphisme d'entreprise
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/service/graphisme-entreprise.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/templates/layout/presentation-service.css') }}">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="section-first-presentation-service">
+        {% include "layout/layout-presentation-services.html.twig" %}
+    </section>
+    <section class="section-second-graphisme-entreprise">
+        <div class="container overflow-a">
+            <article class="title title-perso d-flex justify-between align-items-baseline">
+                <div class="element rotate-X">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>prix <span>services</span></h1>
+                <div class="element rotate rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="format-box-3 overflow-a">
+                <div class="polygon-box correction-1"></div>
+                <div class="box-3 d-flex justify-start row-wrap">
+                    <div class="texte d-flex column-wrap justify-start">
+                        <h3>logos 2d & 3d <br><span>(logo type entreprise)</span></h3>
+                        <h3>images & bannieres <br><span>(tout type)</span></h3>
+                        <h3>cartes de visite <br><span>(tout type)</span></h3>
+                        <h3>stickers & flyers <br><span>(tout type)</span></h3>
+                        <h3>visuel powerpoint <br><span>(visuel empriente)</span></h3>
+                        <h3>maquette siteweb <br><span>(webdesign)</span></h3>
+                    </div>
+                    <hr>
+                    <div class="d-grid templates-grid-three">
+                        <div class="logo-2d bleu d-flex column-wrap">
+                            <h2>logo 2d</h2>
+                            <p>Taille 3000x3000 (max)</p>
+                            <p>format JPEG/PNG<br>VECTORIEL/WEB</p>
+                        </div>
+                        <div class="logo-3d bleu d-flex column-wrap">
+                            <h2>logo 3d</h2>
+                            <p>Taille 3000x3000 (max)</p>
+                            <p>format JPEG/PNG<br>3D/WEB</p>
+                        </div>
+                        <div class="image bleu d-flex column-wrap">
+                            <h2>image</h2>
+                            <p>Dimensions aux choix</p>
+                            <p>format JPEG/PNG<br>WEB</p>
+                        </div>
+                        <div class="banniere bleu d-flex column-wrap">
+                            <h2>banniere</h2>
+                            <p>Dimensions aux choix</p>
+                            <p>format JPEG/PNG<br>WEB</p>
+                        </div>
+                        <div class="visite bleu d-flex column-wrap">
+                            <h2>carte de visite</h2>
+                            <p>Dimensions aux choix</p>
+                            <p>Recto/Verso</p>
+                            <p class="exception">format JPEG/PNG<br>VECTORIEL</p>
+                        </div>
+                        <div class="sticker bleu d-flex column-wrap">
+                            <h2>sticker</h2>
+                            <p>Dimensions aux choix</p>
+                            <p>format JPEG/PNG<br>VECTORIEL</p>
+                        </div>
+                        <div class="flyer bleu d-flex column-wrap">
+                            <h2>flyer</h2>
+                            <p>Dimensions aux choix</p>
+                            <p>format JPEG/PNG<br>VECTORIEL</p>
+                        </div>
+                        <div class="entreprise bleu d-flex column-wrap">
+                            <h2>visuel entreprise</h2>
+                            <p>charte graphique - powerpoint</p>
+                            <p>format JPEG/PNG<br>-</p>
+                        </div>
+                        <div class="maquette bleu d-flex column-wrap">
+                            <h2>maquette</h2>
+                            <p>webdesign - abode xd</p>
+                            <p>format JPEG/PNG<br>-</p>
+                        </div>
+                        <div class="price-logo-2d noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">50euros</p>
+                            </div>
+                        </div>
+                        <div class="price-logo-3d noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">80euros</p>
+                            </div>
+                        </div>
+                        <div class="price-image noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">5euros</p>
+                            </div>
+                        </div>
+                        <div class="price-banniere noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">10euros</p>
+                            </div>
+                        </div>
+                        <div class="price-visite noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">8euros</p>
+                            </div>
+                        </div>
+                        <div class="price-stickers noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">3euros</p>
+                            </div>
+                        </div>
+                        <div class="price-flyer noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">15euros</p>
+                            </div>
+                        </div>
+                        <div class="price-entreprise noir d-flex column-wrap">
+                            <p>Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">25euros</p>
+                            </div>
+                        </div>
+                        <div class="price-maquette noir d-flex column-wrap">
+                            <p class="changement">Paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start">
+                                <h4>a partir de:</h4>
+                                <p class="price-paypal">600euros</p>
+                            </div>
+                            <p class="variation">prix varier en fonction du travail</p>
+                        </div>
+                    </div>
+                    <div class="tableau-option">
+                        <h3>options commande<br><span>(services)</span></h3>
+                        <hr>
+                        <div class="box-option">
+                            <h4>option</h4>
+                            <p>créative</p>
+                        </div>
+                        <div class="box-options-price">
+                            <p>Paiement par Paypal</p>
+                            <p>a partir de: <span>10euros</span></p>
+                        </div>
+                        <div class="box-option">
+                            <h4>option</h4>
+                            <p>modifications</p>
+                        </div>
+                        <div class="box-options-price">
+                            <p>Paiement par Paypal</p>
+                            <p>a partir de: <span>5euros</span></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="bottom d-flex justify-end">
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}

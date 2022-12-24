@@ -1,0 +1,169 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - book
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/present/present.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+{% endblock %}
+
+{% block js %}
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="{{ asset('js/book/app.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+
+    <section class="first-section-present">
+        <div class="container overflow">
+            <article class="title d-flex justify-between row-wrap align-items-baseline">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>book <span>present</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="box-search d-none">
+                <div class="recherche-title">
+                    <h3>recherche</h3>
+                </div>
+                <div class="category">
+                    <h3>{{ slug }}</h3>
+                    <div class="form-fleche"></div>
+                </div>
+            </article>
+            <article class="box-presents">
+                <div class="book-present-select d-none overflow-a">
+                    <ul class="navigation">
+                        <li><p data-value="{{ slug }}">{{ slug }}</p></li>
+                        <hr>
+                        <li><p data-value="logos">logos</p></li>
+                        <hr>
+                        <li><p data-value="packs">packs</p></li>
+                        <hr>
+                        <li><p data-value="autres">autres</p></li>
+                        <hr>
+                        <li><p data-value="4">test 1</p></li>
+                        <hr>
+                        <li><p data-value="5">test 1</p></li>
+                        <hr>
+                        <li><p data-value="6">test 1</p></li>
+                        <hr>
+                        <li><p data-value="7">test 1</p></li>
+                        <hr>
+                        <li><p data-value="8">test 1</p></li>
+                        <hr>
+                    </ul>
+                </div>
+                <div class="livre-book">
+                    <h2>logos client <span>esports & logotype</span></h2>
+                    <div class="range-6">
+                        {% set i = 1 %}
+                        {% for image in 1..18 %}
+                            {% if i < 15 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo-clients/logo_client_'~ image ~'.png') }}" alt="{{ 'logo_client_'~ image ~ '.png' }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir.png') }}" alt="logo_a_venir.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h2>logos excusif <span>logotype & autres</span></h2>
+                    <div class="range-6">
+                        {% set i = 1 %}
+                        {% for image in 1..12 %}
+                            {% if i < 12 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo-exclusif/logo_exclusif_'~ image ~'.png') }}" alt="{{ 'logo_exclusif_'~ image ~ '.png' }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir.png') }}" alt="logo_a_venir.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h2>logos collection <span>xunirobot</span></h2>
+                    <div class="range-6">
+                        {% set i = 1 %}
+                        {% for image in 1..6 %}
+                            {% if i < 3 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logos-collection/logo_collection_'~ image ~'.png') }}" alt="{{ asset('logo_collection_'~ image ~ '.png') }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir.png') }}" alt="logo_a_venir.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h2>Badges & emotes clients <span>twitch design</span></h2>
+                    {% set i = 1 %}
+                    <div class="range-4">
+                        {% set i = 1 %}
+                        {% for image in 1..8 %}
+                            {% if i < 8 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/badges-emotes-client/badges_emotes_client_'~ image ~'.png') }}" alt="{{ 'badges_emotes_client_'~ image ~ '.png' }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h2>badges & emotes exclusif <span>twitch design</span></h2>
+                    <div class="range-4">
+                        {% set i = 1 %}
+                        {% for image in 1..4 %}
+                            {% if i < 4 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/badges-emotes-exclusif/badges_emotes_exclusif_'~ image ~'.png') }}" alt="{{ 'badges_emotes_exclusif_'~ image ~ '.png' }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h2>bannières clients <span>youtube & twitter & twitch</span></h2>
+                    <div class="range-4">
+                        {% set i = 1 %}
+                        {% for image in 1..8 %}
+                            {% if i < 9 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/banniere-clients/banniere_client_'~ image ~'.png') }}" alt="{{ 'banniere_client_'~ image ~ '.png' }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h2>bannière exclusif <span>youtube & twitter & twitch</span></h2>
+                    <div class="range-4">
+                        {% set i = 1 %}
+                        {% for image in 1..8 %}
+                            {% if i < 7 %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/banniere-exclusif/banniere_exclusif_'~ image ~'.png') }}" alt="{{ 'banniere_exclusif_'~ image ~ '.png' }}">
+                                {% set i = i + 1 %}
+                            {% else %}
+                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="triangle triangle-bottom">
+                    <div class="arrow"></div>
+                    <div class="arrow-suite"></div>
+                </div>
+            </article>
+            <article>
+                {{ form_start(form, {'attr': {'id':'hidden','method':'post'}}) }}{{ form_end(form) }}
+            </article>
+            <article>
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}

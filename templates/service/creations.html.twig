@@ -1,0 +1,192 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - creations
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/templates/service/creations.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/templates/layout/presentation-service.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="section-first-presentation-service">
+        {% include "layout/layout-presentation-services.html.twig" %}
+    </section>
+    <section class="section-second-service-creations-developpement">
+        <div class="container overflow-a">
+            <article class="title title-2 d-flex justify-between align-items-baseline">
+                <div class="element rotate-X">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>prix <span>services</span></h1>
+                <div class="element rotate rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="grid-prix overflow-a">
+                <article class="tableau-mobile">
+                    <div class="mini-tableau">
+                        <h1>Bannieres <br><span>(Youtube, Twitter, Twitch) </span><br>emotes & badges</h1>
+                        <hr>
+                        <div class="pack-1-mobile">
+                            <div class="box-degrade-vert">
+                                <div>
+                                    <h3>{{ prices[0].name }}</h3>
+                                    <p class="argu">{{ prices[0].argu1 }}</p>
+                                    <p class="argu">{{ prices[0].argu2 }}</p>
+                                    <p class="argu">{{ prices[0].argu3 }}</p>
+                                </div>
+                                <div>
+                                    <p class="format">{{ prices[0].format }}</p>
+                                </div>
+                            </div>
+                            <div class="box-prix">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="price-mobile">A partir de : <span>{{ prices[0].price > 1 ? prices[0].price ~ 'euros' : prices[0].price ~ 'euro' }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-tableau">
+                        <h1>image profil <br> logo <span>(simple)</span><br>sticker & flyer</h1>
+                        <hr>
+                        <div class="pack-2-mobile">
+                            <div class="box-degrade-vert">
+                                <div>
+                                    <h3>{{ prices[1].name }}</h3>
+                                    <p class="argu">{{ prices[1].argu1 }}</p>
+                                    <p class="argu">{{ prices[1].argu2 }}</p>
+                                    <p class="argu">{{ prices[1].argu3 }}</p>
+                                </div>
+                                <div>
+                                    <p class="format">{{ prices[1].format }}</p>
+                                </div>
+
+                            </div>
+                            <div class="box-prix">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="price-mobile">A partir de : <span>{{ prices[1].price > 1 ? prices[1].price ~ 'euros' : prices[1].price ~ 'euro' }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-tableau">
+                        <h1>projet maquette<br><span>(planning & autres)</span></h1>
+                        <hr>
+                        <div class="pack-2-mobile">
+                            <div class="box-degrade-vert">
+                                <div>
+                                    <h3>{{ prices[2].name }}</h3>
+                                    <p class="argu">{{ prices[2].argu1 }}</p>
+                                    <p class="argu">{{ prices[2].argu2 }}</p>
+                                    <p class="argu">{{ prices[2].argu3 }}</p>
+                                </div>
+                                <div>
+                                    <p class="format">{{ prices[2].format }}</p>
+                                </div>
+
+                            </div>
+                            <div class="box-prix">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="price-mobile">A partir de : <span>{{ prices[2].price > 1 ? prices[2].price ~ 'euros' : prices[2].price ~ 'euro' }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <div class="polygon-box correction"></div>
+                <div class="tableau">
+                    <div class="d-flex column-wrap justify-around">
+                        <div class="texte-service texte-service-1"><p>bannires</p><p class="bleu">(youtube, twitter, twitch)</p><p>emotes & badges</p></div>
+                        <div class="texte-service texte-service-2"><p>image profil</p><p>logo <span class="bleu">(simple)</span></p><p>sticker & flyer</p></div>
+                        <div class="texte-service texte-service-3"><p>projet maquette</p><p class="bleu">(panning & autres)</p></div>
+                    </div>
+                    <hr class="hr-service">
+                    <div class="d-grid grid-templates">
+                        <div class="pack pack-1 a1 d-flex column-nowrap justify-start">
+                            <h3>formule pack #1</h3>
+                            <p>Tailles 2560x1440, 1500x500, 1300x380</p>
+                            <p>800x1064</p>
+                            <p>1920x1080</p>
+                            <p class="align-self-end">Format JPEG/PNG</p>
+                            <p class="align-self-end">vectoriel</p>
+                        </div>
+                        <div class="a2 pack-2 pack d-flex column-wrap justify-start">
+                            <h3>formule pack #2</h3>
+                            <p>Tailles 1080x1080</p>
+                            <p>3 000x3 000(max)</p>
+                            <p>2 000x2 000(max)</p>
+                            <p class="align-self-end">Format JPEG/PNG</p>
+                            <p class="align-self-end">vectoriel</p>
+                        </div>
+                        <div class="a3 pack-3 pack d-flex column-wrap justify-start">
+                            <h3>maquette</h3>
+                            <p>Dimensions aux choix</p>
+                            <p class="align-self-end">Format JPEG/PNG</p>
+                            <p class="align-self-end">& autres</p>
+                        </div>
+                        <div class="b1">
+                            <p class="type-paiement">paiement par Paypal</p>
+                            <div class="d-flex justify-start align-items-center paragraphe">
+                                <p class="price">a partir de: <span>12euros</span></p>
+                            </div>
+                        </div>
+                        <div class="b2">
+                            <p class="type-paiement">paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center paragraphe">
+                                <p class="price">a partir de: <span>20euros</span></p>
+                            </div>
+                        </div>
+                        <div class="b3">
+                            <p class="type-paiement">paiement par Paypal</p>
+                            <div class="d-flex row-wrap justify-start align-items-center paragraphe">
+                                <p class="price">a partir de: <span>12euros</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableau-option">
+                    <div class="option-tab">
+                        <h3>options commande <br><span>(services)</span></h3>
+                        <hr>
+                        <div class="box-option">
+                            <h4>option</h4>
+                            <p>Créatif</p>
+                        </div>
+                        <div class="box-option-prix">
+                            <p>Paiement par Paypal</p>
+                            <p>a partir de: <span>10euros</span></p>
+                        </div>
+                        <div class="box-option">
+                            <h4>option</h4>
+                            <p>Modification</p>
+                        </div>
+                        <div class="box-option-prix">
+                            <p>Paiement par Paypal</p>
+                            <p>a partir de: <span>5euros</span></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="options">d'autres options <br><span>seront disponible par la suite</span></h3>
+            </article>
+            <article class="custom-hr-visite">
+                <hr class="hr-custom">
+                <hr class="hr-custom">
+            </article>
+            <article>
+                <h4 class="comming-soon">à venir !</h4>
+            </article>
+            <article class="d-flex justify-end row-wrap">
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}

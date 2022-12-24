@@ -1,19 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-fr">
     <head>
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="XuniDesign, vous propose des services de qualité et à petit prix. Gaming pour twitch et Entreprise. Avec XuniDesign donnez vie à vos idées !">
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{{ asset("css/font/font.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/reset/reset.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/templates/templates.css") }}">
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+        {% block stylesheets %}{% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="theme">
+        <header id="menu" class="en-tete">
+            <section class="menu container version-1875-breakpoint">
+                <a class="marge" href="{{ path('homepage') }}"><img src="{{ asset('image/Logo-XuniDesign.png') }}" class="logo" alt="image-nofound"></a>
+                <ul class="list-menu">
+                    <li>
+                        <a class="lien-menu" href="{{ path('homepage') }}">Accueil</a>
+                    </li>
+                    <li>
+                        <a id="services-menu" class="lien-menu" href="{{ path('services') }}">services</a>
+                        <ul class="dropdown-service">
+                            <hr>
+                            <li><a href="{{ path('creations-developpement') }}">créations developpements</a></li>
+                            <hr>
+                            <li><a href="{{ path('graphisme-jeux-videos') }}">graphisme jeux videos</a></li>
+                            <hr>
+                            <li><a href="{{ path('graphisme-entreprise') }}">graphisme entreprise</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lien-menu" href="{{ path('packs_index') }}" id="packs-menu">Packs</a>
+                        <ul class="dropdown-packs">
+                            <hr>
+                            <li><a href="{{ path('packs_custom') }}">Personnaliser</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="presentation" href="{{ path('xunidesign') }}" class="lien-menu">presentation</a>
+                        <ul class="dropdown-presentation">
+                            <hr>
+                            <li><a href="{{ path('present') }}">book present</a></li>
+                            <hr>
+                            <li><a href="{{ path('partenariat') }}">partenariats</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('contact') }}" class="lien-menu">contact</a></li>
+                </ul>
+                <ul class="info-contact">
+                    <li class="d-flex"><img src="{{ asset('image/icon/email.png') }}" alt="logo_email"><h1>EMAIL: <a href="mailto:xunidesign@pro.fr" class="email">contact@xunidesign.fr</a></h1></li>
+                </ul>
+            </section>
+            <section class="menu-mobile container">
+                <a href="{{ path('homepage') }}"><img src="{{ asset('image/Logo-XuniDesign.png') }}" class="logo" alt="image-nofound"></a>
+                <button class="btn-mobile">
+                    <div class="burger">
+                        <hr>
+                        <hr>
+                        <hr>
+                    </div>
+                    <div class="croix d-none">
+                    </div>
+                </button>
+            </section>
+            <section class="selection-mobile d-none container">
+                <div class="accueil">
+                    <a href="{{ path('homepage') }}">accueil</a>
+                </div>
+                <div class="Service">
+                    <a href="{{ path('services') }}">Service</a>
+                    <div class="fleche-menu fleche-service d-none"></div>
+                </div>
+                <div class="service-dropdown">
+                    <div><a href="{{ path('creations-developpement') }}">creations developpements</a></div>
+                    <div><a href="{{ path('graphisme-jeux-videos') }}">graphisme jeux videos</a></div>
+                    <div><a href="{{ path('graphisme-entreprise') }}">graphisme entreprise</a></div>
+                </div>
+                <div class="Pack">
+                    <div><a href="{{ path('packs_index') }}">Pack</a></div>
+                    <div><a href="{{ path('packs_custom') }}">Personnaliser</a></div>
+
+                </div>
+
+                <div class="presentation-mobile">
+                    <div><a href="{{ path('xunidesign') }}">presentation</a></div>
+
+                    <div class="fleche-menu fleche-presentation d-none"></div>
+                </div>
+
+                <div class="presentation-dropdown">
+                    <div><a href="{{ path('present') }}">book present</a></div>
+                    <div><a href="{{ path('partenariat') }}">partenariat</a></div>
+                </div>
+                <div class="contact-mobile">
+                    <a href="{{ path('contact') }}">contact</a>
+                </div>
+            </section>
+        </header>
+        <main class="">
+            {% block main %}{% endblock %}
+        </main>
+    <footer class="">
+        <section class="fourth-section">
+            <div class="container">
+                <article class="questions d-flex">
+                    <a href="{{ path('contact') }}">< questions<span>?</span> projets<span>? contact</span> > </a>
+                </article>
+                <article class="article-email">
+                    <h1>| email: contact@xunidesign.fr |</h1>
+                </article>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <article class="footer d-flex row-wrap justify-center align-items-end">
+                    <a class="footer-texte"><img class="logo" src="{{ asset('image/Logo.png') }}" alt="#"></a>
+                    <h3 class="footer-texte">&copy copyright {{ "now" | date("Y") }}</h3>
+                    <a class="footer-texte" target="_blank" href="https://www.linkedin.com/in/guillaume-dupont-a66461105/"><span class="span-espace">-</span> website by guillaume</a>
+                    <a class="footer-texte"><span class="span-espace">-</span> websitedesigner by diazdawn</a>
+                </article>
+            </div>
+        </section>
+    </footer>
+        <script src="{{ asset('js/general/general.js') }}"></script>
+        <script src="{{ asset('js/scroll/scroll.js') }}"></script>
+        <script src="{{ asset('js/header/header.js') }}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-90QJ7W6TKD%22%3E"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-90QJ7W6TKD');
+        </script>
+        {% block js %}{% endblock %}
     </body>
 </html>

@@ -1,0 +1,134 @@
+@media (min-width: 360px) {
+    .fourth-section{
+        overflow: auto;
+        height: auto;
+        background: transparent linear-gradient(270deg, #17252F 0%, #001224 100%) 0 0 no-repeat padding-box;
+    }
+
+    .questions a {
+        margin: 51px auto 31px;
+        padding: 22px 20px 21px 20px;
+        text-align: center;
+        letter-spacing: 3.6px;
+        color: #FFFFFF;
+        text-shadow: 0 3px 6px #00000029;
+        background: transparent linear-gradient(270deg, #29F19C 0%, #02A1F9 100%) 0 0 no-repeat padding-box;
+        box-shadow: inset 6px 5px 10px #00000029, 5px 12px 8px #00000029;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 23px;
+        font-family: Nexa-Light, sans-serif;
+        text-transform: uppercase;
+    }
+
+    .questions a span {
+        font-family: Nexa-Light, sans-serif;
+        font-weight: bold;
+    }
+
+    .article-email h1{
+        text-align: center;
+        font-family: Nexa-Bold, sans-serif;
+        font-weight: bold;
+        line-height: 29px;
+        font-size: 14px;
+        letter-spacing: 4px;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .span-espace{
+        display: none;
+    }
+
+    .footer{
+        color: white;
+        font-size: 14px;
+        line-height: 23px;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1069px) {
+    .footer {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .span-espace {
+        display: initial;
+    }
+
+    .footer-texte:not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1820px) {
+
+
+
+    .footer{
+        font-size: 18px;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .span-espace{
+        display: initial;
+    }
+
+    .article-email h1{
+        margin-bottom: 0;
+        font-size: 24px;
+        letter-spacing: 12px;
+    }
+
+    .questions a span {
+        font-family: Nexa-Light, sans-serif;
+        font-weight: bold;
+    }
+
+    .fourth-section{
+        height: 210px;
+    }
+}
+
+footer section:nth-of-type(2){
+    border-top: 1px white solid;
+    background: #151C25 0 0 no-repeat padding-box;
+}
+
+.logo-footer img {
+    margin-top: 25px;
+    margin-left: 360px;
+}
+
+.footer .logo {
+    margin-top: 15px;
+}
+
+
+.footer h3 {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.footer a, .footer a:hover{
+    color: white;
+    font-weight: normal;
+    font-family: Nexa-Light, sans-serif;
+    text-decoration: none;
+}
+
+
