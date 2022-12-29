@@ -5,47 +5,25 @@ namespace App\Entity;
 use App\Repository\BiographieRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=BiographieRepository::class)
- */
-class Biographie
+#[ORM\Entity(repositoryClass: BiographieRepository::class)]
+class Biographie extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $pseudo;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $marque;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $pseudo;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $texte_1;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $marque;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $texte_2;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $texte_1;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $texte_3;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $texte_2;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $texte_3;
 
     public function getPseudo(): ?string
     {
@@ -76,7 +54,7 @@ class Biographie
         return $this->texte_1;
     }
 
-    public function setTexte1(string $texte_1): self
+    public function setTexte1(?string $texte_1): self
     {
         $this->texte_1 = $texte_1;
 
@@ -88,7 +66,7 @@ class Biographie
         return $this->texte_2;
     }
 
-    public function setTexte2(string $texte_2): self
+    public function setTexte2(?string $texte_2): self
     {
         $this->texte_2 = $texte_2;
 
@@ -100,7 +78,7 @@ class Biographie
         return $this->texte_3;
     }
 
-    public function setTexte3(string $texte_3): self
+    public function setTexte3(?string $texte_3): self
     {
         $this->texte_3 = $texte_3;
 

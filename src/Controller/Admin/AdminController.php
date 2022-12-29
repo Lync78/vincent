@@ -15,9 +15,9 @@ class AdminController extends AbstractController
     #[Route(path: '/login', name: 'login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
+        if ($this->getUser()) {
+            return  $this->redirectToRoute("admin_dashboard");
+        }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -47,7 +47,7 @@ class AdminController extends AbstractController
         // nombre de service création et développement
         // Analyse du taffic du site internet
 
-        return $this->render("admin/dashboard/dashboard.html.twig");
+        return $this->render("admin/dashboard/dashboard.html.twig", ["var" => "dashboard"]);
     }
 
 }

@@ -4,18 +4,17 @@
 namespace App\Controller;
 
 
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Mailer\MailerInterface;
 
 abstract class AbstractController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 {
 
-    protected $mail;
-
-    public function __construct(MailerInterface $mailer)
-    {
-        $this->mail = $mailer;
-    }
+    public function __construct(
+        protected MailerInterface $mailer,
+        protected ManagerRegistry $managerRegistry
+    ){}
 
     /**
      * @param FormInterface $form
@@ -33,6 +32,13 @@ abstract class AbstractController extends \Symfony\Bundle\FrameworkBundle\Contro
     protected function getValidIsNotForm(FormInterface $form): bool
     {
         return $form->isSubmitted() AND !$form->isValid();
+    }
+
+    /**
+     * @return \Doctrine\Persistence\ObjectManager
+     */
+    protected function getManager(){
+        return $this->managerRegistry->getManager();
     }
 
 

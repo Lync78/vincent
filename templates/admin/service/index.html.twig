@@ -1,0 +1,29 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/templates/admin/services/serviceAccueil.css') }}" type="text/css">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+    <section class="admin-grid-service">
+        {% set i = 0 %}
+        {% for service in services %}
+            <div class="{{ service.position ~ " " ~ service.background }} block-info">
+                <h3>{{ service.title }}</h3>
+                <p class="pfirst">{{ service.sbtitle }}</p>
+                <div class="group-last">
+                    <p class="last">{{ service.description }}</p>
+                </div>
+                {{ form_start(forms[i]) }}
+                {{ form_end(forms[i]) }}
+                {% set i = i + 1 %}
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

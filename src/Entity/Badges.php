@@ -5,62 +5,37 @@ namespace App\Entity;
 use App\Repository\BadgesRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=BadgesRepository::class)
- */
-class Badges
+#[ORM\Entity(repositoryClass: BadgesRepository::class)]
+#[ORM\Table("badges")]
+class Badges extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $oneMonth;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $oneMonth;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $TwoMonth;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $TwoMonth;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $ThreeMonth;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $ThreeMonth;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $sixMonth;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $sixMonth;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $nineMonth;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $nineMonth;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $OneYear;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $OneYear;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $OneYearHalf;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $OneYearHalf;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $TwoYearMore;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $TwoYearMore;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Pack::class, inversedBy="badges", cascade={"persist", "remove"})
-     */
-    private $pack;
+    #[ORM\OneToOne(mappedBy: "pack", targetEntity: Pack::class, cascade: ["persist", "remove"])]
+    #[ORM\JoinColumn(name: "pack_id",nullable: false)]
+    private Pack $pack;
 
     public function getId(): ?int
     {

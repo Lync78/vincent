@@ -2,71 +2,42 @@
 
 namespace App\Entity;
 
+use App\Entity\trait\Titre;
 use App\Repository\ServiceRepository;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=ServiceRepository::class)
- */
-class Service
+#[ORM\Entity(repositoryClass: ServiceRepository::class)]
+#[ORM\Table(name: 'service')]
+class Service extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $title;
+    use Titre;
+    
+    #[ORM\Column(type: "string", length: "255")]
+    private string $description;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $description;
+    #[ORM\Column(type: "string", length: "255")]
+    private string $position;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $position;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $sbtitle;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sbtitle;
+    #[ORM\Column(type: "boolean")]
+    private bool $actif;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $actif;
+    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: "services")]
+    #[ORM\JoinColumn(nullable: false)]
+    private Category $category;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="services")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $category;
+    #[ORM\Column(length: 255)]
+    private ?string $background = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
+    
     public function getDescription(): ?string
     {
         return $this->description;
@@ -115,14 +86,31 @@ class Service
         return $this;
     }
 
-    public function getCategory(): ?Category
+    public function getCategory(): Category
     {
         return $this->category;
     }
 
-    public function setCategory(?Category $category): self
+    public function setCategory(Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function isActif(): ?bool
+    {
+        return $this->actif;
+    }
+
+    public function getBackground(): ?string
+    {
+        return $this->background;
+    }
+
+    public function setBackground(string $background): self
+    {
+        $this->background = $background;
 
         return $this;
     }

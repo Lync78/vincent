@@ -2,131 +2,60 @@
 
 namespace App\Entity;
 
+use App\Entity\trait\Titre;
 use App\Repository\PackRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=PackRepository::class)
- */
-class Pack
+
+#[ORM\Entity(repositoryClass: PackRepository::class)]
+class Pack extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    use Titre;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $title;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $slug;
 
+    #[ORM\Column(type: "string", length: 255)]
+    private string $description;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $slug;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $horsLigne;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $description;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $banniere;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $horsLigne;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $profil;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $banniere;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $sceneStartLive;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $profil;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $sceneEndLive;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sceneStartLive;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $sceneBreak;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sceneEndLive;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $sceneGame;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sceneBreak;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $sceneSwitch;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sceneGame;
+    #[ORM\OneToOne(mappedBy: "pack", targetEntity: Badges::class, cascade: ["persist", "remove"])]
+    private Badges $badges;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sceneSwitch;
-    
-    /**
-     * @ORM\OneToOne(targetEntity=Badges::class, mappedBy="pack", cascade={"persist", "remove"})
-     */
-    private $badges;
+    #[ORM\OneToOne(mappedBy: "pack", targetEntity: Panneaux::class, cascade: ["persist", "remove"])]
+    private Panneaux $panneaux;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Panneaux::class, mappedBy="Pack", cascade={"persist", "remove"})
-     */
-    private $panneaux;
+    #[ORM\OneToOne(mappedBy: "pack", targetEntity: Alers::class, cascade: ["persist","remove"])]
+    private Alers $alers;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Alers::class, mappedBy="Pack", cascade={"persist", "remove"})
-     */
-    private $alers;
-
-    /**
-     * @return int|null
-     */
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
-
-    /**
-     * @param string $title
-     * @return $this
-     */
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
     public function getHorsLigne(): ?string
     {
         return $this->horsLigne;
     }
 
-    /**
-     * @param string $horsLigne
-     * @return $this
-     */
     public function setHorsLigne(string $horsLigne): self
     {
         $this->horsLigne = $horsLigne;
@@ -134,18 +63,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBanniere(): ?string
     {
         return $this->banniere;
     }
 
-    /**
-     * @param string $banniere
-     * @return $this
-     */
     public function setBanniere(string $banniere): self
     {
         $this->banniere = $banniere;
@@ -153,18 +75,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getProfil(): ?string
     {
         return $this->profil;
     }
 
-    /**
-     * @param string $profil
-     * @return $this
-     */
     public function setProfil(string $profil): self
     {
         $this->profil = $profil;
@@ -172,18 +87,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSceneStartLive(): ?string
     {
         return $this->sceneStartLive;
     }
 
-    /**
-     * @param string $sceneStartLive
-     * @return $this
-     */
     public function setSceneStartLive(string $sceneStartLive): self
     {
         $this->sceneStartLive = $sceneStartLive;
@@ -191,18 +99,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSceneEndLive(): ?string
     {
         return $this->sceneEndLive;
     }
 
-    /**
-     * @param string $sceneEndLive
-     * @return $this
-     */
     public function setSceneEndLive(string $sceneEndLive): self
     {
         $this->sceneEndLive = $sceneEndLive;
@@ -210,18 +111,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSceneBreak(): ?string
     {
         return $this->sceneBreak;
     }
 
-    /**
-     * @param string $sceneBreak
-     * @return $this
-     */
     public function setSceneBreak(string $sceneBreak): self
     {
         $this->sceneBreak = $sceneBreak;
@@ -229,18 +123,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSceneGame(): ?string
     {
         return $this->sceneGame;
     }
 
-    /**
-     * @param string $sceneGame
-     * @return $this
-     */
     public function setSceneGame(string $sceneGame): self
     {
         $this->sceneGame = $sceneGame;
@@ -248,18 +135,11 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSceneSwitch(): ?string
     {
         return $this->sceneSwitch;
     }
 
-    /**
-     * @param string $sceneSwitch
-     * @return $this
-     */
     public function setSceneSwitch(string $sceneSwitch): self
     {
         $this->sceneSwitch = $sceneSwitch;
@@ -267,26 +147,16 @@ class Pack
         return $this;
     }
 
-    /**
-     * @return Badges|null
-     */
     public function getBadges(): ?Badges
     {
         return $this->badges;
     }
 
-    /**
-     * @return string
-     */
-    public function getSlug(): string
+    public function getSlug(): ?string
     {
         return $this->slug;
     }
 
-    /**
-     * @param string $slug
-     * @return self
-     */
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
@@ -294,10 +164,6 @@ class Pack
         return $this;
     }
 
-    /**
-     * @param Badges|null $badges
-     * @return $this
-     */
     public function setBadges(?Badges $badges): self
     {
         // unset the owning side of the relation if necessary
@@ -320,37 +186,33 @@ class Pack
         return $this->panneaux;
     }
 
-    public function setPanneaux(?Panneaux $Pack): self
+    public function setPanneaux(?Panneaux $panneaux): self
     {
         // unset the owning side of the relation if necessary
-        if ($Pack === null && $this->panneaux !== null) {
+        if ($panneaux === null && $this->panneaux !== null) {
             $this->panneaux->setPack(null);
         }
 
         // set the owning side of the relation if necessary
-        if ($Pack !== null && $Pack->getPack() !== $this) {
-            $Pack->setPack($this);
+        if ($panneaux !== null && $panneaux->getPack() !== $this) {
+            $panneaux->setPack($this);
         }
 
-        $this->Pack = $Pack;
+        $this->panneaux = $panneaux;
 
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description): void
+    public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
     }
 
     public function getAlers(): ?Alers
@@ -358,10 +220,15 @@ class Pack
         return $this->alers;
     }
 
-    public function setAlers(Alers $alers): self
+    public function setAlers(?Alers $alers): self
     {
+        // unset the owning side of the relation if necessary
+        if ($alers === null && $this->alers !== null) {
+            $this->alers->setPack(null);
+        }
+
         // set the owning side of the relation if necessary
-        if ($alers->getPack() !== $this) {
+        if ($alers !== null && $alers->getPack() !== $this) {
             $alers->setPack($this);
         }
 

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Pack;
 use App\Repository\PackRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,43 +12,40 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class PacksController
  * @package App\Controller
- * @Route("/packs", name="packs_")
  */
-
+#[Route("/packs", name: "packs_")]
 class PacksController extends AbstractController
 {
 
-    private $packRepository;
 
-    public function __construct(MailerInterface $mailer, PackRepository $packRepository)
+    public function __construct(MailerInterface $mailer, ManagerRegistry $managerRegistry)
     {
-        parent::__construct($mailer);
+        parent::__construct($mailer, $managerRegistry);
 
-        $this->packRepository = $packRepository;
     }
 
-    /**
-     * @Route("/", name="index")
-     */
+    #[Route("/", name: "index")]
     public function index(): Response
     {
-        $packs = $this->packRepository->findAll();
+
+        $test = new Pack();
+        dump($test);
+
+        $packs = $this->getManager()->getRepository(Pack::class)->findAll();
 
         return $this->render("packs/presentation-packs.html.twig", ["packs"=>$packs]);
     }
 
-    /**
-     * @Route("/personnaliser", name="custom")
-     */
+    #[Route("/personnaliser", name: "custom")]
     public function customPack(): Response
     {
         return $this->render("custom-pack/custom.html.twig");
     }
 
     /**
-     * @Route("/present/{slug}", name="present")
      * @return Response
      */
+    #[Route("/present/{slug}", name: "present")]
     public function clientPack(Pack $pack): Response
     {
 

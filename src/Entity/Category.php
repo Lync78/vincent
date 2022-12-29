@@ -2,58 +2,30 @@
 
 namespace App\Entity;
 
+use App\Entity\trait\Titre;
 use App\Repository\CategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JetBrains\PhpStorm\Pure;
 
-/**
- * @ORM\Entity(repositoryClass=CategoryRepository::class)
- */
-class Category
+#[ORM\Entity(repositoryClass: CategoryRepository::class)]
+#[ORM\Table(name: 'category')]
+class Category extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $title;
+    use Titre;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Service::class, mappedBy="category", orphanRemoval=true)
-     */
-    private $services;
+    #[ORM\OneToMany(mappedBy: "category", targetEntity: Service::class, orphanRemoval: true)]
+    private ArrayCollection $services;
 
-    public function __construct()
+    #[Pure] public function __construct()
     {
         $this->services = new ArrayCollection();
     }
-
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
+    
     /**
-     * @return Collection|Service[]
+     * @return Collection<int, Service>
      */
     public function getServices(): Collection
     {
@@ -63,7 +35,7 @@ class Category
     public function addService(Service $service): self
     {
         if (!$this->services->contains($service)) {
-            $this->services[] = $service;
+            $this->services->add($service);
             $service->setCategory($this);
         }
 

@@ -5,58 +5,33 @@ namespace App\Entity;
 use App\Repository\AlersRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=AlersRepository::class)
- */
-class Alers
+#[ORM\Entity(repositoryClass: AlersRepository::class)]
+class Alers extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsFollow;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsFollow;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsDonation;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsDonation;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsBits;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsBits;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsSubscribe;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsSubscribe;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsHost;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsHost;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsRaid;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsRaid;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $alertsSubgift;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alertsSubgift;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Pack::class, inversedBy="alers", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $Pack;
+    #[ORM\OneToOne(inversedBy: "alers", targetEntity: Pack::class, cascade: ["persist","remove"])]
+    #[ORM\JoinColumn(name: "pack_id",nullable: false)]
+    private Pack $pack;
 
     public function getId(): ?int
     {
@@ -92,9 +67,9 @@ class Alers
         return $this->alertsBits;
     }
 
-    public function setAlertsBits(string $AlertsBits): self
+    public function setAlertsBits(string $alertsBits): self
     {
-        $this->alertsBits = $AlertsBits;
+        $this->alertsBits = $alertsBits;
 
         return $this;
     }
@@ -104,9 +79,9 @@ class Alers
         return $this->alertsSubscribe;
     }
 
-    public function setAlertsSubscribe(string $AlertsSubscribe): self
+    public function setAlertsSubscribe(string $alertsSubscribe): self
     {
-        $this->alertsSubscribe = $AlertsSubscribe;
+        $this->alertsSubscribe = $alertsSubscribe;
 
         return $this;
     }
@@ -116,9 +91,9 @@ class Alers
         return $this->alertsHost;
     }
 
-    public function setAlertsHost(string $AlertsHost): self
+    public function setAlertsHost(string $alertsHost): self
     {
-        $this->alertsHost = $AlertsHost;
+        $this->alertsHost = $alertsHost;
 
         return $this;
     }
@@ -128,9 +103,9 @@ class Alers
         return $this->alertsRaid;
     }
 
-    public function setAlertsRaid(string $AlertsRaid): self
+    public function setAlertsRaid(string $alertsRaid): self
     {
-        $this->alertsRaid = $AlertsRaid;
+        $this->alertsRaid = $alertsRaid;
 
         return $this;
     }
@@ -149,12 +124,12 @@ class Alers
 
     public function getPack(): ?Pack
     {
-        return $this->Pack;
+        return $this->pack;
     }
 
     public function setPack(Pack $Pack): self
     {
-        $this->Pack = $Pack;
+        $this->pack = $Pack;
 
         return $this;
     }

@@ -2,49 +2,32 @@
 
 namespace App\Entity\Book;
 
+use App\Entity\EntityAbstract;
+use App\Entity\trait\Titre;
 use App\Helper\SlugifyHelper;
 use App\Repository\BookRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=BookRepository::class)
- */
-class Book
+#[ORM\Entity(repositoryClass: BookRepository::class)]
+class Book extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $title;
+    use Titre;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $description;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $description;
 
-    /**
-     * @ORM\OneToMany(targetEntity=BookImage::class, mappedBy="book", orphanRemoval=true)
-     */
-    private $bookImages;
+    #[ORM\OneToMany(mappedBy: "book", targetEntity: BookImage::class, orphanRemoval: true)]
+    private ArrayCollection $bookImages;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=BookCategory::class, inversedBy="books")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $category;
+    #[ORM\ManyToOne(targetEntity: BookCategory::class, inversedBy: "books")]
+    #[ORM\JoinColumn(nullable: false)]
+    private BookCategory $category;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $slug;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $slug;
 
 
     /**
@@ -54,46 +37,12 @@ class Book
     {
         $this->bookImages = new ArrayCollection();
     }
-
-    /**
-     * @return int|null
-     */
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
-
-    /**
-     * @param string $title
-     * @return $this
-     */
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
+    
     public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     * @return $this
-     */
     public function setDescription(string $description): self
     {
         $this->description = $description;
@@ -109,24 +58,16 @@ class Book
         return $this->bookImages;
     }
 
-    /**
-     * @param BookImage $bookImage
-     * @return $this
-     */
     public function addBookImage(BookImage $bookImage): self
     {
         if (!$this->bookImages->contains($bookImage)) {
-            $this->bookImages[] = $bookImage;
+            $this->bookImages->add($bookImage);
             $bookImage->setBook($this);
         }
 
         return $this;
     }
 
-    /**
-     * @param BookImage $bookImage
-     * @return $this
-     */
     public function removeBookImage(BookImage $bookImage): self
     {
         if ($this->bookImages->removeElement($bookImage)) {
@@ -139,18 +80,11 @@ class Book
         return $this;
     }
 
-    /**
-     * @return BookCategory|null
-     */
     public function getCategory(): ?BookCategory
     {
         return $this->category;
     }
 
-    /**
-     * @param BookCategory|null $category
-     * @return $this
-     */
     public function setCategory(?BookCategory $category): self
     {
         $this->category = $category;
@@ -158,18 +92,16 @@ class Book
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getSlug(): string
+    public function getSlug(): ?string
     {
         return $this->slug;
     }
 
-
-    public function setSlug(): void
+    public function setSlug(string $slug): self
     {
-        $this->slug = SlugifyHelper::slugify($this->title);
+        $this->slug = $slug;
+
+        return $this;
     }
 
 

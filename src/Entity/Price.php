@@ -5,63 +5,34 @@ namespace App\Entity;
 use App\Repository\PriceRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=PriceRepository::class)
- */
-class Price
+#[ORM\Entity(repositoryClass: PriceRepository::class)]
+class Price extends EntityAbstract
 {
 
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(type: "integer")]
+    private ?int $category_id;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $category_id;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $category;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $category;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $name;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
+    #[ORM\Column(type: "integer")]
+    private ?int $price;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $price;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $argu1;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $argu1;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $argu2;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $argu2;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $argu3;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $argu3;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $format;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $format;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getCategory(): ?string
     {
@@ -159,7 +130,8 @@ class Price
         return $this;
     }
 
-    public function affichage(){
+    public function affichage(): string
+    {
         return $this->price > 1 ? $this->price . "euros" : $this->price . "euro";
     }
 }

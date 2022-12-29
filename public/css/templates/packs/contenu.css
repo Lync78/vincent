@@ -232,7 +232,6 @@
 
 .box-badges div img {
     width: 105px;
-    height: 105px;
 }
 
 .box-badges div span {
@@ -328,7 +327,6 @@
 
 .panneaux-box {
     width: 1178px;
-    height: 338px;
     background: #17242E 0 0 no-repeat padding-box;
     border: 2px solid #00BAFF;
 
@@ -347,9 +345,8 @@
     margin-top: 10px;
 }
 
-.panneaux-flex div, .panneaux-flex div img {
+.panneaux-flex div img {
     width: 276px;
-    height: 92px;
 }
 
 .three-section {

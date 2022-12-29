@@ -2,36 +2,21 @@
 
 namespace App\Entity\Book;
 
+use App\Entity\EntityAbstract;
 use App\Repository\BookImageRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=BookImageRepository::class)
- */
-class BookImage
+
+#[ORM\Entity(repositoryClass: BookImageRepository::class)]
+class BookImage extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $image;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $image;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Book::class, inversedBy="bookImages")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $book;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    #[ORM\ManyToOne(targetEntity: Book::class, inversedBy: "bookImages")]
+    #[ORM\JoinColumn(nullable: false)]
+    private Book $book;
 
     public function getImage(): ?string
     {

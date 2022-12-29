@@ -3,39 +3,27 @@
 namespace App\Entity\Book;
 
 use App\Entity\BookBook;
+use App\Entity\EntityAbstract;
+use App\Entity\trait\Titre;
 use App\Repository\BookCategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=BookCategoryRepository::class)
- */
-class BookCategory
+#[ORM\Entity(repositoryClass: BookCategoryRepository::class)]
+class BookCategory extends EntityAbstract
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $title;
+    use Titre;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Book::class, mappedBy="category", orphanRemoval=true)
-     */
-    private $books;
+    #[ORM\OneToMany(mappedBy: "category", targetEntity: Book::class, orphanRemoval: true)]
+    private ArrayCollection $books;
 
 
     public function __construct()
     {
         $this->books = new ArrayCollection();
     }
-
 
     public function getId(): ?int
     {
@@ -65,7 +53,7 @@ class BookCategory
     public function addBook(Book $book): self
     {
         if (!$this->books->contains($book)) {
-            $this->books[] = $book;
+            $this->books->add($book);
             $book->setCategory($this);
         }
 
