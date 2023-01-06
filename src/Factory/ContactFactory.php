@@ -8,24 +8,24 @@ class ContactFactory
 {
 
     /** @var string $miel */
-    private $miel;
+    private string $miel;
 
     /** @var string $pseudo */
-    private $pseudo;
+    private string $pseudo;
 
     /** @var string $raison */
-    private $raison;
+    private string $raison;
 
     /** @var string $email */
-    private $email;
+    private string $email;
 
     /** @var string $message */
-    private $message;
+    private string $message;
 
     /**
      * @var bool $xunidesign
      */
-    private $xunidesign;
+    private bool $xunidesign;
 
     /**
      * @return string

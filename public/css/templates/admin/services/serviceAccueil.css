@@ -6,7 +6,7 @@
 .admin-grid-service {
     display: grid;
     grid-template-columns: repeat(5,260px);
-    grid-template-rows: repeat(5,200px);
+    grid-template-rows: repeat(5,260px);
     grid-gap: 10px;
 }
 
@@ -89,4 +89,92 @@
 
 .a4, .b4, .c4, .d4, .e4 {
     grid-row: 4/5;
+}
+
+.form_group {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.form_group:nth-of-type(3){
+    margin-bottom: 5px;
+}
+
+.form_group label {
+    color: white;
+    margin: 6px 4px 5px;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.form_group input {
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    width: 230px;
+    height: 25px;
+    font-family: Nexa-Light, sans-serif;
+    padding-left: 5px;
+}
+
+#services_actif, #services_background {
+    outline: none;
+    border: none;
+}
+
+#services_background {
+    margin-left: 5px;
+
+}
+
+
+.z1 form .form_group {
+    margin-bottom: 10px;
+}
+
+.z1 form .form_group:first-child{
+    margin-top: 10px;
+}
+
+.z1 form .form_group:nth-of-type(3) input {
+    width: 500px;
+}
+
+.cancel, .save {
+    border: none;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+}
+
+.save {
+    background-color: limegreen;
+    right: 43px;
+}
+
+.cancel {
+    background-color: lightcoral;
+    right: 18px;
+
+}
+
+[name="services"]{
+    position: relative;
+}
+
+.block-info button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+}
+
+.block-info .formulaire-admin-serviceAccueil {
+    left: 17px;
+    background-color: limegreen;
+}
+
+.block-info .trash {
+    right: 17px;
+    background-color: lightcoral;
 }

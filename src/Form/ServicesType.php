@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Service;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -23,6 +24,9 @@ class ServicesType extends AbstractType
                 ],
                 "required" => true,
                 "mapped" => true,
+                "row_attr" => [
+                    "class" => "form_group"
+                ]
             ])
             ->add('sbtitle', TextType::class, [
                 "constraints" => [
@@ -31,6 +35,10 @@ class ServicesType extends AbstractType
                 ],
                 "required" => true,
                 "mapped" => true,
+                "row_attr" => [
+                    "class" => "form_group"
+                ],
+                "label" => "Sous titre"
             ])
             ->add('actif', ChoiceType::class, [
                 "expanded" => false,
@@ -43,7 +51,10 @@ class ServicesType extends AbstractType
                 "choices" => [
                     "oui" => true,
                     "Non" => false,
-                ]
+                ],
+                "row_attr" => [
+                    "class" => "form_group"
+                ],
             ])
             ->add('background', ChoiceType::class, [
                 "mapped" => true,
@@ -59,18 +70,18 @@ class ServicesType extends AbstractType
                 ],
                 "expanded" => false,
                 "multiple" => false,
+                "row_attr" => [
+                    "class" => "form_group"
+                ]
             ])
             ->add('title', TextType::class, [
                 "mapped" => true,
                 "required" => true,
                 "constraints" => [new NotBlank(["message" => "ce champs est obligatoire"])],
-            ])
-            ->add('category', ChoiceType::class, [
-                "mapped" => false,
-                "required" => true,
-                "constraints" => [new NotBlank(["message" => "ce champs est obligatoire"])],
-                "expanded" => false,
-                "multiple" => false,
+                "row_attr" => [
+                    "class" => "form_group"
+                ],
+                "label" => "Titre"
             ])
         ;
     }
@@ -79,6 +90,7 @@ class ServicesType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Service::class,
+            'list' => null,
         ]);
     }
 }

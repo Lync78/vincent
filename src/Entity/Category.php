@@ -6,8 +6,8 @@ use App\Entity\trait\Titre;
 use App\Repository\CategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Cache\CollectionCacheEntry;
 use Doctrine\ORM\Mapping as ORM;
-use JetBrains\PhpStorm\Pure;
 
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 #[ORM\Table(name: 'category')]
@@ -17,13 +17,14 @@ class Category extends EntityAbstract
     use Titre;
 
     #[ORM\OneToMany(mappedBy: "category", targetEntity: Service::class, orphanRemoval: true)]
-    private ArrayCollection $services;
+    private Collection $services;
 
-    #[Pure] public function __construct()
+
+    public function __toString(): string
     {
-        $this->services = new ArrayCollection();
+        return $this->title;
     }
-    
+
     /**
      * @return Collection<int, Service>
      */
