@@ -55,6 +55,7 @@ class ServicesType extends AbstractType
                 "row_attr" => [
                     "class" => "form_group"
                 ],
+                "label" => "Visible"
             ])
             ->add('background', ChoiceType::class, [
                 "mapped" => true,

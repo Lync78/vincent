@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block js %}
+    <script src="{{ asset('js/admin/Service.js') }}"></script>
 {% endblock %}
 
 {% block main %}
@@ -15,33 +16,41 @@
         {% set i = 0 %}
         {% for service in services %}
             <div class="{{ service.position ~ " " ~ service.background }} block-info">
-                <div>
+                <div class="information">
                     <h3>{{ service.title }}</h3>
                     <p class="pfirst">{{ service.sbtitle }}</p>
                     <div class="group-last">
                         <p class="last">{{ service.description }}</p>
                     </div>
-                    <button class="formulaire-admin-serviceAccueil">
+                    <button class="formulaire-admin-serviceAccueil d-none">
                         <i class="fa-regular fa-pen-to-square"></i>
                     </button>
-                    <button class="trash">
+                    <button class="trash d-none">
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
-
                 {{ form_start(forms[i]) }}
                     {{ form_row(forms[i].title) }}
                     {{ form_row(forms[i].sbtitle) }}
                     {{ form_row(forms[i].description) }}
                     {{ form_row(forms[i].actif) }}
                     {{ form_row(forms[i].background) }}
-                    <button class="save">
+                    <button class="save" type="submit">
                         <i class="fa-regular fa-floppy-disk"></i>
                     </button>
-                    <button class="cancel">
+                    <button type="button" class="cancel">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 {{ form_end(forms[i]) }}
+
+                {{ form_start(deletes[i]) }}
+                    {{ form_row(deletes[i].delete) }}
+                <div>
+                    <label>Confirmer la suppression ?</label>
+                </div>
+                <button type="submit"><i class="fa-solid fa-check"></i></button>
+                <button type="button"><i class="fa-solid fa-xmark"></i></button>
+                {{ form_end(deletes[i]) }}
                 {% set i = i + 1 %}
             </div>
         {% endfor %}
