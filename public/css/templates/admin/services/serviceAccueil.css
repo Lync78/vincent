@@ -1,6 +1,18 @@
 .page-admin section {
     margin-left: 250px;
+}
+
+.page-admin section:first-child {
     margin-top: 50px;
+}
+
+.page-admin section:last-child {
+    margin-top: 25px;
+}
+
+.message {
+    display: flex;
+    flex-flow: wrap row;
 }
 
 .admin-grid-service {

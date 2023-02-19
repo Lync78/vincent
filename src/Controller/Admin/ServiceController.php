@@ -5,11 +5,9 @@ namespace App\Controller\Admin;
 use App\Controller\AbstractController;
 use App\Entity\Service;
 use App\Factory\CategoryServiceFactory;
-use App\Form\DeleteServiceType;
 use App\Form\DeleteType;
 use App\Form\ServicesType;
 use Doctrine\Persistence\ManagerRegistry;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
@@ -53,7 +51,6 @@ class ServiceController extends AbstractController
             $deletes[] = $deleteForm->createView();
             $forms[] = $form->createView();
         }
-
 
         return $this->render('admin/service/index.html.twig', ['var' => 'service', "services" => $services, "forms" => $forms,"deletes" => $deletes]);
     }

@@ -12,7 +12,23 @@
 {% endblock %}
 
 {% block main %}
+    <section>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="message flash-{{ label }}">
+                    <h3>{{ message }}</h3>
+                    {% if label == "success" %}
+                        <i class="fa-solid fa-check"></i>
+                    {% else %}
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    {% endif %}
+
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </section>
     <section class="admin-grid-service">
+
         {% set i = 0 %}
         {% for service in services %}
             <div class="{{ service.position ~ " " ~ service.background }} block-info">
