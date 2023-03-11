@@ -332,16 +332,16 @@ hr {
     height: 100%;
 }
 
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
     width: 7.5px;
 }
 
-::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track{
     background-color: #17242E;
     opacity: 30%;
 }
 
-::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
     border-radius: 5px;
     border: 0.5px transparent solid;
     opacity: 50%;

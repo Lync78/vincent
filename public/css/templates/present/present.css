@@ -9,12 +9,12 @@
 }
 
 .title{
-    width: 700px;
+    width: 826px;
     margin: 66px auto 29px;
 }
 
 .title h1 {
-    width: 407px;
+    width: 550px;
     font-size: 40px;
     line-height: 49px;
     letter-spacing: 8px;
@@ -153,11 +153,19 @@
     width: 265px;
     height: 92px;
     position: absolute;
-    right: -2px;
+    right: 66px;
     top: -19px;
     background-color: #17252F;
     z-index: 300;
     box-shadow: 10px 10px 20px #00000029;
+}
+
+.box-presents {
+   position: relative;
+}
+
+.book-present-select ul {
+    cursor: pointer;
 }
 
 .book-present-select ul li p{
@@ -169,7 +177,6 @@
     color: white;
     text-transform: uppercase;
     padding: 7px 0 5px 10px;
-    cursor: default;
 }
 
 .navigation li:hover{
@@ -185,13 +192,13 @@
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
-    width: 1689px;
+    width: 1685px;
     margin: 0 auto 20px;
 
 }
 
 .recherche-title {
-    width: 1417px;
+    width: 1413px;
     height: 44px;
     background: #17252F 0 0 no-repeat padding-box;
     box-shadow: 10px 10px 20px #00000029;
@@ -235,11 +242,19 @@
 }
 
 .livre-book {
-    background: transparent linear-gradient(180deg, #01ACF880 0%, #004058 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;;
     box-shadow: 10px 10px 20px #00000029;
-    border: 2px solid #01ACF8;
     width: 1685px;
     margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.gallery {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: nowrap row;
 }
 
 .livre-book h2 {
@@ -252,8 +267,7 @@
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 14px;
-    background: transparent linear-gradient(270deg, #01ACF8 0%, #032F50 100%) 0 0 no-repeat padding-box;
-    border-bottom: #00baff 2px solid;
+    background: transparent linear-gradient(90deg, #00BAFF 0%, #0095FF 100%) 0 0 no-repeat padding-box;
 }
 
 .livre-book h2 span {
@@ -262,10 +276,28 @@
 
 .livre-book div {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 10px auto;
-    width: 1680px;
+    overflow-x: scroll;
+    margin: 10px 0 5px 10px;
+    width: 1665px;
+    padding-bottom: 5px;
+}
+
+.livre-book div::-webkit-scrollbar {
+    height: 7.5px;
+}
+
+.livre-book div::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    border: 0.5px transparent solid;
+    opacity: 50%;
+    background-color: #00baff;
+}
+
+.livre-book div img {
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+
 }
 
 .livre-book div img {

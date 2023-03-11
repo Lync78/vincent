@@ -25,14 +25,14 @@
                     <hr>
                     <hr>
                 </div>
-                <h1>book <span>present</span></h1>
+                <h1>parti <span>jeux vidéos</span></h1>
                 <div class="element">
                     <hr>
                     <hr>
                     <hr>
                 </div>
             </article>
-            <article class="box-search d-none">
+            <article class="box-search">
                 <div class="recherche-title">
                     <h3>recherche</h3>
                 </div>
@@ -66,88 +66,9 @@
                 </div>
                 <div class="livre-book">
                     <h2>logos client <span>esports & logotype</span></h2>
-                    <div class="range-6">
-                        {% set i = 1 %}
-                        {% for image in 1..18 %}
-                            {% if i < 15 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo-clients/logo_client_'~ image ~'.png') }}" alt="{{ 'logo_client_'~ image ~ '.png' }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir.png') }}" alt="logo_a_venir.png">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h2>logos excusif <span>logotype & autres</span></h2>
-                    <div class="range-6">
-                        {% set i = 1 %}
-                        {% for image in 1..12 %}
-                            {% if i < 12 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo-exclusif/logo_exclusif_'~ image ~'.png') }}" alt="{{ 'logo_exclusif_'~ image ~ '.png' }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir.png') }}" alt="logo_a_venir.png">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h2>logos collection <span>xunirobot</span></h2>
-                    <div class="range-6">
-                        {% set i = 1 %}
-                        {% for image in 1..6 %}
-                            {% if i < 3 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logos-collection/logo_collection_'~ image ~'.png') }}" alt="{{ asset('logo_collection_'~ image ~ '.png') }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir.png') }}" alt="logo_a_venir.png">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h2>Badges & emotes clients <span>twitch design</span></h2>
-                    {% set i = 1 %}
-                    <div class="range-4">
-                        {% set i = 1 %}
-                        {% for image in 1..8 %}
-                            {% if i < 8 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/badges-emotes-client/badges_emotes_client_'~ image ~'.png') }}" alt="{{ 'badges_emotes_client_'~ image ~ '.png' }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h2>badges & emotes exclusif <span>twitch design</span></h2>
-                    <div class="range-4">
-                        {% set i = 1 %}
-                        {% for image in 1..4 %}
-                            {% if i < 4 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/badges-emotes-exclusif/badges_emotes_exclusif_'~ image ~'.png') }}" alt="{{ 'badges_emotes_exclusif_'~ image ~ '.png' }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h2>bannières clients <span>youtube & twitter & twitch</span></h2>
-                    <div class="range-4">
-                        {% set i = 1 %}
-                        {% for image in 1..8 %}
-                            {% if i < 9 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/banniere-clients/banniere_client_'~ image ~'.png') }}" alt="{{ 'banniere_client_'~ image ~ '.png' }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h2>bannière exclusif <span>youtube & twitter & twitch</span></h2>
-                    <div class="range-4">
-                        {% set i = 1 %}
-                        {% for image in 1..8 %}
-                            {% if i < 7 %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/banniere-exclusif/banniere_exclusif_'~ image ~'.png') }}" alt="{{ 'banniere_exclusif_'~ image ~ '.png' }}">
-                                {% set i = i + 1 %}
-                            {% else %}
-                                <img data-fancybox="gallery" src="{{ asset('image/present/logo_a_venir_large.png') }}" alt="logo_a_venir_large.png">
-                            {% endif %}
+                    <div class="gallery">
+                        {% for i in 0..9 %}
+                        <img data-fancybox="gallery" src="{{ asset('image/book/image-1.png') }}" alt="{{ 'logo_client_1.png' }}">
                         {% endfor %}
                     </div>
                 </div>
