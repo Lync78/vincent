@@ -53,7 +53,7 @@
     div.box{
         width: 330px;
         height: 100px;
-        background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #314757 0%, #1A2429 100%) 0 0 no-repeat padding-box;
         box-shadow: 0 10px 10px #00000029;
         position: relative;
     }
@@ -103,7 +103,7 @@
 
     .tableau-prix{
         position: relative;
-        background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;
         box-shadow: 15px 15px 20px #00000029;
         height: 3007px;
         margin: 28px auto 23px;
@@ -802,14 +802,6 @@
         font-size: 18px;
     }
 
-    div.box{
-        width: 394px;
-        height: 100px;
-        background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
-        box-shadow: 0 10px 10px #00000029;
-        position: relative;
-    }
-
     .second-article hr {
         opacity: 50%;
         display: block;
@@ -1026,14 +1018,13 @@
 }
 
 .first-section{
-
-    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(270deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
 }
 
 .second-section{
     height: auto;
     overflow: auto;
-    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
     border-top: 4px white solid;
 }
 
@@ -1481,7 +1472,7 @@
 }
 
 .third-section{
-    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(270deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
 }
 
 
@@ -1514,10 +1505,12 @@
 .boxes-hr {
     height: 321px;
     border: 2px white solid;
+    align-self: center;
+    margin-bottom: 60px;
 }
 
 .box-div{
-    height: 325px;
+    height: 423px;
 }
 
 .title-boxe h3{

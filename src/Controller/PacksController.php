@@ -18,7 +18,7 @@ class PacksController extends AbstractController
 {
 
 
-    public function __construct(MailerInterface $mailer, ManagerRegistry $managerRegistry)
+    public function __construct(MailerInterface $mailer, ManagerRegistry $managerRegistry, private PackRepository $packRepository)
     {
         parent::__construct($mailer, $managerRegistry);
 
@@ -28,10 +28,7 @@ class PacksController extends AbstractController
     public function index(): Response
     {
 
-        $test = new Pack();
-        dump($test);
-
-        $packs = $this->getManager()->getRepository(Pack::class)->findAll();
+        $packs = $this->packRepository->findAll();
 
         return $this->render("packs/presentation-packs.html.twig", ["packs"=>$packs]);
     }

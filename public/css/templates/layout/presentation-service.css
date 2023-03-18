@@ -143,7 +143,7 @@
         position: relative;
         width: 1019px;
         height: 100px;
-        background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #314757 0%, #1A2429 100%) 0 0 no-repeat padding-box;
         box-shadow: 0 10px 10px #00000029;
     }
 
@@ -184,5 +184,5 @@
 }
 
 .section-first-presentation-service{
-    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
 }

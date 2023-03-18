@@ -5,7 +5,7 @@
 }
 
 .first-section-present{
-    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
 }
 
 .title{
@@ -242,7 +242,7 @@
 }
 
 .livre-book {
-    background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;;
+    background: transparent linear-gradient(180deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;;
     box-shadow: 10px 10px 20px #00000029;
     width: 1685px;
     margin: 0 auto;
@@ -267,7 +267,7 @@
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 14px;
-    background: transparent linear-gradient(90deg, #00BAFF 0%, #0095FF 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #32444B 0%, #566D7E 100%) 0 0 no-repeat padding-box;
 }
 
 .livre-book h2 span {

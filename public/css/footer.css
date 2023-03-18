@@ -2,7 +2,7 @@
     .fourth-section{
         overflow: auto;
         height: auto;
-        background: transparent linear-gradient(270deg, #17252F 0%, #001224 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #2F3B40 0%, #242C30 100%) 0 0 no-repeat padding-box;
     }
 
     .questions a {
@@ -10,9 +10,9 @@
         padding: 22px 20px 21px 20px;
         text-align: center;
         letter-spacing: 3.6px;
-        color: #FFFFFF;
+        color: #6E9BAF;
         text-shadow: 0 3px 6px #00000029;
-        background: transparent linear-gradient(270deg, #29F19C 0%, #02A1F9 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #515C61 0%, #333B3E 100%) 0 0 no-repeat padding-box;
         box-shadow: inset 6px 5px 10px #00000029, 5px 12px 8px #00000029;
         font-weight: normal;
         font-size: 1rem;
@@ -24,6 +24,7 @@
     .questions a span {
         font-family: Nexa-Light, sans-serif;
         font-weight: bold;
+        color: #6E9BAF;
     }
 
     .article-email h1{
@@ -104,7 +105,7 @@
 
 footer section:nth-of-type(2){
     border-top: 1px white solid;
-    background: #151C25 0 0 no-repeat padding-box;
+    background: #4E5A60 0 0 no-repeat padding-box;
 }
 
 .logo-footer img {

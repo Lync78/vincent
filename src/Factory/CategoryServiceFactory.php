@@ -5,12 +5,13 @@ namespace App\Factory;
 
 
 use App\Entity\Category;
+use App\Repository\CategoryRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 class CategoryServiceFactory
 {
 
-    public function __construct(private ManagerRegistry $managerRegistry){}
+    public function __construct(private CategoryRepository $categoryRepository){}
 
     /**
      * @return array
@@ -18,7 +19,7 @@ class CategoryServiceFactory
     public function list(): array
     {
 
-        $categorys = $this->managerRegistry->getRepository(Category::class)->findAll();
+        $categorys = $this->categoryRepository->findAll();
 
         $list = [];
 

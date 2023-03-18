@@ -259,7 +259,7 @@
 }
 
 .en-tete{
-    background: transparent linear-gradient(270deg, #3C87BC 0%, #005D80 100%) 0 0 no-repeat padding-box;;
+    background: transparent linear-gradient(90deg, #092E48 0%, #005D80 100%) 0 0 no-repeat padding-box;;
     border-bottom: 2px #00BAFF solid;
 }
 
@@ -303,7 +303,7 @@
 
 .list-menu li:hover > ul, .list-menu li:hover h1, .list-menu li:hover .lien-menu ,.list-menu li:hover .title{
     z-index: 300;
-    background: transparent linear-gradient(90deg, #00BAFF 0%, #3C87BC 100%) 0 0 no-repeat padding-box;;
+    background: transparent linear-gradient(90deg, #3F606E 0%, #24353D 100%) 0 0 no-repeat padding-box;;
 }
 
 .list-menu li > ul li a {

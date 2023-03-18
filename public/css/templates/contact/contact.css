@@ -74,7 +74,7 @@
     }
 
     .formulaire-contact {
-        background: transparent linear-gradient(180deg, #17242E 0%, #191F24 48%, #1A1A1B 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;
         box-shadow: 0 5px 3px #00000029;
         width: 330px;
         height: 755px;
@@ -400,7 +400,7 @@
     .guillemet{
         width: 507px;
         height: 142px;
-        background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(270deg, #314757 0%, #1A2429 100%) 0 0 no-repeat padding-box;
         box-shadow: 0 10px 10px #00000029;
         position: relative;
     }
@@ -409,8 +409,6 @@
         margin-top: 26px;
         margin-right: 20px;
     }
-
-
 
     .suivi h3,h4 {
         letter-spacing: 5.5px;
@@ -464,7 +462,7 @@
 
 
 .section-contact{
-    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
 }
 
 .title h1, .title-second h2{
@@ -490,26 +488,13 @@
 }
 
 
-
 .suivi h3 {
     margin-right: 8px;
 }
 
-.suivi img {
-    margin-right: 8px;
-}
-
-
-
 .titre-formulaire {
     background: transparent linear-gradient(90deg, #1D588B 0%, #3C87BC 100%) 0 0 no-repeat padding-box;
     height: 55px;
-}
-
-
-
-.group-email{
-
 }
 
 .group-email, .group-pseudo {

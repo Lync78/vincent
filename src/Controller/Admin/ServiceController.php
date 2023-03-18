@@ -7,6 +7,8 @@ use App\Entity\Service;
 use App\Factory\CategoryServiceFactory;
 use App\Form\DeleteType;
 use App\Form\ServicesType;
+use App\Repository\CategoryRepository;
+use App\Repository\ServiceRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,7 +18,12 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route(path: "/backendaccess/admin/service", name: "admin_service_")]
 class ServiceController extends AbstractController
 {
-    public function __construct(MailerInterface $mailer, ManagerRegistry $managerRegistry)
+    public function __construct(
+        MailerInterface $mailer,
+        ManagerRegistry $managerRegistry,
+        private ServiceRepository $serviceRepository,
+        private CategoryRepository $categoryRepository
+    )
     {
         parent::__construct($mailer,$managerRegistry);
     }
@@ -26,12 +33,12 @@ class ServiceController extends AbstractController
     public function index(): Response
     {
 
-        $services = $this->getManager()->getRepository(Service::class)->findAll();
+        $services = $this->serviceRepository->findAll();
 
         $forms = [];
         $deletes = [];
 
-        $categorys = new CategoryServiceFactory($this->managerRegistry);
+        $categorys = new CategoryServiceFactory($this->categoryRepository);
 
         /** @var Service $service */
         foreach ($services as $service){
@@ -59,7 +66,7 @@ class ServiceController extends AbstractController
     public function getTraitementService(Service $service,Request $request)
     {
 
-        $categorys = new CategoryServiceFactory($this->managerRegistry);
+        $categorys = new CategoryServiceFactory($this->categoryRepository);
 
         $form = $this->createForm(ServicesType::class, $service, [
             "action" => $this->generateUrl("admin_service_formulaire", ["id" => $service->getId()]),
