@@ -158,26 +158,6 @@
         margin-bottom: 10px;
     }
 
-    .vert-blue .slot {
-        background: transparent linear-gradient(90deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
-    }
-
-    .darkBlue-blue .slot {
-        background: transparent linear-gradient(270deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
-    }
-
-    .blue-darkBlue .slot {
-        background: transparent linear-gradient(270deg, #222526 0%, #005D80 100%) 0 0 no-repeat padding-box;
-    }
-
-    .purple-blue .slot {
-        background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
-    }
-
-    .blue-black .slot {
-        background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
-    }
-
     .tableau-prix-v360 hr {
         width: 260px;
         margin: 0 auto;
@@ -534,6 +514,12 @@
 @media (min-width: 892px) {
     .fourth-article{
         width: 85%;
+    }
+}
+
+@media screen and (min-width: 911px) {
+    div.box {
+        width: 394px;
     }
 }
 
@@ -1161,28 +1147,45 @@
     grid-column: 5/6;
 }
 
-.a4 {
-    background: transparent linear-gradient(90deg, #B4FF00 0%, #056D01 100%) 0 0 no-repeat padding-box !important;
+.couleur-animation {
+    background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.couleur-graphisme-gaming {
+    background: transparent linear-gradient(270deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.couleur-graphisme-entreprise {
+    background: transparent linear-gradient(270deg, #222526 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.couleur-option-commande {
+    background: transparent linear-gradient(90deg, #B4FF00 0%, #056D01 100%) 0 0 no-repeat padding-box;
+}
+
+.couleur-creations-dev {
+    background: transparent linear-gradient(90deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
+}
+
+.couleur-packs {
+    background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
 }
 
 .a4, .b4, .c4, .d4, .e4{
     grid-row: 4/5;
-    background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
+
 }
 
 .a3, .b3, .c3, .d3, .e3{
     grid-row: 3/4;
-    background: transparent linear-gradient(270deg, #222526 0%, #005D80 100%) 0 0 no-repeat padding-box;
 }
 
 .a2, .b2, .c2, .d2, .e2{
-    background: transparent linear-gradient(270deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
     grid-row: 2/3;
 }
 
 .a1, .b1, .c1, .d1, .e1{
     grid-row: 1/2;
-    background: transparent linear-gradient(90deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
 }
 
 .a3 h3{
@@ -1229,7 +1232,6 @@
     margin-left: 19.76px;
     width: 800px;
     height: 115px;
-    background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
     margin-top: 0 !important;
     margin-right: 10px;
 }
@@ -1238,7 +1240,7 @@
     margin-top: 0 !important;
     width: 260px;
     height: 115px;
-    background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
+
 }
 
 .grid-prix .excel h2{
@@ -1415,7 +1417,6 @@
     width: 260px;
     height: 115px;
     margin-left: 10px;
-    background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
 }
 
 .pack-animation h3 {

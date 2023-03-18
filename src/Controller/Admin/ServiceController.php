@@ -42,6 +42,7 @@ class ServiceController extends AbstractController
 
         /** @var Service $service */
         foreach ($services as $service){
+            dump($service);
             $form = $this->createForm(ServicesType::class, $service, [
                 "action" => $this->generateUrl("admin_service_formulaire", ["id" => $service->getId()]),
                 "method" => "POST",
@@ -67,7 +68,6 @@ class ServiceController extends AbstractController
     {
 
         $categorys = new CategoryServiceFactory($this->categoryRepository);
-
         $form = $this->createForm(ServicesType::class, $service, [
             "action" => $this->generateUrl("admin_service_formulaire", ["id" => $service->getId()]),
             "method" => "POST",
