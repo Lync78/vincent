@@ -15,7 +15,7 @@ class Service extends EntityAbstract
     use Titre;
     
     #[ORM\Column(type: "string", length: "255")]
-    private string $description;
+    private ?string $description = null;
 
     #[ORM\Column(type: "string", length: "255")]
     private string $position;
@@ -43,7 +43,7 @@ class Service extends EntityAbstract
         return $this->description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
 

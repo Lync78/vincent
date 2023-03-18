@@ -81,7 +81,7 @@
                     <div class="vert-blue">
                         {% set i = 1 %}
                         {% for data in creations %}
-                            <div class="slot slot-{{ i }} creations">
+                            <div class="slot slot-{{ i }} {{ data.background }} creations">
                                 <h2>{{ data.getTitle }}</h2>
                                 <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
@@ -98,7 +98,7 @@
                     <div class="darkBlue-blue">
                         {% set i = 1 %}
                         {% for data in gjv %}
-                            <div class="slot slot-{{ i }} gjv">
+                            <div class="slot slot-{{ i }} {{ data.background }} gjv">
                                 <h2>{{ data.getTitle }}</h2>
                                 <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
@@ -115,7 +115,7 @@
                     <div class="blue-darkBlue">
                         {% set i = 1 %}
                         {% for data in entreprise %}
-                            <div class="slot slot-{{ i }} entreprise">
+                            <div class="slot slot-{{ i }} {{ data.background }} entreprise">
                                 <h2>{{ data.getTitle }}</h2>
                                 <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
@@ -132,7 +132,7 @@
                     <div class="purple-blue">
                         {% set i = 1 %}
                         {% for data in option %}
-                            <div class="slot slot-{{ i }} option" {% if i == 4 %}id="exception_slot"{% endif %}>
+                            <div class="slot slot-{{ i }} {{ data.background }} option" >
                                 <h2>{{ data.getTitle }}</h2>
                                 <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
@@ -149,7 +149,7 @@
                     <div class="blue-black">
                         {% set i = 1 %}
                         {% for data in packs %}
-                            <div class="slot slot-{{ i }} packs">
+                            <div class="slot slot-{{ i }} {{ data.background }} packs">
                                 <h2>{{ data.getTitle }}{{ i == 1 ? '<span> (classique) </span>' : '' }}</h2>
                                 <p class="sous-description">{{ data.getSbtitle == "none" ? "" : data.getSbtitle }}</p>
                                 <div>
@@ -165,14 +165,14 @@
                         <h1>creations <span>developpements</span></h1>
                         <h1>graphisme <span>jeux videos</span></h1>
                         <h1>graphisme <span>entreprise</span></h1>
-                        <h1>option <span><br>+ anmimation</span></h1>
+                        <h1>option <span><br>+ animation</span></h1>
                     </aside>
                     <aside>
                         <hr class="hr-blanc">
                     </aside>
                     <aside class="d-grid grid-prix">
                         {% for service in services %}
-                            <div class="{{ service.getPosition }} excel">
+                            <div class="{{ service.getPosition }} {{ service.background }} excel">
                                 <h2>{{ service.getTitle }}</h2>
                                 <p>{{ service.getSbtitle }}</p>
                                 <div class="d-flex row-wrap justify-end">
@@ -187,14 +187,14 @@
                     <aside>
                         <hr class="second-hr-blanc">
                     </aside>
-                    <aside class="box-prix excel">
+                    <aside class="box-prix {{ packs[0].background }} excel">
                         <h2>{{ packs[0].getTitle }} <span>(classique)</span></h2>
                         <p>{{ packs[0].getSbtitle }}</p>
                         <div class="d-flex justify-end row-wrap">
                             <h3>{{ packs[0].getDescription }}</h3>
                         </div>
                     </aside>
-                    <aside class="pack-animation">
+                    <aside class="pack-animation {{ packs[1].background }}">
                         <h2>{{ packs[1].getTitle }}</h2>
                         {% if packs[1].getSbtitle == "none" %}
                             <p></p>
@@ -205,7 +205,7 @@
                             <h3>{{ packs[1].getDescription }}</h3>
                         </div>
                     </aside>
-                    <aside class="pack-full-anime">
+                    <aside class="pack-full-anime {{ packs[2].background }}">
                         <h2>{{ packs[2].getTitle }}</h2>
                         {% if packs[2].getSbtitle == "none" %}
                             <p></p>

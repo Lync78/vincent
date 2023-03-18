@@ -19,10 +19,9 @@ class ServicesType extends AbstractType
         $builder
             ->add('description', TextType::class, [
                 "constraints" => [
-                    new NotBlank(["message" => "ce champs est obligatoire"]),
-                    new Length(["max" => 50])
+                    new Length(["max" => 255])
                 ],
-                "required" => true,
+                "required" => false,
                 "mapped" => true,
                 "row_attr" => [
                     "class" => "form_group"
@@ -45,9 +44,6 @@ class ServicesType extends AbstractType
                 "multiple" => false,
                 "required" => true,
                 "mapped" => true,
-                "constraints" => [
-                    new NotBlank(["message" => "ce champs est obligatoire"])
-                ],
                 "choices" => [
                     "oui" => true,
                     "Non" => false,
@@ -61,14 +57,14 @@ class ServicesType extends AbstractType
                 "mapped" => true,
                 "required" => true,
                 "constraints" => [new NotBlank(["message" => "ce champs est obligatoire"])],
-                "choices" => [
-                    "couleurCreations" => "couleurCreations",
-                    "couleurGraphisme" => "couleurGraphisme",
-                    "couleurGraphismeEntreprise" => "couleurGraphismeEntreprise",
-                    "couleurAnimation" => "couleurAnimation",
-                    "couleurOptionCommande" => "couleurOptionCommande",
-                    "couleurPacks" => "couleurPacks",
-                ],
+                "choices" => array_flip([
+                    "couleur-creations-dev" => "couleurCreations",
+                    "couleur-graphisme-gaming" => "couleurGraphisme",
+                    "couleur-graphisme-entreprise" => "couleurGraphismeEntreprise",
+                    "couleur-animation" => "couleurAnimation",
+                    "couleur-option-commande" => "couleurOptionCommande",
+                    "couleur-packs" => "couleurPacks",
+                ]),
                 "expanded" => false,
                 "multiple" => false,
                 "row_attr" => [
