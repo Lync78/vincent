@@ -249,24 +249,22 @@
             </article>
             <article class="tableau d-flex row-wrap justify-between">
                 <aside class="boxes align-self-center d-flex row-wrap justify-between">
-                    <div class="box-div boxes-first d-flex column-wrap justify-between">
-                        <img src="{{ asset('image/home/home-tableau.png') }}" alt="home-tableau.png">
-                        <div class="title-boxe"><h3>titre nouveauté</h3></div>
-                    </div>
-                    <hr class="boxes-hr">
-                    <div class="box-div boxes-second d-flex column-wrap justify-between">
-                        <img src="{{ asset('image/home/home-tableau.png') }}" alt="home-tableau.png">
-                        <div class="title-boxe"><h3>titre nouveauté</h3></div>
-                    </div>
-                    <div class="box-div boxes-third d-flex column-wrap justify-between">
-                        <img src="{{ asset('image/home/home-tableau.png') }}" alt="home-tableau.png">
-                        <div class="title-boxe"><h3>titre nouveauté</h3></div>
-                    </div>
-                    <hr class="boxes-hr">
-                    <div class="box-div boxes-four d-flex column-wrap justify-between">
-                        <img src="{{ asset('image/home/home-tableau.png') }}" alt="home-tableau.png">
-                        <div class="title-boxe"><h3>titre nouveauté</h3></div>
-                    </div>
+                    {% set i = 1 %}
+                    {% for exclusivite in exclusivites %}
+                        {% if i == 1 or i == 3 %}
+                        <div class="box-div d-flex column-wrap justify-between">
+                            <img src="{{ asset(exclusivite.img) }}" alt="home-tableau.png">
+                            <div class="title-boxe"><h3>{{ exclusivite.title }}</h3></div>
+                        </div>
+                        <hr class="boxes-hr">
+                        {% else %}
+                            <div class="box-div d-flex column-wrap justify-between">
+                                <img src="{{ asset(exclusivite.img) }}" alt="home-tableau.png">
+                                <div class="title-boxe"><h3>{{ exclusivite.title }}</h3></div>
+                            </div>
+                        {% endif %}
+                        {% set i = i + 1 %}
+                    {% endfor %}
                 </aside>
             </article>
             <article class="d-flex row-wrap justify-end mt-perso">

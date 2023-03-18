@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\Service;
 use App\Factory\MailFactory;
 use App\Form\FormContactType;
+use App\Repository\ExclusiviteRepository;
+use App\Repository\ServiceRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,7 +17,12 @@ use App\Factory\ContactFactory;
 class MainController extends AbstractController
 {
 
-    public function __construct(MailerInterface $mailer, ManagerRegistry $managerRegistry)
+    public function __construct(
+    MailerInterface $mailer,
+    ManagerRegistry $managerRegistry,
+    private ServiceRepository $serviceRepository,
+    private ExclusiviteRepository $exclusiviteRepository
+    )
     {
         parent::__construct($mailer, $managerRegistry);
     }
@@ -28,23 +34,25 @@ class MainController extends AbstractController
         $list = [1,2,3,4];
 
         foreach ($list as $value){
-            $data[] = $this->getManager()->getRepository(Service::class)->findBy(["category"=>$value,"actif"=>true]);
+            $data[] = $this->serviceRepository->findBy(["category"=>$value,"actif"=>true]);
 
             if ($value == 1){
-                $creations = $this->getManager()->getRepository(Service::class)->findBy(["category"=>1,"actif"=>true]);
+                $creations = $this->serviceRepository->findBy(["category"=>1,"actif"=>true]);
             }
             elseif ($value == 2){
-                $gjv = $this->getManager()->getRepository(Service::class)->findBy(["category"=>2, "actif"=> true]);
+                $gjv = $this->serviceRepository->findBy(["category"=>2, "actif"=> true]);
             }
 
             elseif ($value == 3){
-                $gentreprise = $this->getManager()->getRepository(Service::class)->findBy(["category"=>3,"actif"=>true]);
+                $gentreprise = $this->serviceRepository->findBy(["category"=>3,"actif"=>true]);
             }
 
             else {
-                $option = $this->getManager()->getRepository(Service::class)->findBy(["category"=>4,"actif"=>true]);
+                $option = $this->serviceRepository->findBy(["category"=>4,"actif"=>true]);
             }
         }
+
+        $exclusivites = $this->exclusiviteRepository->findBy([],["id" => "ASC"],4);
 
         $services = [];
 
@@ -53,7 +61,7 @@ class MainController extends AbstractController
                 $services[] = $service;
             }
         }
-        $packs = $this->getManager()->getRepository(Service::class)->findBy(["category"=>5]);
+        $packs = $this->serviceRepository->findBy(["category"=>5]);
 
         $data = [
             "packs"=>$packs,
@@ -62,6 +70,7 @@ class MainController extends AbstractController
             "gjv"=> $gjv,
             "entreprise" => $gentreprise,
             "option" => $option,
+            "exclusivites" => $exclusivites,
         ];
 
         return $this->render("main/index.html.twig", $data);

@@ -24,6 +24,7 @@ class CarouselController extends AbstractController
         $view = $this->createForm(ViewCarouselType::class);
 
         $data = [
+            "var" => "carousel",
             "addForm" => $add->createView(),
             "viewForm" => $view->createView(),
         ];

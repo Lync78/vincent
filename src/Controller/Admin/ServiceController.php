@@ -42,7 +42,6 @@ class ServiceController extends AbstractController
 
         /** @var Service $service */
         foreach ($services as $service){
-            dump($service);
             $form = $this->createForm(ServicesType::class, $service, [
                 "action" => $this->generateUrl("admin_service_formulaire", ["id" => $service->getId()]),
                 "method" => "POST",
@@ -107,8 +106,7 @@ class ServiceController extends AbstractController
             $service->setSbtitle("Sous titre");
             $service->setDescription("Description");
 
-            $this->getManager()->persist($service);
-            $this->getManager()->flush();
+            $this->serviceRepository->add($service);
 
             $this->addFlash("success","La suppression a bien été effectué");
         }
@@ -119,5 +117,4 @@ class ServiceController extends AbstractController
 
         return $this->redirectToRoute("admin_service_service");
     }
-
 }
