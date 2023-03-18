@@ -1,0 +1,74 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/templates/admin/services/serviceAccueil.css') }}" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('js/admin/Service.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <section>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="message flash-{{ label }}">
+                    <h3>{{ message }}</h3>
+                    {% if label == "success" %}
+                        <i class="fa-solid fa-check"></i>
+                    {% else %}
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    {% endif %}
+
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </section>
+    <section class="admin-grid-service">
+
+        {% set i = 0 %}
+        {% for service in services %}
+            <div class="{{ service.position ~ " " ~ service.background }} block-info">
+                <div class="information">
+                    <h3>{{ service.title }}</h3>
+                    <p class="pfirst">{{ service.sbtitle }}</p>
+                    <div class="group-last">
+                        <p class="last">{{ service.description }}</p>
+                    </div>
+                    <button class="formulaire-admin-serviceAccueil d-none">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="trash d-none">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                {{ form_start(forms[i]) }}
+                    {{ form_row(forms[i].title) }}
+                    {{ form_row(forms[i].sbtitle) }}
+                    {{ form_row(forms[i].description) }}
+                    {{ form_row(forms[i].actif) }}
+                    {{ form_row(forms[i].background) }}
+                    <button class="save" type="submit">
+                        <i class="fa-regular fa-floppy-disk"></i>
+                    </button>
+                    <button type="button" class="cancel">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                {{ form_end(forms[i]) }}
+
+                {{ form_start(deletes[i]) }}
+                    {{ form_row(deletes[i].delete) }}
+                <div>
+                    <label>Confirmer la suppression ?</label>
+                </div>
+                <button type="submit"><i class="fa-solid fa-check"></i></button>
+                <button type="button"><i class="fa-solid fa-xmark"></i></button>
+                {{ form_end(deletes[i]) }}
+                {% set i = i + 1 %}
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

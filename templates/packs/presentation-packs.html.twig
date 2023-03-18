@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    xunidesign - personnaliser votre pack
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/templates/packs/presentation-packs.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/templates/layout/presentation-service.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="section-first-presentation-service">
+        <div class="container overflow-a">
+            <article class="title title-perso d-flex justify-between align-items-baseline">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>personnaliser votre <span>pack</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="sous-title d-flex justify-between align-items-center">
+                <div class="box-info">
+                    <h3 class="interesse">n'hésitez pas à faire une demande pour réaliser votre projet d'un <span>pack personnalisable !</span></h3>
+                    <div class="polygon-box"></div>
+                </div>
+                <a href="{{ path('packs_custom') }}" class="contact">acedez à la page <br><span>personnalisation pack</span></a>
+            </article>
+        </div>
+    </section>
+    <section class="second-section-pack">
+        <div class="container overflow-a">
+            <article class="title d-flex justify-between align-items-baseline">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>presentations <span>packs</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="box-pack d-flex justify-start row-wrap">
+                {% set i = 1 %}
+                {% for pack in packs %}
+                    {% if i < 3 %}
+                        <div class="box-image d-flex justify-center align-items-center">
+                            <img src="{{ asset("image/pack-client/pack/" ~ pack.slug ~ "/" ~ pack.profil) }}" alt="">
+                            <div class="position-absolute d-flex row-wrap justify-start">
+                                <a href="{{ path('packs_present', {'slug':pack.slug}) }}">accedez ></a>
+                            </div>
+                        </div>
+                        <hr>
+                    {% set i = i + 1 %}
+                    {% else %}
+                        <div class="box-image d-flex justify-center align-items-center">
+                            <img src="{{ asset("image/pack-client/pack/" ~ pack.slug ~ "/" ~ pack.profil) }}" alt="">
+                            <div class="position-absolute d-flex row-wrap justify-start">
+                                <a href="{{ path('packs_present', {'slug': pack.slug}) }}">accedez ></a>
+                            </div>
+                        </div>
+                    {% set i = 1 %}
+                    {% endif %}
+                {% endfor %}
+            </article>
+            <article class="container">
+                <div class="triangle triangle-marge triangle-bottom">
+                    <div class="arrow"></div>
+                    <div class="arrow-suite"></div>
+                </div>
+            </article>
+            <article class="buttom d-flex justify-end">
+                {%  include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+
+{% endblock %}

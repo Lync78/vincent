@@ -1,0 +1,323 @@
+.img {
+    height: 327px;
+    background-image: url("../../../image/header/header-present.png");
+    border-bottom: 2px white solid;
+}
+
+.first-section-present{
+    background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
+}
+
+.title{
+    width: 826px;
+    margin: 66px auto 29px;
+}
+
+.title h1 {
+    width: 550px;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 8px;
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    color: white;
+    text-transform: uppercase;
+}
+
+.title h1 span {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+.box-present{
+    width: 1685px;
+    height: 1509px;
+    background: transparent linear-gradient(180deg, #01ACF880 0%, #004058 100%) 0 0 no-repeat padding-box;
+    box-shadow: 10px 10px 20px #00000029;
+    border: 2px solid #00BAFF;
+    margin: 0 auto;
+    position: relative;
+}
+
+.retour-haut {
+    margin-bottom: 73px;
+    margin-top: 44px;
+    overflow: auto;
+    margin-left: 1720px;
+}
+
+.logos{
+    margin-top: 28px;
+}
+
+.packs{
+    margin-top: 49.5px;
+}
+
+.autres{
+    margin-top: 50.5px;
+}
+
+.box-present h1{
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 6px;
+    font-weight: normal;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    color: #00BAFF;
+    margin-left: 49px;
+    margin-bottom: 20px;
+}
+
+.img-logo{
+    width: 1593px;
+    margin: 0 auto 24.65px;
+}
+
+.img-logo img {
+    margin-bottom: 30px;
+}
+
+.box-present .triangle {
+    margin: 36.5px auto 35.15px;
+}
+
+.block-form{
+    background-color: #17252F;
+    opacity: 50%;
+    box-shadow: 10px 10px 20px #00000029;
+    margin-top: 27px;
+    margin-right: 48px;
+    width: 265px;
+    height: 44px;
+}
+
+.block-form, .block-form h3 {
+    cursor: pointer;
+}
+
+.block-form h3 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    color: #00BAFF;
+    text-transform: uppercase;
+    margin: 10px 37px 10px 25px;
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+}
+
+.category .form-fleche{
+    clip-path: polygon(50% 100%, 30% 40%, 70% 40%);
+    width: 50px;
+    height: 30px;
+    background-color: #00BAFF;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+
+.book-present-select::-webkit-scrollbar{
+    width: 4px;
+}
+
+.book-present-select::-webkit-scrollbar-track{
+    background-color: #17252F;
+}
+
+.book-present-select::-webkit-scrollbar-thumb{
+    border: 0.5px white solid;
+    opacity: 50%;
+    background-color: white;
+    border-radius: 0;
+}
+
+.navigation hr:not(:last-child) {
+    /*
+    display: none;
+     */
+    width: 231px !important;
+    height: 1px !important;
+    border: none !important;
+    background: linear-gradient(to right, #00BAFF 0%, #1C6EA4 82%, #17252F 100%) !important;
+}
+
+.navigation hr {
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+.book-present-select{
+    width: 265px;
+    height: 92px;
+    position: absolute;
+    right: 66px;
+    top: -19px;
+    background-color: #17252F;
+    z-index: 300;
+    box-shadow: 10px 10px 20px #00000029;
+}
+
+.box-presents {
+   position: relative;
+}
+
+.book-present-select ul {
+    cursor: pointer;
+}
+
+.book-present-select ul li p{
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    padding: 7px 0 5px 10px;
+}
+
+.navigation li:hover{
+    background-color: #00BAFF;
+}
+
+.fancybox__content, .fancybox__image{
+    width: 100%;
+    height: auto;
+}
+
+.box-search {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    width: 1685px;
+    margin: 0 auto 20px;
+
+}
+
+.recherche-title {
+    width: 1413px;
+    height: 44px;
+    background: #17252F 0 0 no-repeat padding-box;
+    box-shadow: 10px 10px 20px #00000029;
+    opacity: 50%;
+    margin-right: 7px;
+}
+
+.recherche-title h3 {
+    text-align: right;
+    text-transform: uppercase;
+    color: #00baff;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    font-family: Nexa-Light, sans-serif;
+    padding: 11px 15px 9px 0;
+    opacity: 100%;
+}
+
+.category {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: #17252F 0 0 no-repeat padding-box;
+    box-shadow: 10px 10px 20px #00000029;
+    opacity: 50%;
+    width: 265px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.category h3 {
+    color: #00baff;
+    line-height: 24px;
+    letter-spacing: 4px;
+    font-family: Nexa-Light, sans-serif;
+    margin: 10px 0 10px 25px;
+    text-transform: uppercase;
+}
+
+.livre-book {
+    background: transparent linear-gradient(180deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;;
+    box-shadow: 10px 10px 20px #00000029;
+    width: 1685px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.gallery {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: nowrap row;
+}
+
+.livre-book h2 {
+    font-family: Nexa-Light, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 14px;
+    background: transparent linear-gradient(90deg, #32444B 0%, #566D7E 100%) 0 0 no-repeat padding-box;
+}
+
+.livre-book h2 span {
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.livre-book div {
+    display: flex;
+    overflow-x: scroll;
+    margin: 10px 0 5px 10px;
+    width: 1665px;
+    padding-bottom: 5px;
+}
+
+.livre-book div::-webkit-scrollbar {
+    height: 7.5px;
+}
+
+.livre-book div::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    border: 0.5px transparent solid;
+    opacity: 50%;
+    background-color: #00baff;
+}
+
+.livre-book div img {
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+}
+
+.livre-book div img {
+    cursor: pointer;
+}
+
+.livre-book .range-6 img:nth-child(n+7) {
+    margin-top: 20px;
+}
+
+.livre-book .range-6 img {
+    width: 260px;
+    height: 260px;
+}
+
+.livre-book .range-4 img:nth-child(n+5){
+    margin-top: 20px;
+}
+
+.livre-book .range-4 img {
+    width: 412px;
+    height: 232px;
+}

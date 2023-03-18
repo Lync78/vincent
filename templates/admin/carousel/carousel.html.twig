@@ -1,0 +1,35 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/templates/admin/admin_carousel/view_carousel.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/templates/admin/form/form_admin.css') }}" type="text/css">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block navigation %}
+    {% set var = "carousel" %}
+    {% include "admin/layout/navigation.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="add-carousel">
+        <a><img src="{{ asset('image/pack-client/plus.png') }}" alt=""></a>
+    </section>
+    <section class="form-carousel-add">
+        {{ form_start(addForm) }}
+            {% form_theme addForm 'admin/form/form_carousel.html.twig' %}
+            <div class="d-flex column-wrap info-mo">
+                {{ form_row(addForm.image) }}
+                <span class="info-file">max Upload 8Mo</span>
+            </div>
+
+
+
+        {{ form_end(addForm) }}
+    </section>
+{% endblock %}

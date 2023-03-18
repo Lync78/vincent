@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - contact
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/contact/contact.css') }}">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('js/contact/contact.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="section-contact overflow-a">
+        <div class="container">
+            <article class="title d-flex row-wrap justify-between align-items-baseline">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>questions<span>?</span> renseignements<span>?</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="title-second">
+                <h2>ou <span>toutes autres demandes c'est ici</span></h2>
+            </article>
+            {% for message in app.flashes('sucess') %}
+                <article class="reponseEmail SuccessReponseEmail">
+                    <p>Votre message a bien été envoyé. Je vous répondrai le plus vite possible. N'oubliez pas de regarder vos spams.</p>
+                </article>
+            {% endfor %}
+            {% for message in app.flashes('error') %}
+                <article class="reponseEmail errorReponseEmail">
+                    <p>Une erreur s'est produit. Il se peut que certains champs ne sont pas remplis.</p>
+                </article>
+            {% endfor %}
+            <article class="article-contact row-wrap d-flex align-items-baseline">
+                <div class="align-self-start">
+                    <aside class="guillemet">
+                        <p><img src="{{ asset('image/icon/Icon-guillemet.png') }}" alt="Icon-guillemet.png">vous recevrez un mail en réponse dans de bref delais</p>
+                        <div class="polygon-box"></div>
+                    </aside>
+                    <aside class="suivi d-flex justify-center align-items-center">
+                        <img src="{{ asset('image/contact/sociaux.png') }}" alt="sociaux.png">
+                    </aside>
+                </div>
+                <hr class="article-contact-hr align-self-start">
+                <aside class="formulaire-contact">
+                    <div class="titre-formulaire">
+                        <h2>remplissez ci-dessous</h2>
+                    </div>
+                    {{ form_start(form) }}
+                    <div class="group-pseudo d-flex row-wrap justify-between align-items-baseline">
+                        {{ form_label(form.pseudo) }}
+                        {{ form_widget(form.pseudo) }}
+                    </div>
+                    <div class="group-email d-flex justify-between row-wrap align-items-baseline">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email) }}
+                    </div>
+                    <div class="group-raison d-flex justify-between row-wrap align-items-baseline">
+                        {{ form_label(form.raison) }}
+                        {{ form_widget(form.raison) }}
+                        <div class="selected-raison disable d-flex justify-between align-items-center">
+                            <h4>sélectionner une raison</h4>
+                            <div class="form-fleche-contact"></div>
+                        </div>
+                    </div>
+                    <div class="select-choix d-none overflow-a">
+                        <ul>
+                            <li><p data-value="achat de pack(s)">achat de pack(s)</p></li>
+                            <hr>
+                            <li><p data-value="question(s)">question(s)</p></li>
+                            <hr>
+                            <li><p data-value="création d'un projet">création d'un projet</p></li>
+                            <hr>
+                        </ul>
+                    </div>
+                    <div class="group-message row-wrap d-flex justify-between align-items-baseline">
+                        {{ form_label(form.message) }}
+                        {{ form_widget(form.message) }}
+                    </div>
+                    <div class="envoie d-flex justify-end row-wrap">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                    {{ form_end(form) }}
+                </aside>
+            </article>
+            <article class="d-flex justify-end position">
+                {%  include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+
+
+    </section>
+{% endblock %}

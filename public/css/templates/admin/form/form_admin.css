@@ -1,0 +1,24 @@
+.label_custom input {
+    display: none;
+}
+
+.label_custom div {
+    display: flex;
+}
+
+.label_custom {
+    cursor: pointer;
+}
+
+.label_custom div span {
+    padding: 15px;
+    background-color: #0075AA;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    font-size: 20px;
+}
+
+.info-file {
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+}

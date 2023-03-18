@@ -1,0 +1,400 @@
+.img{
+    height: 327px;
+    background-image: url("../../../image/header/custom-pack.png");
+    border-bottom: 2px white solid;
+}
+
+.perso-pack {
+    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+
+.title {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+
+.title h1 {
+    font-size: 40px;
+    font-family: Nexa-Light, sans-serif;
+    line-height: 49px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.title h1 span {
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.contact-custom {
+    width: 1489px;
+    margin: 0 auto 44px;
+}
+
+.polygon-box {
+    height: 148px !important;
+}
+
+.text-contact {
+    width: 1179px;
+    position: relative;
+    background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+    box-shadow: 0 10px 10px #00000029;
+    height: 148px;
+}
+
+.text-contact p:first-child {
+    color: #00baff;
+    margin-top: 39px;
+    margin-left: 32px;
+    margin-bottom: 25px;
+}
+
+.text-contact p:nth-of-type(2) {
+    color: white;
+    margin-left: 32px;
+}
+
+.text-contact p {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.lien-contact {
+    background: transparent linear-gradient(270deg, #00BAFF 0%, #1E445E 100%) 0 0 no-repeat padding-box;
+    box-shadow: 5px 5px 5px #00000029;
+    padding: 34px 83px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.prix-custom {
+    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.prix-custom-title {
+    margin: 45px auto 52px;
+    width: 700px;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 8px;
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+.prix-custom-title span {
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.box-custom-price {
+    width: 1514px;
+
+    position: relative;
+    background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+    box-shadow: 15px 15px 20px #00000029;
+    margin: 0 auto 35.5px;
+}
+
+.tableau {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-custom-price, .polygon-box-perso {
+    height: 577px;
+}
+
+.polygon-box-perso {
+    width: 150px;
+    position: absolute;
+    clip-path: polygon(85% 0, 100% 0, 100% 100%, 95% 100%);
+    box-shadow: -2px 0 10px #00000029;
+    top: 0;
+    right: 0;
+    background-color: #00baff;
+}
+
+.pack-classique, .pack-edition {
+    font-size: 1rem;
+    font-family: Nexa-Bold, sans-serif;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    color: white;
+    text-align: right;
+}
+
+.pack-prenium, .pack-classique, .pack-edition {
+    width: 272px;
+    margin-top: 20px;
+}
+
+:is(.pack-edition, .pack-classique, .pack-prenium) span {
+    color: #00baff;
+}
+
+.cinema {
+    line-height: 17px;
+    letter-spacing: 2.8px;
+    font-size: 14px;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.pack-prenium {
+    font-size: 1rem;
+    letter-spacing: 3.2px;
+    line-height: 17px;
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.box-service {
+    width: 725px;
+    height: 116px;
+    background: transparent linear-gradient(90deg, #005D80 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
+}
+
+.prix-service {
+    background: #151C25 0 0 no-repeat padding-box;
+    width: 267px;
+    height: 116px;
+}
+
+.tableau-custom-prix {
+    margin: 66px auto 0;
+    width: 1300px;
+}
+
+.tableau hr {
+    width: 4px;
+    height: 116px;
+    background-color: white;
+    border: none;
+}
+
+.tableau:not(:last-child) hr{
+    height: 128px;
+}
+
+.box-service h4 {
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 21px;
+    letter-spacing: 4.2px;
+    line-height: 25px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-left: 17px;
+}
+
+.span-class {
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+}
+
+.anime {
+    color: #00baff;
+    text-transform: uppercase;
+}
+
+.box-service p{
+    margin-left: 17px;
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    line-height: 1rem;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.marge-price:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.prix-service p:first-child {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    margin-top: 34px;
+    margin-left: 14px;
+    margin-bottom: 9px;
+}
+
+.prix-service p:last-child {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    margin-left: 14px;
+}
+
+.prix-service p:last-child span {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    background: #17252F 0 0 no-repeat padding-box;
+    color: white;
+    padding: 5px 17px;
+}
+
+.preavis {
+    font-family: Nexa-Bold, sans-serif;
+    color: white;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 3.2px;
+    width: 1514px;
+    margin: 64px auto 0;
+    text-align: center;
+}
+
+.preavis span:first-child {
+    text-decoration: underline;
+}
+
+.preavis span:last-child {
+    color: #00baff;
+}
+
+.trait-espacement {
+    width: 1511px;
+    height: 7px;
+    background: transparent linear-gradient(180deg, #01ACF880 0%, #004058 100%) 0 0 no-repeat padding-box;
+    box-shadow: 10px 10px 20px #00000029;
+    border: 2px solid #00BAFF;
+    margin: 0 auto;
+}
+
+.abordable {
+    font-size: 21px;
+    letter-spacing: 4.2px;
+    line-height: 26px;
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+    margin: 0 auto 63px;
+    width: 1300px;
+    text-align: center;
+}
+
+.abordable span {
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.mt-perso {
+    margin-top: 533px;
+    margin-bottom: 73px;
+}
+
+.options-commande {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    font-family: Nexa-Bold, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    width: 272px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.options-commande span {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    font-family: Nexa-Light, sans-serif;
+    color: #00baff;
+}
+
+.tableau-option {
+    width: 1300px;
+    margin: 12px auto 0;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.options hr{
+    height: 72px;
+    width: 4px;
+    background-color: white;
+    border: none;
+}
+
+.box-options {
+    width: 229px;
+    height: 72px;
+    background: transparent linear-gradient(90deg, #B4FF00 0%, #056D01 100%) 0 0 no-repeat padding-box;
+}
+
+.box-options-price {
+    width: 267px;
+    height: 72px;
+    background: #151C25 0 0 no-repeat padding-box;
+}
+
+.box-options h3 {
+    color: white;
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 21px;
+    letter-spacing: 4.2px;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-left: 17px;
+}
+
+.box-options p {
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    font-size: 13px;
+    line-height: 1rem;
+    letter-spacing: 2.6px;
+    margin-left: 17px;
+}
+
+.box-options-price p:nth-of-type(1){
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+    margin-top: 14px;
+    margin-left: 14px;
+}
+
+.box-options-price p:nth-of-type(2){
+    margin-left: 14px;
+    margin-top: 11px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.box-options-price p:nth-of-type(2) span {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    background: #17252F 0 0 no-repeat padding-box;
+    padding: 4px 17px;
+}

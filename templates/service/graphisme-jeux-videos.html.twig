@@ -1,0 +1,309 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - Jeux vidéos
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/layout/presentation-service.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/templates/service/gjv.css') }}">
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="section-first-presentation-service">
+        {% include "layout/layout-presentation-services.html.twig" %}
+    </section>
+    <section class="section-second-graphisme-jeux-videos">
+        <div class="container overflow-a">
+            <article class="title title-perso d-flex justify-between align-items-baseline">
+                <div class="element rotate-X">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>prix <span>services</span></h1>
+                <div class="element rotate rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="box-grid one overflow-a">
+                <div class="mini-tableau">
+                    <div class="format-gjv">
+                        <div class="tableau">
+                            <h3>logos 2d & 3d <br><span>(simple & emblématique)</span></h3>
+                            <hr>
+                            <div class="bleu-block">
+                                <h4>{{ prices[0].name }}</h4>
+                                <p>{{ prices[0].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[0].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[0].affichage }}</span></p>
+                            </div>
+                            <div class="bleu-block">
+                                <h4>{{ prices[1].name }}</h4>
+                                <p>{{ prices[1].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[1].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[1].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3>miniature & affiche <span>(youtube)</span></h3>
+                            <hr>
+                            <div class="bleu-block">
+                                <h4>{{ prices[2].name }}</h4>
+                                <p>{{ prices[2].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[2].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Payapl</p>
+                                <p class="partir">a partir de: <span>{{ prices[2].affichage }}</span></p>
+                            </div>
+                            <div class="bleu-block">
+                                <h4>{{ prices[3].name }}</h4>
+                                <p>{{ prices[3].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[3].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[3].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3>bannieres <br><span>(youtube, twitter, twitch) & autres</span></h3>
+                            <hr>
+                            <div class="bleu-block gros">
+                                <h4>{{ prices[4].name }}</h4>
+                                <p>{{ prices[4].argu1 }}</p>
+                                <p>{{ prices[4].argu2 }}</p>
+                                <p>{{ prices[4].argu3 }}</p>
+                                <p class="last-bleu-block">{{ prices[4].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[4].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3>emotes & badges <br><span>(emotes & badges)</span></h3>
+                            <hr>
+                            <div class="bleu-block">
+                                <h4>{{ prices[5].name }}</h4>
+                                <p>{{ prices[5].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[5].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[5].affichage }}</span></p>
+                            </div>
+                            <div class="bleu-block">
+                                <h4>{{ prices[6].name }}</h4>
+                                <p>{{ prices[6].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[6].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[6].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3>stickers & flyers <span>(twitch & autres)</span></h3>
+                            <hr>
+                            <div class="bleu-block">
+                                <h4>{{ prices[7].name }}</h4>
+                                <p>{{ prices[7].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[7].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[7].affichage }}</span></p>
+                            </div>
+                            <div class="bleu-block">
+                                <h4>{{ prices[8].name }}</h4>
+                                <p>{{ prices[8].argu1 }}</p>
+                                <p class="last-bleu-block">{{ prices[8].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de: <span>{{ prices[8].affichage }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableau-option">
+                    <h3>options commande<br><span>(services)</span></h3>
+                    <hr>
+                    <div class="box-option">
+                        <h4>option</h4>
+                        <p>Créative</p>
+                    </div>
+                    <div class="box-option-prix">
+                        <p>Paiement par Paypal</p>
+                        <p>a partir de: <span>10euros</span></p>
+                    </div>
+                    <div class="box-option">
+                        <h4>option</h4>
+                        <p>Modification</p>
+                    </div>
+                    <div class="box-option-prix">
+                        <p>Paiement par Paypal</p>
+                        <p>a partir de: <span>5euros</span></p>
+                    </div>
+                </div>
+                <div class="polygon-box correction-1"></div>
+            </article>
+            <article class="box-grid two overflow-a">
+                <div class="polygon-box correction-2"></div>
+                <h4 id="animation" class="first-h4">"les animations sont à la demande, tout type peuvent être réaliser"</h4>
+                <h4 class="last-h4">merci de bien preciser vos explications afin de pouvoir créer a vos attente.</h4>
+                <div class="mini-tableau">
+                    <div class="format-gav">
+                        <div class="tableau">
+                            <h3>logo 2d & logo 3d <span>(animations)</span></h3>
+                            <hr>
+                            <div class="violet-block">
+                                <h4>{{ gav[0].name }}</h4>
+                                <p>{{ gav[0].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[0].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[0].affichage }}</span></p>
+                            </div>
+                            <div class="violet-block">
+                                <h4>{{ gav[1].name }}</h4>
+                                <p>{{ gav[1].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[1].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[1].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3>formes 3d <br><span>(tout type)</span><br><span class="exception">cinema 4d & after effect</span></h3>
+                            <hr>
+                            <div class="violet-block largeur">
+                                <h4>{{ gav[2].name }}</h4>
+                                <p>{{ gav[2].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[2].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[2].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3>contour de cam & reaseaux sociaux <br><span>(twitch)</span></h3>
+                            <hr>
+                            <div class="violet-block largeur">
+                                <h4>{{ gav[3].name }}</h4>
+                                <p>{{ gav[3].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[3].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[3].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3 style="text-align: right">alerts <br><span>(twitch)</span></h3>
+                            <hr>
+                            <div class="violet-block largeur">
+                                <h4>{{ gav[4].name }}</h4>
+                                <p>{{ gav[4].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[4].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[4].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3 style="text-align: right">scene debut live & fin twitch <br><span>(twitch)</span></h3>
+                            <hr>
+                            <div class="violet-block gros largeur">
+                                <h4>{{ gav[5].name }}</h4>
+                                <p>{{ gav[5].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[5].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[5].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3 style="text-align: right">switch <br><span>(twitch)</span></h3>
+                            <hr>
+                            <div class="violet-block gros">
+                                <h4>{{ gav[6].name }}</h4>
+                                <p>{{ gav[6].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[6].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[6].affichage }}</span></p>
+                            </div>
+                            <div class="violet-block">
+                                <h4>{{ gav[7].name }}</h4>
+                                <p>{{ gav[7].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[7].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[7].affichage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="tableau">
+                            <h3 style="text-align: right">hud de jeux <br><span>(twitch)</span></h3>
+                            <hr>
+                            <div class="violet-block largeur">
+                                <h4>{{ gav[8].name }}</h4>
+                                <p>{{ gav[8].argu1 }}</p>
+                                <p class="last-violet-block">{{ gav[8].format }}</p>
+                            </div>
+                            <div class="black-block">
+                                <p class="paypal">Paiement par Paypal</p>
+                                <p class="partir">a partir de <span>{{ gav[8].affichage }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableau-option" id="largeur">
+                    <h3 id="title-option-exception">options commande<br><span>(services)</span></h3>
+                    <hr>
+                    <div class="box-option">
+                        <h4>option</h4>
+                        <p>Créative</p>
+                    </div>
+                    <div class="box-option-prix">
+                        <p>Paiement par Paypal</p>
+                        <p>a partir de: <span>10euros</span></p>
+                    </div>
+                    <div class="box-option">
+                        <h4>option</h4>
+                        <p>Modification</p>
+                    </div>
+                    <div class="box-option-prix">
+                        <p>Paiement par Paypal</p>
+                        <p>a partir de: <span>5euros</span></p>
+                    </div>
+                </div>
+            </article>
+            <article class="d-flex justify-end row-wrap bottom">
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}

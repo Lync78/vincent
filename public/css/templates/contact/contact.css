@@ -1,0 +1,590 @@
+@media (min-width: 360px) {
+    .title{
+        width: 300px;
+        margin: 65px auto 10px;
+    }
+
+    .element {
+        display: none;
+    }
+
+    .title h1 {
+        letter-spacing: 2px;
+        line-height: 35px;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .title-second h2{
+        font-size: 20px;
+        letter-spacing: 10px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .title-second {
+        margin: 0 auto;
+    }
+
+    .guillemet, .reponseEmail {
+        background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+        box-shadow: 0 10px 10px #00000029;
+    }
+
+    .guillemet{
+        width: 330px;
+        height: 142px;
+        position: relative;
+    }
+
+    .guillemet p {
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        letter-spacing: 3.6px;
+        line-height: 23px;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: right;
+        color: white;
+        width: 295px;
+    }
+
+    .polygon-box {
+        display: none;
+    }
+
+    .guillemet p img {
+        margin-top: 14px;
+        margin-right: 20px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .suivi h3,h4 {
+        line-height: 27px;
+        font-size: 22px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .article-contact-hr {
+        display: none;
+    }
+
+    .formulaire-contact {
+        background: transparent linear-gradient(270deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;
+        box-shadow: 0 5px 3px #00000029;
+        width: 330px;
+        height: 755px;
+    }
+
+    form[name=form_contact]{
+        margin: 33px auto 0;
+        width: 247px;
+        position: relative;
+    }
+
+    .titre-formulaire h2{
+        font-size: 15px;
+        letter-spacing: 5.28px;
+        line-height: 30px;
+        color: white;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        padding: 13px 0 12px 20px;
+    }
+
+    .input{
+        background: #393939 0 0 no-repeat padding-box;
+        width: 242px;
+        height: 37px;
+        border: none;
+        outline: none;
+        color: white;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        padding-left: 10px;
+    }
+
+    .selected-raison{
+        width: 247px;
+        height: 57px;
+        background: #00BAFF 0 0 no-repeat padding-box;
+        cursor: pointer;
+    }
+
+    .selected-raison h4 {
+        font-weight: bold;
+        font-family: Nexa-Bold, sans-serif;
+        letter-spacing: 3.96px;
+        line-height: 23px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 8px 0 8px 14px;
+    }
+
+    .form-fleche-contact{
+        clip-path: polygon(50% 100%, 30% 40%, 70% 40%);
+        width: 60px;
+        height: 20px;
+        background-color: white;
+    }
+
+    .select-choix{
+        position: absolute;
+        z-index: 99;
+        margin-top:6px;
+        width: 247px;
+        height: 144px;
+    }
+
+    form[name=form_contact] div label{
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 3.96px;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        color: #686868;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .suivi {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .position {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .article-contact {
+        width: 330px;
+        margin: 10px auto 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .discord span {
+        text-transform: uppercase;
+        font-family: Nexa-Light, sans-serif;
+    }
+
+    .discord {
+        font-family: Nexa-Bold, sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 20px;
+    }
+
+    .reponseEmail {
+        width: 75%;
+        display: flex;
+        margin: 10px auto 0;
+    }
+
+    .reponseEmail p {
+        font-family: Nexa-Light, sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 2px;
+        margin: 20px 10px 15px 25px;
+        color: white;
+    }
+}
+
+@media (min-width: 748px) {
+    .article-contact {
+        width: 685px;
+        margin-top: 53px;
+    }
+}
+
+@media (min-width: 788px) {
+    .element {
+        display: block;
+    }
+
+    .title {
+        width: 760px;
+    }
+
+
+}
+
+
+@media (min-width: 992px) {
+    .article-contact {
+        width: 925px;
+    }
+
+    .formulaire-contact {
+        width: 535px;
+        height: 665px;
+    }
+
+    .titre-formulaire h2 {
+        font-size: 24px;
+    }
+
+    form[name=form_contact]{
+        width: 467px;
+    }
+
+    .input{
+        width: 312px;
+    }
+
+    .selected-raison {
+        width: 324px;
+    }
+
+    .select-choix {
+        width: 324px;
+        margin-left: 143px;
+    }
+    
+    .img{
+        height: 327px;
+        background-image: url("../../../image/header/header-contact.png");
+        border-bottom: 2px white solid;
+        display: block;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .article-contact {
+        width: 1128px;
+    }
+
+    .formulaire-contact {
+        width: 666px;
+    }
+
+    .article-contact-hr {
+        margin: 42.5px 65px 0;
+        border: 1px white solid;
+        height: 590px;
+        opacity: 50%;
+        display: block;
+    }
+
+    form[name=form_contact]{
+        width: 572px;
+    }
+
+    .input {
+        width: 390px;
+    }
+
+    .selected-raison {
+        width: 402px;
+        height: 37px;
+    }
+
+    .select-choix {
+        width: 402px;
+        margin-left: 170px;
+    }
+
+
+    .form-fleche-contact {
+        height: 33px;
+        margin-bottom: 9px;
+    }
+
+
+}
+
+
+@media (min-width: 1400px) {
+
+    .article-contact {
+        width: 1316px;
+    }
+
+    .guillemet {
+        width: 507px;
+    }
+
+    .guillemet p {
+        width: 450px;
+    }
+
+    .polygon-box {
+        height: 142px !important;
+        display: block;
+    }
+
+    .title{
+        width: 1200px;
+        margin: 65px auto 10px;
+    }
+
+    .title h1 {
+        letter-spacing: 8px;
+        line-height: 49px;
+        font-size: 40px;
+    }
+
+
+}
+
+
+@media (min-width: 1600px) {
+    .article-contact {
+        width: 1506px;
+    }
+
+    .formulaire-contact {
+        width: 854px;
+    }
+
+    form[name=form_contact]{
+        width: 778px;
+    }
+
+    .input {
+        width: 627px;
+    }
+
+    .selected-raison {
+        width: 639px;
+    }
+
+    .select-choix {
+        width: 639px;
+        margin-left: 139px;
+    }
+
+    .formulaire-contact {
+        height: 650px;
+    }
+}
+
+@media (min-width: 1875px) {
+
+    .suivi {
+        margin-top: 40px;
+    }
+
+    .input{
+        width: 630px;
+    }
+
+    .title-second h2{
+        font-size: 20px;
+        letter-spacing: 10px;
+        line-height: 24px;
+    }
+
+    .title-second {
+        margin: 0 auto;
+        width: 765px;
+    }
+
+    .article-contact{
+        margin: 53px auto 0;
+        width: 1516px;
+        height: 755px;
+    }
+
+    .guillemet{
+        width: 507px;
+        height: 142px;
+        background: transparent linear-gradient(270deg, #314757 0%, #1A2429 100%) 0 0 no-repeat padding-box;
+        box-shadow: 0 10px 10px #00000029;
+        position: relative;
+    }
+
+    .guillemet p img {
+        margin-top: 26px;
+        margin-right: 20px;
+    }
+
+    .suivi h3,h4 {
+        letter-spacing: 5.5px;
+    }
+
+    .formulaire-contact {
+        width: 877px;
+        height: 755px;
+    }
+
+    form[name=form_contact]{
+        width: 783px;
+        margin-top: 54px;
+    }
+
+    .titre-formulaire h2{
+        font-size: 24px;
+    }
+
+    .selected-raison{
+        width: 642px;
+        height: 39px;
+    }
+
+    .selected-raison h4 {
+        font-weight: bold;
+        font-family: Nexa-Bold, sans-serif;
+        letter-spacing: 3.96px;
+        line-height: 23px;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 8px 0 8px 14px;
+    }
+
+    .form-fleche-contact{
+        width: 35px;
+        height: 20px;
+    }
+
+    .select-choix{
+        margin-left: 141px;
+        width: 642px;
+    }
+
+    form[name=form_contact] div label{
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+.section-contact{
+    background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
+}
+
+.title h1, .title-second h2{
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: white;
+}
+
+.title h1 span, .title-second h2 span{
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+.suivi h3, .suivi h4 span, .discord{
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+}
+
+.suivi h4 {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+
+.suivi h3 {
+    margin-right: 8px;
+}
+
+.titre-formulaire {
+    background: transparent linear-gradient(90deg, #1D588B 0%, #3C87BC 100%) 0 0 no-repeat padding-box;
+    height: 55px;
+}
+
+.group-email, .group-pseudo {
+    margin-bottom: 30px;
+}
+
+.group-message {
+    margin-top: 30px;
+    margin-bottom: 39px;
+}
+
+.envoie button[type=submit]{
+    border: none;
+    outline: none;
+    background: transparent linear-gradient(270deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
+    box-shadow: 0 5px 5px #00000029;
+    color: white;
+    padding: 10px 53px 9px;
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 3.96px;
+    line-height: 23px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+textarea.input{
+    height: 208px !important;
+    resize: none;
+    padding-top: 10px;
+}
+
+.input:focus{
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    color: white;
+}
+
+.select-choix ul li p {
+    font-weight: normal;
+    font-family: Nexa-Light, sans-serif;
+    line-height: 23px;
+    letter-spacing: 3.96px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+    padding: 9px 0 5px 14px;
+    cursor:pointer;
+}
+
+.select-choix ul li {
+    background: #007BA8 0 0 no-repeat padding-box;
+}
+
+.select-choix ul li:hover {
+    background: #00baff 0 0 no-repeat padding-box;
+}
+
+.select-choix ul hr:not(:last-child) {
+    border: none;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(90deg, #00baff 30%, #007ba8 75%) 0 0 no-repeat padding-box;
+}
+
+.select-choix ul hr:last-child{
+    border:none;
+    width: 0;
+    height: 0;
+
+}
+
+.select-choix::-webkit-scrollbar{
+    width: 5px;
+}
+
+.select-choix::-webkit-scrollbar-track{
+    background-color: #007BA8;
+}
+
+.select-choix::-webkit-scrollbar-thumb{
+    border: 0.5px white solid;
+    opacity: 50%;
+    background-color: white;
+}
+
+.input {
+    font-size: 20px;
+    font-family: Nexa-Light, sans-serif;
+    letter-spacing: 2px;
+    line-height: 24px;
+}

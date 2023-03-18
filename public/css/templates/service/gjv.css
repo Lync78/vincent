@@ -1,0 +1,770 @@
+@media (min-width: 360px) {
+
+    .one{
+        height: 2537px;
+        margin-bottom: 69.41px;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .element {
+        display: none;
+    }
+
+    .gjv {
+        display: flex;
+    }
+
+    .polygon-box {
+        display: none;
+    }
+
+    .box-grid{
+        position: relative;
+        background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+        box-shadow: 15px 15px 20px #00000029;
+        width: 330px;
+        margin: 0 auto 25px;
+    }
+
+
+    .first-h4, .last-h4 {
+        font-size: 21px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 4.2px;
+    }
+
+    .first-h4{
+        width: 300px;
+        font-family: Nexa-Bold, sans-serif;
+        color: #00baff;
+        margin: 46px auto 0;
+    }
+
+    .last-h4{
+        width: 300px;
+        margin: 0 auto 62.79px;
+        font-family: Nexa-Light, sans-serif;
+        color: white;
+    }
+
+    .format-gjv, .format-gav {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .mini-tableau h3 {
+        font-size: 1rem;
+        letter-spacing: 3.2px;
+        line-height: 20px;
+        font-family: Nexa-Bold, sans-serif;
+        color: white;
+        text-transform: uppercase;
+        margin: 10px 0;
+        text-align: right;
+    }
+
+    .mini-tableau h3 ~ hr {
+        width: 300px;
+        background-color: white;
+        height: 4px;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .mini-tableau h3 span {
+        font-family: Nexa-Light, sans-serif;
+        color: #00baff;
+    }
+
+    .templates-grid-one {
+        display: none;
+    }
+
+    .gjv {
+        display: none;
+    }
+
+    .hr-graphisme {
+        display: none;
+    }
+
+    .mini-tableau {
+        display: flex;
+        flex-flow: wrap row;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .violet-block, .bleu-block {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .bleu-block {
+        background: transparent linear-gradient(90deg, #005D80 0%, #00BAFF 100%) 0 0 no-repeat padding-box;
+    }
+
+    .violet-block {
+        background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
+    }
+
+    .format-gjv, .format-gav {
+        margin: 0 auto;
+    }
+
+    .bleu-block h4, .violet-block h4 {
+        font-size: 21px;
+        letter-spacing: 4.2px;
+        line-height: 25px;
+        color: white;
+        font-family: Nexa-Bold, sans-serif;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-left: 17px;
+    }
+
+    .bleu-block p:not(.last-bleu-block), .violet-block p:not(.last-violet-block) {
+        color: white;
+        letter-spacing: 2.6px;
+        font-size: 13px;
+        line-height: 1rem;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        margin-left: 17px;
+    }
+
+    .bleu-block .last-bleu-block, .violet-block .last-violet-block {
+        margin-top: 25px;
+        align-self: end;
+        color: white;
+        font-size: 12px;
+        letter-spacing: 2.4px;
+        line-height: 15px;
+        font-family: Nexa-Light, sans-serif;
+        width: 148px;
+        text-align: end;
+        margin-right: 13px;
+    }
+
+    .violet-block .last-violet-block {
+        width: 164px !important;
+    }
+
+    .black-block .paypal {
+        color: white;
+        margin-top: 34px;
+        margin-left: 14px;
+        line-height: 12px;
+        letter-spacing: 2px;
+        font-size: 10px;
+        font-family: Nexa-Light, sans-serif;
+    }
+
+    .black-block .partir{
+        letter-spacing: 3.2px;
+        line-height: 15px;
+        font-size: 12px;
+    }
+
+    .black-block :is(.prix,.partir) {
+        margin-top: 7px;
+        text-transform: uppercase;
+        margin-left: 14px;
+        color: white;
+        font-family: Nexa-Light, sans-serif;
+    }
+
+
+    .black-block .prix{
+        line-height: 38px;
+        letter-spacing: 6px;
+        font-size: 30px;
+    }
+
+    .black-block p:not(.paypal) span {
+        padding: 5px 26px;
+        background-color: #17252F;
+        font-size: 1rem;
+        line-height: 20px;
+    }
+
+    .bleu-block, .black-block, .violet-block {
+        width: 300px;
+        height: 116px;
+        margin: 0 auto;
+    }
+
+    .bleu-block.gros{
+        height: 150px;
+    }
+
+    .violet-block.gros {
+        height: 125px;
+    }
+
+    .black-block {
+        background: #151C25 0 0 no-repeat padding-box;
+    }
+
+
+    .tableau {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .exception {
+        font-size: 1rem;
+        line-height: 20px;
+        letter-spacing: 3.2px;
+        color: #00baff !important;
+        font-family: Nexa-Bold, sans-serif !important;
+    }
+
+    .two{
+        height: 2968px;
+        margin-bottom: 251.41px;
+    }
+}
+
+@media (min-width: 748px)
+{
+     .box-grid, .mini-tableau {
+         width: 685px;
+     }
+
+    .two {
+        height: 1976px;
+    }
+
+    .first-h4, .last-h4 {
+        width: 600px;
+    }
+
+    .format-gjv, .format-gav {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-top: 25px;
+    }
+
+    .tableau {
+        width: 300px;
+        flex-flow: column wrap;
+    }
+
+    .tableau:nth-child(2n+1){
+        margin-right: 35px;
+        margin-left: 25px;
+    }
+
+    .one {
+        height: 1664px;
+    }
+
+}
+
+
+
+@media (min-width: 1050px) {
+    .img {
+        display: block;
+    }
+
+    .two {
+        height: 1976px;
+    }
+
+
+}
+
+@media (min-width: 1100px) {
+    .box-grid, .mini-tableau {
+        width: 1025px;
+    }
+
+    .one {
+        height: 1126px;
+    }
+
+    .tableau:nth-of-type(4) {
+        margin-left: 25px;
+    }
+
+    .two {
+        height: 1650px;
+    }
+
+
+}
+
+@media (min-width: 1600px) {
+    .box-grid, .mini-tableau {
+        width: 1504px;
+    }
+
+    .first-h4, .last-h4 {
+        width: auto;
+        text-align: center;
+    }
+
+    .two {
+        height: 1187px;
+        margin-bottom: 251.41px;
+    }
+
+    .mini-tableau h3 ~ hr {
+        width: 5px;
+        height: 126px;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    .mini-tableau .tableau:last-child hr{
+        height: 116px;
+    }
+
+    .bleu-block.gros, .violet-block .gros {
+        height: 116px;
+        width: 725px;
+    }
+
+    .bleu-block.gros .last-bleu-block {
+        margin-top: 81px;
+    }
+
+    .black-block p:not(.paypal) span {
+        padding: 5px;
+    }
+
+    .violet-block{
+        width: 229px;
+    }
+
+    .format-gjv {
+        margin-top: 80px;
+    }
+
+    .one {
+        height: 825px;
+    }
+
+    .polygon-box {
+        display: block;
+    }
+
+    .box-grid.mini-tableau {
+        width: 1288px;
+    }
+
+    .tableau:nth-of-type(4){
+        margin-left: 0;
+    }
+
+    .format-gjv .tableau, .tableau-option  {
+        width: 1288px;
+    }
+
+    .format-gav .tableau {
+        width: 1359px;
+    }
+
+    .format-gav .tableau h3 {
+        width: 321px;
+        margin-right: 25px;
+    }
+
+    .largeur {
+        width: 725px !important;
+    }
+
+    .tableau {
+        flex-flow: row wrap;
+        align-self: flex-end;
+    }
+
+    .tableau:nth-child(2n+1){
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .mini-tableau h3 {
+        margin-right: 25px;
+        width: 250px;
+    }
+
+    .format-gjv, .format-gav {
+        flex-flow: column wrap;
+    }
+
+    .bleu-block {
+        width: 229px;
+    }
+
+    .bleu-block, .black-block {
+        margin: 0;
+    }
+
+    .black-block {
+        width: 267px;
+    }
+
+    .violet-block.gros {
+        height: 116px;
+    }
+}
+
+@media (min-width: 1875px) {
+    .element {
+        display: block;
+    }
+
+    .polygon-box {
+        display: block;
+    }
+
+    .format-box-1 {
+        display: none;
+    }
+
+    .box-grid{
+        width: 1514px;
+    }
+
+    .first-h4{
+        width: 1100px;
+    }
+
+    .last-h4{
+        width: 1350px;
+    }
+
+}
+
+.img{
+    height: 327px;
+    background-image: url("../../../image/header/header-graphisme-jeux-videos.png");
+    border-bottom: 2px white solid;
+}
+
+.section-second-graphisme-jeux-videos{
+    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+
+
+.title {
+    margin: 60px auto 52px;
+}
+
+
+
+.bottom{
+    margin-bottom: 85px;
+}
+
+.correction-1{
+    width: 125px !important;
+    height: 825px !important;
+}
+
+.correction-2 {
+    width: 125px !important;
+    height: 1187px !important;
+}
+
+.tableau-option {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1288px;
+    margin: 12px auto 0;
+    align-items: center;
+}
+
+.box-option {
+    width: 229px;
+    height: 72px;
+    background: transparent linear-gradient(90deg, #B4FF00 0%, #056D01 100%) 0 0 no-repeat padding-box;
+}
+
+.box-options-prix {
+    width: 267px;
+    height: 72px;
+    background: #151C25 0 0 no-repeat padding-box;
+}
+
+.tableau-option h3 {
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
+    width: 250px;
+    margin-right: 25px;
+}
+
+.tableau-option h3 span {
+    font-family: Nexa-Light, sans-serif;
+    font-size: 1rem;
+    color: #00baff;
+}
+
+.tableau-option hr {
+    width: 5px;
+    height: 72px;
+    background-color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+.box-option h4{
+    margin-top: 15px;
+    margin-left: 17px;
+    color: white;
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 4.2px;
+    text-transform: uppercase;
+}
+
+.box-option p {
+    margin-left: 17px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    font-size: 13px;
+    line-height: 1rem;
+    letter-spacing: 2.6px;
+}
+
+.box-option-prix {
+    background: #151C25 0 0 no-repeat padding-box;
+    width: 267px;
+    height: 72px;
+}
+
+.box-option-prix p:nth-of-type(1){
+    font-family: Nexa-Light, sans-serif;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    color: white;
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 11px;
+}
+
+.box-option-prix p:nth-of-type(2){
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+    margin-left: 14px;
+}
+
+.box-option-prix p:nth-of-type(2) span {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    padding: 5px 15px;
+    background: #17252F 0 0 no-repeat padding-box;
+}
+
+.format-box-1{
+    height: 628px;
+    width: 1370px;
+    margin: 79.8px auto;
+}
+
+.texte h3{
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: right;
+}
+
+.span{
+    font-family: Nexa-Light, sans-serif;
+    color: #00baff !important;
+}
+
+.hr-graphisme{
+    margin-left: 32px;
+    margin-right: 1rem;
+    height: 628px;
+    width: 5px;
+    border: none;
+    background-color: #FFF;
+}
+
+.templates-grid-one{
+    grid-template-rows: repeat(5,116px);
+    grid-template-columns: 229px 267px 229px 267px;
+    row-gap: 12px;
+}
+
+.noir {
+    background: #151C25 0 0 no-repeat padding-box;
+}
+
+.bleu {
+    background: transparent linear-gradient(90deg, #005D80 0%, #00BAFF 100%) 0 0 no-repeat padding-box;
+}
+
+
+.bleu h2, .rose h2{
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 4.2px;
+    color: white;
+    margin-left: 17px;
+    margin-top: 15px;
+}
+
+.bleu p, .rose p {
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+}
+
+.bleu p:not(:last-child), .rose p:not(:last-child){
+    margin-left: 17px;
+    font-size: 13px;
+    line-height: 1rem;
+    letter-spacing: 2.6px;
+}
+
+.bleu p:last-child, .rose p:last-child{
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    line-height: 15px;
+    margin-right: 13px;
+    text-align: right;
+    margin-top: 23px;
+}
+
+.exception{
+    margin-top: 80px !important;
+}
+
+.noir p:not(.price-paypal) {
+    margin-top: 34px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+}
+
+.noir h4 {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.noir .price-paypal {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    padding: 4.75px 21.5px 4.25px 18.5px;
+    background: #17252F 0 0 no-repeat padding-box;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.noir p:not(.price-paypal), .noir h4 {
+    margin-left: 14px;
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+}
+
+.texte h3:first-child{
+    margin-top: 20px;
+}
+
+.texte h3:nth-of-type(2){
+    margin-top: 90px;
+}
+
+.texte h3:nth-of-type(3){
+    margin-top: 85px;
+}
+
+.texte h3:nth-of-type(4){
+    margin-top: 70px;
+}
+
+.texte h3:last-child{
+    margin-top: 85px;
+}
+
+.format-box-2 {
+    width: 1363px;
+    height: 884px;
+    margin: 0 auto auto;
+}
+
+.info-service {
+    margin-right: 32px;
+}
+
+.info-service h3 {
+    font-family: Nexa-Bold, sans-serif;
+    letter-spacing: 3.2px;
+    line-height: 20px;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.info-service h3 span {
+    font-family: Nexa-Light, sans-serif;
+    color: #00baff;
+}
+
+.hr-box-2{
+    height: 884px;
+    width: 5px;
+    background-color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+.rose {
+    background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.changement{
+    margin-top: 9px !important;
+}
+
+.info-service h3:first-child{
+    margin-top: 20px;
+ }
+
+.info-service h3:nth-of-type(4), .info-service h3:nth-of-type(5), .info-service h3:nth-of-type(6), .info-service h3:nth-of-type(2){
+    margin-top: 90px;
+}
+
+.info-service h3:last-child, .info-service h3:nth-of-type(3){
+    margin-top: 85px;
+}
+
+#title-option-exception {
+    width: 321px;
+}
+
+#largeur {
+    width: 1359px;
+}

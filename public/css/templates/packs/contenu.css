@@ -1,0 +1,532 @@
+.img{
+    height: 327px;
+    background-image: url("../../../image/header/custom-pack.png");
+    border-bottom: 2px white solid;
+}
+
+.first-section {
+    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.present {
+    width: 900px;
+    margin: 63px auto 50px;
+}
+
+.present h1{
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 8px;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.present h1 span {
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.box-client {
+    width: 1746px;
+    background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+    box-shadow: 15px 15px 20px #00000029;
+    position: relative;
+    margin-bottom: 74px;
+    display: flex;
+}
+
+.box-client, .correction {
+    height: 341px !important;
+}
+
+.encadrer {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    width: 1500px;
+    align-content: center;
+}
+
+.photo-encadrement {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background: transparent linear-gradient(180deg, #2E2E2E00 0%, #005D80 100%) 0 0 no-repeat padding-box;
+    box-shadow: 10px 10px 20px #00000029;
+    border: 1px solid #00BAFF;
+}
+
+.photo-encadrement img {
+    margin: auto;
+    width: 272px;
+    height: 272px;
+    padding: 14px 13.5px;
+}
+
+.encadrer hr {
+    margin: 0 48.5px;
+    height: 264px;
+    width: 2px;
+    background-color: #00baff;
+    border: none;
+    align-self: center;
+}
+
+.texte h3{
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.premium {
+    color: #FF00D5;
+}
+
+.texte p {
+    font-size: 22px;
+    line-height: 23px;
+    letter-spacing: 4.4px;
+    font-family: Nexa-Bold, sans-serif;
+    color: #00baff;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.texte p span {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 3.6px;
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+    text-transform: none;
+}
+
+.type-pack {
+    padding: 15px 23px;
+    background: #17252F 0 0 no-repeat padding-box;
+    color: white !important;
+    font-size: 20px !important;
+    letter-spacing: 4px !important;
+    line-height: 24px !important;
+    margin-top: 1rem
+}
+
+.last-section {
+    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.last-section article {
+    width: 1736px;
+}
+
+.background-hors-ligne {
+    width: 550px;
+    margin-top: 50px;
+}
+
+.hors-ligne-photo img{
+    border: 2px solid #00baff;
+    display: block;
+    width: 1091px;
+    height: 612px;
+}
+
+.box-background-hors-ligne {
+    margin: 46px auto 67px;
+}
+
+.background-hors-ligne h4 {
+    font-size: 60px;
+    letter-spacing: 12px;
+    color: #00baff;
+    text-transform: uppercase;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.background-hors-ligne p {
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.background-hors-ligne p:nth-of-type(1) {
+    margin-top: 40px;
+}
+
+.background-hors-ligne p span {
+    font-family: Nexa-Light, sans-serif;
+}
+
+.background-hors-ligne p:last-child {
+    margin-top: 25px;
+}
+
+.background-hors-ligne p:last-child span {
+    font-family: Nexa-Light, sans-serif;
+}
+
+.banniere-profil {
+    margin: 0 auto 59px;
+}
+
+.badges {
+    margin: 0 auto;
+}
+
+.banniere-profil-texte h4{
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+    color: #00baff;
+    font-size: 60px;
+    letter-spacing: 12px;
+    width: 478px;
+}
+
+.banniere-profil-texte p {
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+}
+
+.banniere-profil-texte p:nth-of-type(1){
+    margin-top:40px ;
+}
+
+.banniere-profil-texte p span {
+    font-family: Nexa-Light, sans-serif;
+}
+
+.photo-banniere-profil img:first-child{
+    width: 252px;
+    height: 252px;
+    border: 2px solid #00baff;
+    display: block;
+}
+
+.photo-banniere-profil img:last-child {
+    border: 2px solid #00baff;
+    display: block;
+    margin-left: 22px;
+    width: 898px;
+    height: 252px;
+}
+
+.box-badges {
+    width: 1180px;
+    height: 161px;
+    border: 2px solid #00baff;
+    background: #17242E 0 0 no-repeat padding-box;
+    box-shadow: 15px 15px 20px #00000029;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.box-badges div img {
+    width: 105px;
+}
+
+.box-badges div span {
+    color: #00baff;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Nexa-Bold, sans-serif;
+    margin-top: 8px;
+}
+
+.box-badges div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.box-badges hr:last-child {
+    display: none;
+}
+
+.box-badges hr:not(:last-child){
+    width: 2px;
+    height: 101px;
+    border: none;
+    background-color: #00baff;
+    align-self: center;
+}
+
+.badges-texte {
+    margin-top: 22px;
+}
+
+.badges-texte h4 {
+    color: #00baff;
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 60px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.badges-texte p {
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.badges-texte p span {
+    font-family: Nexa-Light, sans-serif;
+
+}
+
+.badges-texte p:nth-of-type(1) span {
+    text-transform: none !important;
+}
+
+.panneaux-article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 62px auto 59px;
+}
+
+.panneaux-texte {
+    margin-top: 35px;
+}
+
+.panneaux-texte h4{
+    color: #00baff;
+    font-size: 60px;
+    letter-spacing: 12px;
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+}
+
+.panneaux-texte p {
+    font-family: Nexa-Bold, sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    line-height: 24px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.panneaux-texte p span {
+    font-family: Nexa-Light, sans-serif;
+}
+
+.panneaux-box {
+    width: 1178px;
+    background: #17242E 0 0 no-repeat padding-box;
+    border: 2px solid #00BAFF;
+
+}
+
+.panneaux-flex {
+    width: 1134px;
+    margin: 25px auto 0;
+}
+
+.panneaux-flex div:not(:nth-child(4n+4)){
+    margin-right: 10px;
+}
+
+.panneaux-flex div:nth-child(n+5){
+    margin-top: 10px;
+}
+
+.panneaux-flex div img {
+    width: 276px;
+}
+
+.three-section {
+    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.three-section article:not(:last-child) {
+    width: 1687px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.scene-debut-live, .scene-fin-live, .scene-pause, .scene-jeux, .scene-twitch {
+    margin: 61px auto 56px;
+    height: 619px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.scene-pause {
+    position: relative;
+}
+
+.overlay-scene-pause {
+    position: absolute;
+    border: none !important;
+    top: 0;
+    left: 0;
+}
+
+.video-webm video {
+    width: 1091px;
+    height: 615px;
+    border: #00baff 2px solid;
+}
+
+.texte-block {
+    width: 500px;
+    margin-top: 50px;
+}
+
+:is(.scene-fin-live, .scene-debut-live, .scene-pause, .scene-jeux, .scene-twitch) .texte-block h3{
+    font-size: 60px;
+    letter-spacing: 12px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: #00baff;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.texte-block p {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    font-family: Nexa-Bold, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+.texte-block p span {
+    font-family: Nexa-Light, sans-serif;
+}
+
+.texte-block p:last-child, .scene-pause .texte-block p:nth-of-type(3), .scene-jeux p:nth-of-type(3) {
+    margin-top: 25px
+}
+
+.texte-block p:nth-of-type(2) span:nth-of-type(2)
+{
+    color: #FF00D5;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.scene-jeux .video-webm {
+    position: relative;
+}
+
+.scene-jeux .video-webm img {
+    width: 1091px;
+    height: 612px;
+    border: 2px #00baff solid;
+}
+
+.scene-jeux .video-webm video
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: none !important;
+}
+
+.three-section hr {
+    width: 1687px;
+    height: 3px;
+    border: none;
+    background-color: #00baff;
+    margin: 77.5px auto 68.5px;
+}
+
+.twitch {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 1687px;
+    margin: 0 auto;
+}
+
+.twitch-alerts {
+    color: #00baff;
+    font-size: 70px;
+    line-height: 87px;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    font-family: Nexa-Bold, sans-serif;
+    width: 358px;
+    margin-right: 49px;
+}
+
+.twitch .texte-block p:nth-of-type(3) {
+    margin-top: 25px;
+}
+
+.twitch img {
+    border: 2px solid #00baff;
+}
+
+.twitch .texte-block {
+    margin: 0 0 38px 0;
+    width: 700px;
+}
+
+.img-twitch-alerts {
+    position: relative;
+}
+
+.img-twitch-alerts video {
+    position: absolute;
+    top: 28%;
+    left: 23%;
+}
+
+.mt-perso {
+    margin-top: 68px;
+    margin-bottom: 61px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bouttons-liste button {
+    width: 209px;
+    height: 51px;
+    border: none;
+    box-shadow: 15px 15px 20px #00000029;
+    background: transparent linear-gradient(270deg, #00BAFF 0%, #1E445E 100%) 0 0 no-repeat padding-box;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    font-family: Nexa-Bold, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 9px;
+}
+
+.actif, .bouttons-liste button:hover:not(.disabled-video) {
+    background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box !important;
+}
+
+.disabled-video {
+    cursor: not-allowed !important;
+    background: gray !important;
+}
+
+.article-boutton {
+    margin: 0 auto;
+}
+
+.img-twitch-alerts video {
+    width: 1080px;
+    height: 500px;
+}

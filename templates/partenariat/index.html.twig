@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - partenariat
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/partenariat/partenariat.css') }}">
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+    <section class="section-partenariat overflow-a">
+        <article class="title d-flex justify-between row-wrap align-items-baseline">
+            <div class="element rotateY">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <h1>partenariats <span>liste</span></h1>
+            <div class="element">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </article>
+        <article class="venir">
+            <h1>a venir</h1>
+        </article>
+        <video preload="auto" muted="muted" loop autoplay="autoplay">
+            <source src="{{ asset('video/overlay.webm') }}" type="video/webm">
+        </video>
+        <article>
+
+        </article>
+    </section>
+{% endblock %}

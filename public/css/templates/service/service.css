@@ -1,0 +1,392 @@
+@media (min-width: 360px) {
+    .photo-section {
+        display: none;
+    }
+
+    .element {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 27px;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        line-height: 34px;
+        letter-spacing: 1px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .title h1 span {
+        font-family: Nexa-Bold, sans-serif;
+        font-weight: bold;
+    }
+
+    .title{
+        margin: 68px auto 46.94px;
+    }
+
+    .title-service {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .info-service {
+        margin: 0 auto 61px;
+        width: 330px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    .block-title, .block-accedez, .block-info-1, .block-info-2, .block-info-3, .block-info-4 {
+        width: auto;
+    }
+
+    .text {
+        font-size: 1rem;
+        line-height: 20px;
+        letter-spacing: 3.2px;
+        font-family: Nexa-Bold, sans-serif;
+        font-weight: normal;
+        color: white;
+        margin-left: 15px;
+    }
+
+    .formule {
+        margin: 33.48px 0 0 15px;
+    }
+
+    .block-service {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+
+    .column-service{
+        height: 606.02px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        width: 330px;
+    }
+
+    .creation, .graphisme-jeux-video, .graphisme-animations, .graphisme-entreprise{
+        padding: 12.06px 0 12.49px 23.22px;
+        font-family: Nexa-Light, sans-serif;
+        line-height: 30px;
+        letter-spacing: 4.8px;
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+
+    .title-level-2{
+        margin: 50px auto;
+        font-family: Nexa-Light, sans-serif;
+        font-weight: normal;
+        letter-spacing: 10px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: white;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .options{
+        height: 73px;
+        background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+        box-shadow: 0 10px 10px #00000029;
+        margin: 0 auto 21px;
+    }
+
+
+    .hr-custom:first-child{
+        left: -90px;
+        top: 0;
+        bottom: 0;
+        right: 90px;
+        transform: rotate(15deg);
+    }
+
+    .hr-custom:last-child{
+        left: 95px;
+        top: 0;
+        bottom: 0;
+        right: -95px;
+        transform: rotate(345deg);
+    }
+
+    .hr-custom, .custom-hr-visite {
+        display: none;
+    }
+}
+
+@media (min-width: 412px) {
+    .hr-custom, .custom-hr-visite {
+        display: block;
+    }
+
+    .title-level-2 {
+        margin: 50px auto 0;
+    }
+}
+
+
+@media (min-width: 748px) {
+
+    .info-service {
+        width: 685px;
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width: 604px) {
+    .options {
+        height: 47px;
+    }
+}
+
+@media (min-width: 758px) {
+    .element {
+        display: block;
+    }
+
+    .title-service {
+        width: 640px;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 912px) {
+    .options{
+        width: 857px;
+    }
+}
+
+@media (min-width: 992px) {
+    .title-service {
+        width: 800px;
+        justify-content: space-between;
+    }
+
+    .title h1 {
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: 8px;
+    }
+
+    .photo-section {
+        display: block;
+    }
+}
+
+@media (min-width: 1107px) {
+    .info-service {
+        justify-content: center;
+        width: 1040px;
+    }
+
+    .info-service .column-service:nth-of-type(2){
+        margin: 0 25px;
+    }
+}
+
+@media (min-width: 1434px) {
+    .image{
+        display: block;
+    }
+}
+
+@media (min-width: 1484px) {
+    .info-service {
+        justify-content: space-between;
+        width: 1395px;
+    }
+
+    .info-service .column-service:nth-of-type(2){
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 1875px) {
+
+    .second-section-service{
+        display: block;
+    }
+
+    .creation, .graphisme-jeux-video, .graphisme-animations, .graphisme-entreprise{
+        width: 265px;
+    }
+
+    .info-service {
+        justify-content: center;
+        width: auto;
+    }
+
+    .info-service .column-service:not(:last-child){
+        margin-right: 31px;
+    }
+
+    .title-service {
+        justify-content: space-between;
+    }
+
+
+
+    .title{
+        margin: 68px auto 46.94px;
+        width: 800px;
+    }
+
+    .column-service {
+        width: 400px;
+    }
+}
+
+.img{
+    height: 327px;
+    background-image: url("../../../image/header/header-services.png");
+    border-bottom: 2px white solid;
+}
+
+.first-section-service{
+    background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.block-title {
+    background: transparent linear-gradient(270deg, #17242E 0%, #1A1B1B 100%) 0 0 no-repeat padding-box;
+    height: 84.54px;
+}
+
+
+
+
+
+.block-info-1, .block-info-2, .block-info-3, .block-info-4, .block-title{
+    box-shadow: 10px 10px 20px #00000029;
+}
+
+.block-info-1, .block-info-2, .block-info-3, .block-info-4{
+    height: 453.48px;
+}
+
+.block-info-1 {
+    background: transparent linear-gradient(90deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
+}
+
+.block-info-2 {
+    background: transparent linear-gradient(270deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.block-info-3 {
+    background: transparent linear-gradient(270deg, #005D80 0%, #FF00D5 100%) 0 0 no-repeat padding-box;
+}
+
+.block-info-4 {
+    background: transparent linear-gradient(90deg, #005D80 0%, #222526 100%) 0 0 no-repeat padding-box;
+}
+
+.block-accedez {
+    background: #151C25 0 0 no-repeat padding-box;
+    height: 48px;
+}
+
+.lien {
+    margin-top: 15px;
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    line-height: 23px;
+}
+
+.lien a[href],.lien a[href]:hover {
+    color: #00baff;
+}
+
+.formule, .espace{
+    text-transform: capitalize;
+}
+
+.espace{
+    margin-bottom: 15px;
+}
+
+.text span {
+    text-transform: uppercase;
+    color: #00baff;
+}
+
+.second-section-service{
+    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.image{
+    width: 1348px;
+    margin: 67px auto 55px;
+}
+
+.image img {
+    height: 562px;
+}
+
+.title-level-2 span{
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.options p {
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 4.5px;
+}
+
+.page-contact{
+    margin: 0 auto 71px;
+    width: 290px;
+    height: 92px;
+    background: transparent linear-gradient(270deg, #00BAFF 0%, #1E445E 100%) 0 0 no-repeat padding-box;
+    box-shadow: 5px 5px 5px #00000029;
+}
+
+.page-contact a {
+    text-align: center;
+    margin: 28px auto 29px;
+    text-transform: uppercase;
+    font-family: Nexa-Light, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    line-height: 17px;
+    width: 188px;
+    color: white;
+}
+
+
+.page-contact a span {
+    font-family: Nexa-Bold, sans-serif;
+    font-weight: bold;
+}
+
+.bouton {
+    margin-bottom: 73px;
+}

@@ -1,0 +1,306 @@
+.img{
+    height: 327px;
+    background-image: url("../../../image/header/header-graphisme-entreprise.png");
+    border-bottom: 2px white solid;
+}
+
+.section-second-graphisme-entreprise{
+    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+}
+
+.title-perso{
+    width: 700px !important;
+}
+
+.format-box-3 {
+    position: relative;
+    width: 1514px;
+    height: 980px;
+    background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
+    box-shadow: 15px 15px 20px #00000029;
+    margin: auto;
+}
+
+.box-3{
+    width: 1319px;
+    height: 756px;
+    margin: 79.8px auto 0;
+}
+
+.bottom{
+    margin-top: 152px;
+    margin-bottom: 88px;
+}
+
+.correction-1{
+    height: 980px;
+}
+
+.templates-grid-three{
+    grid-template-columns: 229px 267px 229px 267px;
+    grid-template-rows: repeat(6,116px);
+    grid-row-gap: 12px;
+}
+
+.texte h3{
+    font-family: Nexa-Bold, sans-serif;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+}
+
+.texte h3 span{
+    color: #00baff;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.box-3 hr {
+    margin-right: 1rem;
+    margin-left: 2rem;
+    width: 5px;
+    height: auto;
+    background-color: white;
+    border: none;
+}
+
+.bleu{
+    background: transparent linear-gradient(90deg, #005D80 0%, #222526 100%) 0 0 no-repeat padding-box;
+}
+
+.noir{
+    background: #151C25 0 0 no-repeat padding-box;
+}
+
+.visite, .entreprise, .maquette{
+    grid-column: 1/4;
+}
+
+.logo-2d, .price-logo-2d, .logo-3d, .price-logo-3d{
+    grid-row: 1/2;
+}
+
+.image, .price-image, .banniere, .price-banniere{
+    grid-row: 2/3;
+}
+
+.visite, .price-visite{
+    grid-row: 3/4;
+}
+
+.sticker, .price-stickers, .flyer, .price-flyer{
+    grid-row: 4/5;
+}
+
+.entreprise, .price-entreprise{
+    grid-row: 5/6;
+}
+
+.maquette, .price-maquette{
+    grid-row: 6/7;
+}
+
+.logo-2d, .image, .sticker{
+    grid-column: 1/2;
+}
+
+.price-logo-2d, .price-image, .price-stickers{
+    grid-column: 2/3;
+}
+
+.logo-3d, .banniere, .flyer{
+    grid-column: 3/4;
+}
+
+.price-logo-3d, .price-banniere, .price-visite, .price-flyer, .price-entreprise, .price-maquette{
+    grid-column: 4/5;
+}
+
+
+.bleu h2{
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 4.2px;
+    color: white;
+    margin-left: 17px;
+    margin-top: 15px;
+}
+
+.bleu p{
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+}
+
+.bleu p:not(:last-child){
+    margin-left: 17px;
+    font-size: 13px;
+    line-height: 1rem;
+    letter-spacing: 2.6px;
+}
+
+.bleu p:last-child{
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    line-height: 15px;
+    margin-right: 13px;
+    text-align: right;
+    margin-top: 23px;
+}
+
+.exception{
+    margin-top: 80px !important;
+}
+
+.noir p:not(.price-paypal) {
+    margin-top: 34px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+}
+
+.noir h4 {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.noir .price-paypal {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    padding: 4.75px 13px 4.25px 13px;
+    background: #17252F 0 0 no-repeat padding-box;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.noir p:not(.price-paypal), .noir h4 {
+    margin-left: 14px;
+    font-family: Nexa-Light, sans-serif;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+}
+
+.price-paypal span {
+    font-size: 8px;
+    line-height: 9px;
+    letter-spacing: 1.6px;
+}
+
+.variation{
+    font-size: 8px !important;
+    letter-spacing: 1.6px !important;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    margin-top: 9px !important;
+}
+
+.changement{
+    margin-top: 29px !important;
+}
+
+.entreprise p:nth-of-type(1), .maquette p:nth-of-type(1){
+    text-transform: uppercase;
+}
+
+.texte h3:first-child{
+    margin-top: 20px;
+}
+
+.texte h3:nth-of-type(2), .texte h3:nth-of-type(3), .texte h3:nth-of-type(4), .texte h3:nth-of-type(5), .texte h3:nth-of-type(6){
+    margin-top: 90px;
+}
+
+.tableau-option {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1319px;
+    margin: 12px auto 0;
+}
+
+.tableau-option h3 {
+    width: 273.64px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+    font-family: Nexa-Bold, sans-serif;
+    text-align: right;
+    align-self: center;
+}
+
+.box-option h4{
+    color: white;
+    margin-top: 15px;
+    margin-left: 17px;
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 4.2px;
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.box-option p {
+    letter-spacing: 2.6px;
+    line-height: 1rem;
+    font-size: 13px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    margin-left: 17px;
+    text-transform: capitalize;
+}
+
+.box-options-price p:nth-of-type(1) {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 10px;
+}
+
+.box-options-price p:nth-of-type(2){
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    line-height: 15px;
+    font-family: Nexa-Light, sans-serif;
+    margin-left: 14px;
+}
+
+.box-options-price p:nth-of-type(2) span {
+    line-height: 20px;
+    letter-spacing: 3.2px;
+    font-size: 1rem;
+    background: #17252F 0 0 no-repeat padding-box;
+    padding: 5px 10px;
+}
+
+.tableau-option h3 span{
+    color: #00baff;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.box-option {
+    width: 229px;
+    height: 72px;
+    background: transparent linear-gradient(90deg, #B4FF00 0%, #056D01 100%) 0 0 no-repeat padding-box;
+}
+
+.box-options-price {
+    width: 267px;
+    height: 72px;
+    background: #151C25 0 0 no-repeat padding-box;
+}

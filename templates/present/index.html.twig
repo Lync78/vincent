@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Xunidesign - book
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/templates/present/present.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+{% endblock %}
+
+{% block js %}
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="{{ asset('js/book/app.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <section class="img"></section>
+
+    <section class="first-section-present">
+        <div class="container overflow">
+            <article class="title d-flex justify-between row-wrap align-items-baseline">
+                <div class="element rotateY">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <h1>parti <span>jeux vidéos</span></h1>
+                <div class="element">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </article>
+            <article class="box-search d-none">
+                <div class="recherche-title">
+                    <h3>recherche</h3>
+                </div>
+                <div class="category">
+                    <h3>{{ slug }}</h3>
+                    <div class="form-fleche"></div>
+                </div>
+            </article>
+            <article class="box-presents">
+                <div class="book-present-select d-none overflow-a">
+                    <ul class="navigation">
+                        <li><p data-value="{{ slug }}">{{ slug }}</p></li>
+                        <hr>
+                        <li><p data-value="logos">logos</p></li>
+                        <hr>
+                        <li><p data-value="packs">packs</p></li>
+                        <hr>
+                        <li><p data-value="autres">autres</p></li>
+                        <hr>
+                        <li><p data-value="4">test 1</p></li>
+                        <hr>
+                        <li><p data-value="5">test 1</p></li>
+                        <hr>
+                        <li><p data-value="6">test 1</p></li>
+                        <hr>
+                        <li><p data-value="7">test 1</p></li>
+                        <hr>
+                        <li><p data-value="8">test 1</p></li>
+                        <hr>
+                    </ul>
+                </div>
+                <div class="livre-book">
+                    <h2>logos client <span>esports & logotype</span></h2>
+                    <div class="gallery">
+                        {% for i in 0..9 %}
+                        <img data-fancybox="gallery" src="{{ asset('image/book/image-1.png') }}" alt="{{ 'logo_client_1.png' }}">
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            <article class="d-none">
+                <div class="triangle triangle-bottom">
+                    <div class="arrow"></div>
+                    <div class="arrow-suite"></div>
+                </div>
+            </article>
+            <article>
+                {{ form_start(form, {'attr': {'id':'hidden','method':'post'}}) }}{{ form_end(form) }}
+            </article>
+            <article>
+                {% include "layout/layout-buttom-for-top.html.twig" %}
+            </article>
+        </div>
+    </section>
+{% endblock %}
