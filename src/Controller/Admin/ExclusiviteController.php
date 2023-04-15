@@ -44,7 +44,7 @@ class ExclusiviteController extends AbstractController
             $deletesForms[] = $this->createForm(DeleteType::class)->createView();
         }
 
-        return $this->render("admin/exclusivite/exclusivite.html.twig",["var" => "exclusivite"]);
+        return $this->render("admin/exclusivite/exclusivite.html.twig",["var" => "exclusivite","forms" => $forms, "deletes" => $deletesForms,"exclusivites" => $exclusivites]);
     }
 
     #[Route(path: "/delete/{id}", name: "delete")]

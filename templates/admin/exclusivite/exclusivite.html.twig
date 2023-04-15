@@ -3,7 +3,7 @@
 {% block title %}
 {% endblock %}
 
-{% block stylesheets %}
+{% block css %}
     <link rel="stylesheet" href="{{ asset('css/templates/admin/exclusivite/exclusivite.css') }}">
 {% endblock %}
 
@@ -12,4 +12,21 @@
 {% endblock %}
 
 {% block main %}
+    <section class="liste-titre">
+        {% for exclusivite in exclusivites %}
+        <article class="article-flex">
+            <img class="" src="{{ asset(exclusivite.img) }}">
+            <h3>{{ exclusivite.title }}</h3>
+
+            <div class="position flex">
+                <button class="pen-to-square-buttom">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="trash-buttom">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+        </article>
+        {% endfor %}
+    </section>
 {% endblock %}

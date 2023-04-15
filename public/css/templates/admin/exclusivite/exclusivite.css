@@ -1,0 +1,44 @@
+.liste-titre {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px;
+    flex-flow: row wrap;
+}
+
+.article-flex {
+    position: relative;
+}
+
+.article-flex div {
+    position: absolute;
+    bottom: 85px;
+    right: 15px;
+}
+
+.article-flex:nth-child(2n+1) {
+    margin-right: 25px;
+}
+
+.pen-to-square-buttom {
+    background-color: #00AA00;
+    margin-right: 10px;
+}
+
+.pen-to-square-buttom, .trash-buttom {
+    border: none;
+    cursor: pointer;
+}
+
+.trash-buttom {
+    background-color: red;
+}
+
+.article-flex h3 {
+    padding: 15px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    background-color: #0BA4DE;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
