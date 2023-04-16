@@ -707,6 +707,11 @@
         height: 100%;
     }
 
+    .block-texte-service {
+        width: 243px;
+        height: 100%;
+    }
+
     .presentation h1{
         width: 624px;
         font-family: Nexa-Light, sans-serif;
@@ -806,6 +811,10 @@
         display: block;
     }
 
+    .entreprise-service {
+        grid-template-rows: repeat(2,115px) !important;
+    }
+
 
 
     .first-article h1{
@@ -864,18 +873,7 @@
         bottom: 44% !important;
     }
 
-
-
 }
-
-/**
-.carousel{
-    width: 1913px;
-    height: 467px;
-    display: block;
-}
- */
-
 
 .fleche-gauche{
     border-right: #00BAFF 2px solid;
@@ -1184,6 +1182,10 @@
     background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
 }
 
+.service-entreprise {
+    background: transparent linear-gradient(180deg, #7EA2AF 0%, #314757 100%) 0 0 no-repeat padding-box;
+}
+
 .a4, .b4, .c4, .d4, .e4{
     grid-row: 4/5;
 
@@ -1200,6 +1202,8 @@
 .a1, .b1, .c1, .d1, .e1{
     grid-row: 1/2;
 }
+
+
 
 .a3 h3{
     width: 160px !important;
@@ -1276,9 +1280,9 @@
 
 .grid-prix .excel p {
     text-transform: capitalize;
-    letter-spacing: 2.6px;
-    line-height: 1rem;
-    font-size: 13px;
+    letter-spacing: 3.2px;
+    line-height: 20px;
+    font-size: 1rem;
     margin-left: 17px;
     margin-bottom: 23px;
 }
@@ -1376,11 +1380,6 @@
 .b1 h3 {
     width: 240px !important;
 }
-
-
-
-
-
 
 .box-prix.excel h3{
     width: 768px !important;

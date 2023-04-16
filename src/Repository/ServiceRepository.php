@@ -45,4 +45,14 @@ class ServiceRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
+
+    public function findByService(array $list){
+        return $this->createQueryBuilder("s")
+            ->innerJoin("s.category","c")
+            ->where("c.id IN (:list)")
+            ->andWhere("s.actif = 1")
+            ->setParameter(":list",$list)
+            ->getQuery()->getResult()
+        ;
+    }
 }

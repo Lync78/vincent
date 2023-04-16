@@ -36,21 +36,19 @@ class MainController extends AbstractController
         foreach ($list as $value){
             $data[] = $this->serviceRepository->findBy(["category"=>$value,"actif"=>true]);
 
-            if ($value == 1){
-                $creations = $this->serviceRepository->findBy(["category"=>1,"actif"=>true]);
-            }
-            elseif ($value == 2){
-                $gjv = $this->serviceRepository->findBy(["category"=>2, "actif"=> true]);
-            }
-
-            elseif ($value == 3){
-                $gentreprise = $this->serviceRepository->findBy(["category"=>3,"actif"=>true]);
-            }
-
-            else {
-                $option = $this->serviceRepository->findBy(["category"=>4,"actif"=>true]);
+            switch ($value){
+                case 1: $creations = $this->serviceRepository->findBy(["category" => 1,"actif" => true]);
+                case 2: $gjv = $this->serviceRepository->findBy(["category" => 2,"actif" => true]);
+                case 3: $gentreprise = $this->serviceRepository->findBy(["category" => 3,"actif" => true]);
+                case 4: $option = $this->serviceRepository->findBy(["category" => 4, "actif" => true]);
+                case 6: $support = $this->serviceRepository->findBy(["category" => 6,"actif" => true]);
+                case 7: $visuel = $this->serviceRepository->findBy(["category" => 7, "actif" => true]);
             }
         }
+
+
+        $first = $this->serviceRepository->findByService([1,2,3,4]);
+        $second = $this->serviceRepository->findByService([6,7]);
 
         $exclusivites = $this->exclusiviteRepository->findBy([],["id" => "ASC"],4);
 
@@ -61,7 +59,7 @@ class MainController extends AbstractController
                 $services[] = $service;
             }
         }
-        $packs = $this->serviceRepository->findBy(["category"=>5]);
+        $packs = $this->serviceRepository->findBy(["category"=> 5]);
 
         $data = [
             "packs"=>$packs,
@@ -71,6 +69,10 @@ class MainController extends AbstractController
             "entreprise" => $gentreprise,
             "option" => $option,
             "exclusivites" => $exclusivites,
+            "support" => $support,
+            "visuel" => $visuel,
+            "first" => $first,
+            "second" => $second,
         ];
 
         return $this->render("main/index.html.twig", $data);

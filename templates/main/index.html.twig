@@ -83,7 +83,6 @@
                         {% for data in creations %}
                             <div class="slot slot-{{ i }} {{ data.background }} creations">
                                 <h2>{{ data.getTitle }}</h2>
-                                <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
                                     <p class="last">{{ data.getdescription }}</p>
                                 </div>
@@ -100,7 +99,6 @@
                         {% for data in gjv %}
                             <div class="slot slot-{{ i }} {{ data.background }} gjv">
                                 <h2>{{ data.getTitle }}</h2>
-                                <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
                                     <p class="last">{{ data.getdescription }}</p>
                                 </div>
@@ -117,7 +115,6 @@
                         {% for data in entreprise %}
                             <div class="slot slot-{{ i }} {{ data.background }} entreprise">
                                 <h2>{{ data.getTitle }}</h2>
-                                <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
                                     <p class="last">{{ data.getdescription }}</p>
                                 </div>
@@ -134,7 +131,6 @@
                         {% for data in option %}
                             <div class="slot slot-{{ i }} {{ data.background }} option" >
                                 <h2>{{ data.getTitle }}</h2>
-                                <p class="sous-description">{{ data.getSbtitle }}</p>
                                 <div>
                                     <p class="last">{{ data.getdescription }}</p>
                                 </div>
@@ -154,10 +150,101 @@
                         <hr class="hr-blanc">
                     </aside>
                     <aside class="d-grid grid-prix">
-                        {% for service in services %}
+                        {% for service in first %}
                             <div class="{{ service.getPosition }} flex-grid-prix excel">
                                 <div class="{{ service.background }} block-price" ></div>
+                                <div class="block-texte-service">
+                                    <h2>{{ service.getTitle }}</h2>
+                                    <p>{{ service.getDescription }}</p>
+                                </div>
+                            </div>
+                        {%  endfor %}
+                    </aside>
+                </div>
+                <aside class="polygon-prix">
+                    <div class="box-polygon"></div>
+                </aside>
+            </article>
+            <article class="tableau-prix">
+                <div class="tableau-prix-v360 overflow-a">
+                    <div class="texte-flex">
+                        <h1>creations <span>developpements</span></h1>
+                    </div>
+                    <hr>
+                    <div class="vert-blue">
+                        {% set i = 1 %}
+                        {% for data in creations %}
+                            <div class="slot slot-{{ i }} {{ data.background }} creations">
+                                <h2>{{ data.getTitle }}</h2>
                                 <div>
+                                    <p class="last">{{ data.getdescription }}</p>
+                                </div>
+                            </div>
+                            {% set i = i + 1 %}
+                        {% endfor %}
+                    </div>
+                    <div class="texte-flex">
+                        <h1>graphisme <br><span>gaming</span></h1>
+                    </div>
+                    <hr>
+                    <div class="darkBlue-blue">
+                        {% set i = 1 %}
+                        {% for data in gjv %}
+                            <div class="slot slot-{{ i }} {{ data.background }} gjv">
+                                <h2>{{ data.getTitle }}</h2>
+                                <div>
+                                    <p class="last">{{ data.getdescription }}</p>
+                                </div>
+                            </div>
+                            {% set i = i + 1 %}
+                        {% endfor %}
+                    </div>
+                    <div class="texte-flex">
+                        <h1>graphisme <span>animations</span></h1>
+                    </div>
+                    <hr>
+                    <div class="blue-darkBlue">
+                        {% set i = 1 %}
+                        {% for data in entreprise %}
+                            <div class="slot slot-{{ i }} {{ data.background }} entreprise">
+                                <h2>{{ data.getTitle }}</h2>
+                                <div>
+                                    <p class="last">{{ data.getdescription }}</p>
+                                </div>
+                            </div>
+                            {% set i = i + 1 %}
+                        {% endfor %}
+                    </div>
+                    <div class="texte-flex">
+                        <h1>packs <span><br>twitch</span></h1>
+                    </div>
+                    <hr>
+                    <div class="purple-blue">
+                        {% set i = 1 %}
+                        {% for data in option %}
+                            <div class="slot slot-{{ i }} {{ data.background }} option" >
+                                <h2>{{ data.getTitle }}</h2>
+                                <div>
+                                    <p class="last">{{ data.getdescription }}</p>
+                                </div>
+                            </div>
+                            {% set i = i + 1 %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="tableau-prix-v1820">
+                    <aside class="d-flex column-wrap align-items-end info-service">
+                        <h1>support <span>entreprise</span></h1>
+                        <h1>visuel <span>entreprise</span></h1>
+                    </aside>
+                    <aside>
+                        <hr class="hr-blanc">
+                    </aside>
+                    <aside class="d-grid grid-prix entreprise-service">
+                        {% for service in second %}
+                            <div class="{{ service.getPosition }} flex-grid-prix excel">
+                                <div class="{{ service.background }} block-price" ></div>
+                                <div class="block-texte-service">
                                     <h2>{{ service.getTitle }}</h2>
                                     <p>{{ service.getDescription }}</p>
                                 </div>

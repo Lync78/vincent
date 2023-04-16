@@ -20,9 +20,6 @@ class Service extends EntityAbstract
     #[ORM\Column(type: "string", length: "255")]
     private string $position;
 
-    #[ORM\Column(type: "string", length: 255)]
-    private string $sbtitle;
-
     #[ORM\Column(type: "boolean")]
     private bool $actif;
 
@@ -58,18 +55,6 @@ class Service extends EntityAbstract
     public function setPosition(string $position): self
     {
         $this->position = $position;
-
-        return $this;
-    }
-
-    public function getSbtitle(): ?string
-    {
-        return $this->sbtitle;
-    }
-
-    public function setSbtitle(string $sbtitle): self
-    {
-        $this->sbtitle = $sbtitle;
 
         return $this;
     }
