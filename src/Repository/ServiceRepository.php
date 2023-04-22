@@ -46,13 +46,21 @@ class ServiceRepository extends ServiceEntityRepository
         }
     }
 
-    public function findByService(array $list){
-        return $this->createQueryBuilder("s")
-            ->innerJoin("s.category","c")
-            ->where("c.id IN (:list)")
-            ->andWhere("s.actif = 1")
-            ->setParameter(":list",$list)
-            ->getQuery()->getResult()
-        ;
+    public function findByService(array $list,int $actif = 1){
+
+        $filtre = [];
+
+        $qb = $this->createQueryBuilder("s");
+        $qb->innerJoin("s.category","c");
+        $qb->where("c.id IN (:list)");
+
+        if ($actif <= 1){
+            $qb->andWhere("s.actif = :actif");
+            $filtre["actif"] = $actif;
+        }
+
+        $qb->setParameters(array_merge(["list" => $list], $filtre));
+
+        return $qb->getQuery()->getResult();
     }
 }

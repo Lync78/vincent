@@ -17,22 +17,29 @@ class ExclusiviteType extends AbstractType
     {
         $builder
             ->add('img', FileType::class, [
-                "required" => true,
+                "required" => false,
                 "mapped" => false,
+                "row_attr" => ["class" => "div-formImg"],
                 "attr" => [
-                    "accept" => ".png"
+                    "accept" => ".jpg",
+                    "class" => "input-file"
                 ],
+                "label_attr" => ["class" => "label-file"],
                 "constraints" => [
                     new File([
                         "maxSize" => "1024k",
-                        "mimeTypes" => ["image/png"],
-                        "mimeTypesMessage" => "Seul les fichiers au format PNG sont autorisé"
+                        "mimeTypes" => ["image/jpg"],
+                        "mimeTypesMessage" => "Seul les fichiers au format JPG sont autorisé"
                     ])
                 ]
             ])
             ->add('title', TextType::class, [
                 "required" => true,
                 "mapped" => true,
+                "label_attr" => ["class" => "title-form"],
+                "row_attr" => ["class" => "div-title"],
+                "attr" => ["class" => "input-title"],
+
                 "constraints" => [
                     new NotBlank(["message"=>"ce champs est obligatoire"])
                 ]
@@ -44,6 +51,7 @@ class ExclusiviteType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Exclusivite::class,
+            "information" => null,
         ]);
     }
 }

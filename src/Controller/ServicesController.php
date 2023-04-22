@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Repository\PriceRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -15,14 +17,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class ServicesController extends AbstractController
 {
 
-    private $priceRepository;
-
-    public function __construct(PriceRepository $priceRepository)
+    public function __construct(
+        private PriceRepository $priceRepository,
+        MailerInterface $mailer,
+        ManagerRegistry $managerRegistry
+    )
     {
-
-        $this->priceRepository = $priceRepository;
-
-
+        parent::__construct($mailer,$managerRegistry);
     }
 
     #[Route("/", name:"services")]

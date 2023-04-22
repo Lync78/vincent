@@ -15,19 +15,23 @@
     flex-flow: wrap row;
 }
 
-.admin-grid-service {
+.admin-grid-service, .admin-grid-service-entreprise {
     display: grid;
     grid-template-columns: repeat(5,260px);
-    grid-template-rows: repeat(5,260px);
+    grid-template-rows: repeat(4,260px);
     grid-gap: 10px;
 }
 
-.admin-grid-service .block-info {
+.admin-grid-service-entreprise {
+    grid-template-rows: repeat(2,260px) !important;
+}
+
+:is(.admin-grid-service-entreprise, .admin-grid-service) .block-info {
     position: relative;
     background-color: #1E445E;
 }
 
-.admin-grid-service .block-info h3 {
+:is(.admin-grid-service-entreprise, .admin-grid-service) .block-info h3 {
     text-transform: uppercase;
     letter-spacing: 4.2px;
     line-height: 25px;
@@ -37,7 +41,7 @@
     font-family: Nexa-Bold, sans-serif;
 }
 
-.admin-grid-service .block-info p{
+:is(.admin-grid-service-entreprise, .admin-grid-service) .block-info p{
     font-family: Nexa-Light, sans-serif;
     text-transform: capitalize;
     letter-spacing: 2.6px;

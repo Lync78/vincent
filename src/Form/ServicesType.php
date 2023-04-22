@@ -27,18 +27,6 @@ class ServicesType extends AbstractType
                     "class" => "form_group"
                 ]
             ])
-            ->add('sbtitle', TextType::class, [
-                "constraints" => [
-                    new NotBlank(["message" => "ce champs est obligatoire"]),
-                    new Length(["max" => 30])
-                ],
-                "required" => true,
-                "mapped" => true,
-                "row_attr" => [
-                    "class" => "form_group"
-                ],
-                "label" => "Sous titre"
-            ])
             ->add('actif', ChoiceType::class, [
                 "expanded" => false,
                 "multiple" => false,
@@ -64,6 +52,7 @@ class ServicesType extends AbstractType
                     "couleur-animation" => "couleurAnimation",
                     "couleur-option-commande" => "couleurOptionCommande",
                     "couleur-packs" => "couleurPacks",
+                    "service-entreprise" => "Service Entreprise"
                 ]),
                 "expanded" => false,
                 "multiple" => false,

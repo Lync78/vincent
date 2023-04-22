@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block js %}
-    <script src="{{ asset('js/admin/Service.js') }}"></script>
+    <script src="{{ asset('js/admin/service/Service.js') }}"></script>
 {% endblock %}
 
 {% block main %}
@@ -28,13 +28,11 @@
         {% endfor %}
     </section>
     <section class="admin-grid-service">
-
         {% set i = 0 %}
-        {% for service in services %}
+        {% for service in first %}
             <div class="{{ service.position ~ " " ~ service.background }} block-info">
                 <div class="information">
                     <h3>{{ service.title }}</h3>
-                    <p class="pfirst">{{ service.sbtitle }}</p>
                     <div class="group-last">
                         <p class="last">{{ service.description }}</p>
                     </div>
@@ -45,28 +43,68 @@
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
-                {{ form_start(forms[i]) }}
-                    {{ form_row(forms[i].title) }}
-                    {{ form_row(forms[i].sbtitle) }}
-                    {{ form_row(forms[i].description) }}
-                    {{ form_row(forms[i].actif) }}
-                    {{ form_row(forms[i].background) }}
+                {{ form_start(formsFirst[i]) }}
+                    {{ form_row(formsFirst[i].title) }}
+                    {{ form_row(formsFirst[i].description) }}
+                    {{ form_row(formsFirst[i].actif) }}
+                    {{ form_row(formsFirst[i].background) }}
                     <button class="save" type="submit">
                         <i class="fa-regular fa-floppy-disk"></i>
                     </button>
                     <button type="button" class="cancel">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
-                {{ form_end(forms[i]) }}
+                {{ form_end(formsFirst[i]) }}
 
-                {{ form_start(deletes[i]) }}
-                    {{ form_row(deletes[i].delete) }}
+                {{ form_start(deletesFirst[i]) }}
+                    {{ form_row(deletesFirst[i].delete) }}
                 <div>
                     <label>Confirmer la suppression ?</label>
                 </div>
                 <button type="submit"><i class="fa-solid fa-check"></i></button>
                 <button type="button"><i class="fa-solid fa-xmark"></i></button>
-                {{ form_end(deletes[i]) }}
+                {{ form_end(deletesFirst[i]) }}
+                {% set i = i + 1 %}
+            </div>
+        {% endfor %}
+    </section>
+    <section class="admin-grid-service-entreprise">
+        {% set i = 0 %}
+        {% for service in second %}
+            <div class="{{ service.position ~ " " ~ service.background }} block-info">
+                <div class="information">
+                    <h3>{{ service.title }}</h3>
+                    <div class="group-last">
+                        <p class="last">{{ service.description }}</p>
+                    </div>
+                    <button class="formulaire-admin-serviceAccueil d-none">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="trash d-none">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                {{ form_start(formsSecond[i]) }}
+                {{ form_row(formsSecond[i].title) }}
+                {{ form_row(formsSecond[i].description) }}
+                {{ form_row(formsSecond[i].actif) }}
+                {{ form_row(formsSecond[i].background) }}
+                <button class="save" type="submit">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>
+                <button type="button" class="cancel">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                {{ form_end(formsSecond[i]) }}
+
+                {{ form_start(deletesSecond[i]) }}
+                {{ form_row(deletesSecond[i].delete) }}
+                <div>
+                    <label>Confirmer la suppression ?</label>
+                </div>
+                <button type="submit"><i class="fa-solid fa-check"></i></button>
+                <button type="button"><i class="fa-solid fa-xmark"></i></button>
+                {{ form_end(deletesSecond[i]) }}
                 {% set i = i + 1 %}
             </div>
         {% endfor %}

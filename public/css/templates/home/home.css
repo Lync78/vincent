@@ -770,6 +770,11 @@
         width: 1820px;
     }
 
+
+    .tableau-entreprise, .tableau-entreprise .box-polygon {
+        height: 372px;
+    }
+
     .tableau-prix-v1820{
         display: flex;
         flex-flow: row wrap;
@@ -1122,6 +1127,10 @@
 
 .hr-blanc{
     height: 486px;
+}
+
+.tableau-entreprise .hr-blanc {
+    height: 245px;
 }
 
 .second-hr-blanc{

@@ -13,20 +13,44 @@
 
 {% block main %}
     <section class="liste-titre">
+        {% set i = 0 %}
         {% for exclusivite in exclusivites %}
-        <article class="article-flex">
-            <img class="" src="{{ asset(exclusivite.img) }}">
-            <h3>{{ exclusivite.title }}</h3>
+            <article class="article-flex">
+                <div class="show-entity d-none">
+                    <img class="" src="{{ asset(exclusivite.img) }}">
+                    <h3>{{ exclusivite.title }}</h3>
+                    <div class="position flex">
+                        <button class="pen-to-square-buttom">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+                        <button class="trash-buttom">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modify-entity">
+                    {{ form_start(forms[i]) }}
 
-            <div class="position flex">
-                <button class="pen-to-square-buttom">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                </button>
-                <button class="trash-buttom">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
-            </div>
-        </article>
+                    <img class="" src="{{ asset(exclusivite.img) }}">
+                    <h3>{{ exclusivite.title }}</h3>
+                    <div class="position flex d-none">
+                        <button class="pen-to-square-buttom">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+                        <button class="trash-buttom">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                        {{ form_row(forms[i].img)}}
+                        {{ form_row(forms[i].title) }}
+                    {{ form_end(forms[i]) }}
+                </div>
+                <div class="delete-entity d-none">
+                    {{ form_start(deletes[i]) }}
+                    {{ form_end(deletes[i]) }}
+                </div>
+            </article>
+            {% set i = i + 1 %}
         {% endfor %}
     </section>
 {% endblock %}
