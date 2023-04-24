@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Service;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Exception\ORMException;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -42,5 +44,23 @@ class ServiceRepository extends ServiceEntityRepository
         if ($flush) {
             $this->_em->flush();
         }
+    }
+
+    public function findByService(array $list,int $actif = 1){
+
+        $filtre = [];
+
+        $qb = $this->createQueryBuilder("s");
+        $qb->innerJoin("s.category","c");
+        $qb->where("c.id IN (:list)");
+
+        if ($actif <= 1){
+            $qb->andWhere("s.actif = :actif");
+            $filtre["actif"] = $actif;
+        }
+
+        $qb->setParameters(array_merge(["list" => $list], $filtre));
+
+        return $qb->getQuery()->getResult();
     }
 }

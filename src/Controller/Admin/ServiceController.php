@@ -33,16 +33,20 @@ class ServiceController extends AbstractController
     public function index(): Response
     {
 
-        $services = $this->serviceRepository->findAll();
+        $first = $this->serviceRepository->findByService([1,2,3,4],2);
 
-        $forms = [];
-        $deletes = [];
+        $second = $this->serviceRepository->findByService([6,7],2);
+
+        $formsFirst = [];
+        $deletesFirst = [];
+
+        $formsSecond = [];
+        $deletesSecond = [];
 
         $categorys = new CategoryServiceFactory($this->categoryRepository);
 
         /** @var Service $service */
-        foreach ($services as $service){
-            dump($service);
+        foreach ($first as $service){
             $form = $this->createForm(ServicesType::class, $service, [
                 "action" => $this->generateUrl("admin_service_formulaire", ["id" => $service->getId()]),
                 "method" => "POST",
@@ -56,11 +60,29 @@ class ServiceController extends AbstractController
                 "attr" => ["class" => "d-none form-delete"],
             ]);
 
-            $deletes[] = $deleteForm->createView();
-            $forms[] = $form->createView();
+            $deletesFirst[] = $deleteForm->createView();
+            $formsFirst[] = $form->createView();
         }
 
-        return $this->render('admin/service/index.html.twig', ['var' => 'service', "services" => $services, "forms" => $forms,"deletes" => $deletes]);
+        foreach ($second as $service){
+            $form = $this->createForm(ServicesType::class, $service, [
+                "action" => $this->generateUrl("admin_service_formulaire", ["id" => $service->getId()]),
+                "method" => "POST",
+                "attr" => ["class" => "d-none"],
+                "list" => $categorys->list(),
+            ]);
+
+            $deleteForm = $this->createForm(DeleteType::class, null, [
+                "action" => $this->generateUrl("admin_service_delete", ["id" => $service->getId()]),
+                "method" => "POST",
+                "attr" => ["class" => "d-none form-delete"],
+            ]);
+
+            $deletesSecond[] = $deleteForm->createView();
+            $formsSecond[] = $form->createView();
+        }
+
+        return $this->render('admin/service/index.html.twig', ['var' => 'service', "first" => $first,"second" => $second, "formsFirst" => $formsFirst,"deletesFirst" => $deletesFirst, "formsSecond" => $formsSecond, "deletesSecond" => $deletesSecond]);
     }
 
     #[Route(path: "/traitement/{id}", name: "formulaire")]
@@ -104,11 +126,9 @@ class ServiceController extends AbstractController
         if ($this->getValidForm($form)){
             $service->setActif(false);
             $service->setTitle("emplacement ". $service->getPosition());
-            $service->setSbtitle("Sous titre");
             $service->setDescription("Description");
 
-            $this->getManager()->persist($service);
-            $this->getManager()->flush();
+            $this->serviceRepository->add($service);
 
             $this->addFlash("success","La suppression a bien été effectué");
         }
@@ -119,5 +139,4 @@ class ServiceController extends AbstractController
 
         return $this->redirectToRoute("admin_service_service");
     }
-
 }

@@ -696,6 +696,22 @@
 
 @media (min-width: 1820px) {
 
+    .flex-grid-prix {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+
+    .block-price {
+        width: 17px;
+        height: 100%;
+    }
+
+    .block-texte-service {
+        width: 243px;
+        height: 100%;
+    }
+
     .presentation h1{
         width: 624px;
         font-family: Nexa-Light, sans-serif;
@@ -742,14 +758,21 @@
     .box-polygon{
         display: block;
         width: 100px;
-        height: 800px;
         clip-path: polygon(77.33% 0, 100% 0%, 100% 100%, 95% 100%);
         background: #00BAFF 0 0 no-repeat padding-box;
     }
 
+    .tableau-prix, .box-polygon {
+        height: 615px;
+    }
+
     .tableau-prix{
         width: 1820px;
-        height: 800px;
+    }
+
+
+    .tableau-entreprise, .tableau-entreprise .box-polygon {
+        height: 372px;
     }
 
     .tableau-prix-v1820{
@@ -791,6 +814,10 @@
     .second-article hr {
         opacity: 50%;
         display: block;
+    }
+
+    .entreprise-service {
+        grid-template-rows: repeat(2,115px) !important;
     }
 
 
@@ -851,18 +878,7 @@
         bottom: 44% !important;
     }
 
-
-
 }
-
-/**
-.carousel{
-    width: 1913px;
-    height: 467px;
-    display: block;
-}
- */
-
 
 .fleche-gauche{
     border-right: #00BAFF 2px solid;
@@ -1113,6 +1129,10 @@
     height: 486px;
 }
 
+.tableau-entreprise .hr-blanc {
+    height: 245px;
+}
+
 .second-hr-blanc{
     height: 111px;
     margin-left: 1px;
@@ -1148,11 +1168,11 @@
 }
 
 .couleur-animation {
-    background: transparent linear-gradient(90deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
 }
 
 .couleur-graphisme-gaming {
-    background: transparent linear-gradient(270deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #00BAFF 0%, #005D80 100%) 0 0 no-repeat padding-box;
 }
 
 .couleur-graphisme-entreprise {
@@ -1164,11 +1184,15 @@
 }
 
 .couleur-creations-dev {
-    background: transparent linear-gradient(90deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
 }
 
 .couleur-packs {
     background: transparent linear-gradient(270deg, #151C25 0%, #265B7F 100%) 0 0 no-repeat padding-box;
+}
+
+.service-entreprise {
+    background: transparent linear-gradient(180deg, #7EA2AF 0%, #314757 100%) 0 0 no-repeat padding-box;
 }
 
 .a4, .b4, .c4, .d4, .e4{
@@ -1187,6 +1211,8 @@
 .a1, .b1, .c1, .d1, .e1{
     grid-row: 1/2;
 }
+
+
 
 .a3 h3{
     width: 160px !important;
@@ -1263,9 +1289,9 @@
 
 .grid-prix .excel p {
     text-transform: capitalize;
-    letter-spacing: 2.6px;
-    line-height: 1rem;
-    font-size: 13px;
+    letter-spacing: 3.2px;
+    line-height: 20px;
+    font-size: 1rem;
     margin-left: 17px;
     margin-bottom: 23px;
 }
@@ -1363,8 +1389,6 @@
 .b1 h3 {
     width: 240px !important;
 }
-
-
 
 .box-prix.excel h3{
     width: 768px !important;
@@ -1536,6 +1560,10 @@
 
 .RightToLeft {
     animation: 1s ease-in 1 RightToLeft;
+}
+
+.flex-grid-prix {
+    background-color: #253841;
 }
 
 

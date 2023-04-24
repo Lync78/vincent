@@ -6,8 +6,8 @@ const Service = {
         for (let i = 0;i < boite.length;i++){
             if (!boite[i].classList.contains("d-none")){
 
-                let suppression = boite[i].children[0].children[4];
-                let edit = boite[i].children[0].children[3];
+                let suppression = boite[i].children[0].children[3];
+                let edit = boite[i].children[0].children[2];
 
                 boite[i].addEventListener("mouseover", () => {
                     suppression.classList.remove("d-none");

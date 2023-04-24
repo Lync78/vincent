@@ -1,0 +1,87 @@
+.liste-titre {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    flex-flow: row wrap;
+    width: 1239px;
+}
+
+.article-flex {
+    margin-top: 25px;
+}
+
+.article-flex:nth-child(2n+1){
+    margin-left: 25px;
+}
+
+.article-flex .show-entity{
+    position: relative;
+}
+
+.position {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+
+.input-file{
+    display: none;
+}
+
+.label-file{
+    width: 589px;
+    height: 346px;
+    border: 5px #00baff dashed;
+    display: block;
+    cursor: pointer;
+}
+
+.div-title {
+    position: relative;
+}
+
+.input-title {
+    width: 430px;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 9px;
+    padding-right: 159px;
+    border: white;
+    outline: none;
+    margin: 10px 0;
+}
+
+.title-form {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 25px;
+    background-color: #00baff;
+    padding: 10px 80px 7px 20px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+}
+
+.pen-to-square-buttom {
+    background-color: #00AA00;
+    margin-right: 10px;
+}
+
+.pen-to-square-buttom, .trash-buttom {
+    border: none;
+    cursor: pointer;
+}
+
+.trash-buttom {
+    background-color: red;
+}
+
+.article-flex h3 {
+    padding: 15px;
+    color: white;
+    font-family: Nexa-Light, sans-serif;
+    text-transform: uppercase;
+    background-color: #0BA4DE;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
