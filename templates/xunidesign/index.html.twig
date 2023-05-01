@@ -20,7 +20,7 @@
                     <hr>
                     <hr>
                 </div>
-                <h1 class="presentation">presentation <span>xunidesign</span></h1>
+                <h1 class="presentation">chartre <span>graphique</span></h1>
                 <div class="element">
                     <hr>
                     <hr>
@@ -28,21 +28,26 @@
                 </div>
             </article>
             <article class="container box-biographie d-flex justify-start row-wrap">
-                <div class="box-cadre">
-                    <div class="description-xunidesign">
-                        <img src="{{ asset('image/presentation/xunidesign.png') }}" alt="xunidesign.png">
-                        <h1>xunidesign <span>Alias DiazDawn</span></h1>
+                <div class="block-chartre">
+                    <div class="polygon-box-chartre">
+                        <div></div>
                     </div>
-                    <h3>graphiste <span>pro</span> | web<span>design</span></h3>
-                </div>
-                <hr class="trait">
-                <div class="longueur">
-                    <div class="biographie">
-                        <p >Bonjour,</p>
-                        <p>Je me présente DiazDawn.</p>
-                        <p>Graphiste Professionnel depuis maintenant plusieurs années, je pratique aussi le webdesign ainsi que la maintenance informatique.</p>
-                        <p>XuniDesign à pour ambition de valoriser le visuel de vos projets.</p>
-                        <p> Les services proposés vise le gaming, l’entreprise et la maintenance hardware/software.</p>
+                    <div class="info-chartre-graphique">
+                        <img src="{{ asset('image/presentation/chartre-graphique-xunidesign.png') }}" alt="chartre-graphique-xunidesign.png">
+                        <div class="couleur-block">
+                            <p>couleurs <span>utilisé</span></p>
+                            <div class="color-flex parti-1">
+                                {% for i in 1..4 %}
+                                    <div></div>
+                                {% endfor %}
+                            </div>
+                            <p>dégrader <span>utilisé</span></p>
+                            <div class="color-flex parti-2">
+                                {% for i in 1..2 %}
+                                    <div></div>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -56,7 +61,7 @@
                     <hr>
                     <hr>
                 </div>
-                <h1 class="presentation-projet">experiences <span>logiciels</span></h1>
+                <h1 class="presentation-projet">description <span>xunidesign</span></h1>
                 <div class="element rotateX-rotateY">
                     <hr>
                     <hr>
@@ -64,119 +69,13 @@
                 </div>
             </article>
             <article class="box-logiciel overflow-a">
-                <div class="polygon-box"></div>
-                <div class="tableau-logiciel">
-                    <div class="tableau">
-                        <img src="{{ asset('image/presentation/Adobe-Photoshop-CC-Logo.png') }}" alt="Adobe-Photoshop-CC-Logo.png">
-                        <div class="competences">
-                            <div class="niveau-competences">
-                                <p>faible</p>
-                                <p>elever</p>
-                            </div>
-                            <div class="progress-competence">
-                                <hr class="bar-valid">
-                                <hr class="bar-valid">
-                                <hr class="bar-valid">
-                                <hr class="bar-no-valid">
-                            </div>
-                            <div class="name-logiciel">
-                                <p>adobe photoshop cc</p>
-                            </div>
-                        </div>
-                        <hr class="trait">
-                        <div class="competence-texte">
-                            <p>plusieurs maitrise avec photoshop, dans le but de créer affiches et carte de visites mais aussi pour tout ce qui est retouche principale style (gamming) et (entreprise).</p>
-                        </div>
-                    </div>
-                    <div class="tableau">
-                        <img src="{{ asset('image/presentation/ADOBE-ILLUSTRATOR-CC-Logo.png') }}" alt="ADOBE-ILLUSTRATOR-CC-Logo.png">
-                        <div class="competences">
-                            <div class="niveau-competences">
-                                <p>moyen</p>
-                                <p>expert</p>
-                            </div>
-                            <div class="progress-competence">
-                                <hr class="bar-valid">
-                                <hr class="bar-valid">
-                                <hr class="bar-valid">
-                                <hr class="bar-no-valid">
-                            </div>
-                            <div class="name-logiciel">
-                                <p>adobe illustrator</p>
-                            </div>
-                        </div>
-                        <hr class="trait">
-                        <div class="competence-texte">
-                            <p>experience dans les logotypes et emote/badges puis autres créer dans un style gaming et aussi imaginatif.</p>
-                        </div>
-                    </div>
-                    <div class="tableau">
-                        <img src="{{ asset('image/presentation/AFTER-EFFECTS-CC-Logo.png') }}" alt="AFTER-EFFECTS-CC-Logo.png">
-                        <div class="competences">
-                            <div class="niveau-competences">
-                                <p>faible</p>
-                                <p>elever</p>
-                            </div>
-                            <div class="progress-competence">
-                                <hr class="bar-valid">
-                                <hr class="bar-valid">
-                                <hr class="bar-no-valid">
-                                <hr class="bar-no-valid">
-                            </div>
-                            <div class="name-logiciel">
-                                <p>adobe after effect cc</p>
-                            </div>
-                        </div>
-                        <hr class="trait">
-                        <div class="competence-texte">
-                            <p>competence acquis principalement dans le style gaming. Des effets scène. Overlay puis logo etc.</p>
-                        </div>
-                    </div>
-                    <div class="tableau">
-                        <img src="{{ asset('image/presentation/ADOBE-XD-Logo.png') }}" alt="ADOBE-XD-Logo.png">
-                        <div class="competences">
-                            <div class="niveau-competences">
-                                <p>faible</p>
-                                <p>moyen</p>
-                            </div>
-                            <div class="progress-competence">
-                                <hr class="bar-valid">
-                                <hr class="bar-no-valid">
-                                <hr class="bar-no-valid">
-                                <hr class="bar-no-valid">
-                            </div>
-                            <div class="name-logiciel">
-                                <p>adobe xd</p>
-                            </div>
-                        </div>
-                        <hr class="trait">
-                        <div class="competence-texte">
-                            <p>creation de maquette website et aussi autre projet comme presentation d'application etc.</p>
-                        </div>
-                    </div>
-                    <div class="tableau">
-                        <img src="{{ asset('image/presentation/Cinema-4D-Logo.png') }}" alt="Cinema-4D-Logo.png">
-                        <div class="competences">
-                            <div class="niveau-competences">
-                                <p>faible</p>
-                                <p>moyen</p>
-                            </div>
-                            <div class="progress-competence">
-                                <hr class="bar-valid">
-                                <hr class="bar-no-valid">
-                                <hr class="bar-no-valid">
-                                <hr class="bar-no-valid">
-                            </div>
-                            <div class="name-logiciel">
-                                <p>cinema 4d</p>
-                            </div>
-                        </div>
-                        <hr class="trait">
-                        <div class="competence-texte">
-                            <p>maitrise de la base du logiciel pour text et logo 3d. en apprentisage pour le reste</p>
-                        </div>
-                    </div>
-                </div>
+                <p><span>xunidesign</span> a été crée, le 21 septembre 2021</p>
+                <p>cette entreprise est spécialisée dns le graphisme design gaming et entreprise.</p>
+                <p>les services proposées ont le potentiel de réalisé des projets <span>uniques</span> et <span>personaliser</span></p>
+                <p>les compétences sur les logiciels adobe (illustrator, photoshop, after effect) sont maîtrsées professionnelement pour réaliser le(s) projet(s).</p>
+            </article>
+            <article class="carte-de-visiste overflow-a">
+                <img src="{{ asset('image/presentation/carte-de-visiste.png') }}" alt="carte-de-visite.png">
             </article>
             <article class="mt-perso d-flex justify-end">
                 {% include "layout/layout-buttom-for-top.html.twig" %}
