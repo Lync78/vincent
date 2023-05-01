@@ -3,6 +3,11 @@
         display: none;
     }
 
+    .info-chartre-graphique {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
     .section_first_xunidesign h1.presentation {
         font-family: Nexa-Light, sans-serif;
         font-weight: normal;
@@ -55,7 +60,7 @@
     }
 
     .section_first_xunidesign{
-        background: transparent linear-gradient(90deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(90deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
     }
 
     .box-cadre ~ .trait{
@@ -102,14 +107,6 @@
         font-family: Nexa-Light, sans-serif;
         font-weight: normal;
         text-align: center;
-    }
-
-    .box-logiciel {
-        margin: 0 auto;
-        background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
-        box-shadow: 15px 15px 20px #00000029;
-        position: relative;
-        height: 1927px;
     }
 
     .polygon-box {
@@ -199,10 +196,6 @@
         width: auto;
     }
 
-    .box-logiciel {
-        height: 1310px;
-    }
-
     .trait {
         display: none;
     }
@@ -227,18 +220,11 @@
         width: auto;
     }
 
-    .box-logiciel {
-        height: 1230px;
-    }
 }
 
 @media (min-width: 900px) {
     .biographie {
         width: 410px;
-    }
-
-    .box-logiciel {
-        height: 1160px;
     }
 
     .conteneur, .title-xunidesign {
@@ -272,9 +258,6 @@
         width: 660px;
     }
 
-    .box-logiciel {
-        height: 1040px;
-    }
 }
 
 
@@ -330,16 +313,57 @@
 
 }
 
-@media (min-width: 1740px) {
-    .box-logiciel {
-        height: 735px;
-    }
-}
-
 @media (min-width: 1875px) {
 
+    .info-chartre-graphique {
+        margin: 39px 0 0 40px;
+    }
+
+    .color-flex {
+        display: flex;
+        width: 314px;
+    }
+
+    .color-flex div:nth-child(1n+2) {
+        margin-left: 18px;
+    }
+
+    .color-flex div {
+        width: 65px;
+        height: 65px;
+    }
+
+    .color-flex.parti-1 {
+        margin-bottom: 45px;
+    }
+
+    .color-flex.parti-1 div:nth-of-type(1){
+        background-color: #00BAFF;
+    }
+
+    .color-flex.parti-1 div:nth-of-type(2){
+        background-color: #3C87BC;
+    }
+
+    .color-flex.parti-1 div:nth-of-type(3){
+        background-color: #1D588B;
+    }
+
+    .color-flex.parti-1 div:nth-of-type(4){
+        background-color: #1A1A1A;
+    }
+
+    .color-flex.parti-2 div:nth-of-type(1){
+        background: transparent linear-gradient(90deg, #1D588B 0%, #00BAFF 100%) 0 0 no-repeat padding-box;
+    }
+
+    .color-flex.parti-2 div:nth-of-type(2){
+        background: transparent linear-gradient(90deg, #1D588B 0%, #3C87BC 100%) 0 0 no-repeat padding-box;
+    }
+
+
     .box-biographie {
-        margin-bottom: 167px;
+        margin-bottom: 73px;
     }
 
     .element, .section_img, .polygon-box, .trait {
@@ -349,12 +373,54 @@
     .section_first_xunidesign h1.presentation {
         font-size: 40px;
         line-height: 49px;
-        width: 1040px;
+        width: 860px;
         margin: 0 auto;
     }
 
     .tableau hr.trait {
         margin-left: 11px;
+    }
+
+    .block-chartre {
+        width: 1778px;
+        background: transparent linear-gradient(270deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;
+        box-shadow: 15px 15px 20px #00000029;
+        position: relative;
+    }
+
+    .polygon-box-chartre {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .polygon-box-chartre div, .block-chartre {
+        height: 492px;
+    }
+
+    .polygon-box-chartre div {
+        display: block;
+        width: 100px;
+        clip-path: polygon(77.33% 0,100% 0, 100% 100%, 95% 100%);
+        background-color: #00BAFF;
+    }
+
+    .couleur-block {
+        align-self: center;
+    }
+
+    .couleur-block p {
+        font-family: Nexa-Light, sans-serif;
+        color: white;
+        font-size: 17px;
+        letter-spacing: 3.4px;
+        line-height: 21px;
+        text-transform: uppercase;
+        margin-bottom: 9px;
+    }
+
+    .couleur-block p span {
+        font-family: Nexa-Bold, sans-serif;
     }
 
     .box-cadre{
@@ -402,8 +468,21 @@
     }
 
     .title-xunidesign{
-        width: 1020px;
-        margin: 67px auto 70px;
+        width: 860px;
+        margin: 67px auto 43px;
+    }
+
+    .box-logiciel p {
+        font-size: 31px;
+        letter-spacing: 6.2px;
+        line-height: 38px;
+        text-transform: uppercase;
+        font-family: Nexa-Light, sans-serif;
+        color: white;
+    }
+
+    .box-logiciel p span {
+        font-family: Nexa-Bold, sans-serif;
     }
 
     .conteneur{
@@ -417,12 +496,16 @@
     }
 
     .box-logiciel {
-        width: 1778px;
-        height: 800px;
-        margin: 0 auto;
-        background: transparent linear-gradient(90deg, #1A1C1D 0%, #181F25 51%, #17232C 100%) 0 0 no-repeat padding-box;
-        box-shadow: 15px 15px 20px #00000029;
-        position: relative;
+        width: 1530px;
+        margin: auto;
+    }
+
+    .box-logiciel p {
+        margin-bottom: 50px;
+    }
+
+    .carte-de-visiste img{
+        margin: 0 125px;
     }
 
     .tableau-logiciel {
@@ -485,7 +568,7 @@
 }
 
 .section_second_xunideisgn{
-    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(270deg, #4A5D6A 0%, #25343E 100%) 0 0 no-repeat padding-box;
 }
 
 .presentation-projet span {
