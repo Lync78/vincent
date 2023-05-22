@@ -210,12 +210,6 @@
         background: #151C25 0 0 no-repeat padding-box;
     }
 
-
-    .tableau {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
     .exception {
         font-size: 1rem;
         line-height: 20px;
@@ -248,16 +242,6 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         margin-top: 25px;
-    }
-
-    .tableau {
-        width: 300px;
-        flex-flow: column wrap;
-    }
-
-    .tableau:nth-child(2n+1){
-        margin-right: 35px;
-        margin-left: 25px;
     }
 
     .one {
@@ -380,16 +364,6 @@
         width: 725px !important;
     }
 
-    .tableau {
-        flex-flow: row wrap;
-        align-self: flex-end;
-    }
-
-    .tableau:nth-child(2n+1){
-        margin-right: 0;
-        margin-left: 0;
-    }
-
     .mini-tableau h3 {
         margin-right: 25px;
         width: 250px;
@@ -442,18 +416,6 @@
     }
 
 }
-
-.img{
-    height: 327px;
-    background-image: url("../../../image/header/header-graphisme-jeux-videos.png");
-    border-bottom: 2px white solid;
-}
-
-.section-second-graphisme-jeux-videos{
-    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
-}
-
-
 
 .title {
     margin: 60px auto 52px;

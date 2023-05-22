@@ -9,9 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BookController extends AbstractController
 {
-    /**
-     * @Route("/book-present/{slug?}", name="present")
-     */
+
+    #[Route(path: "/book-creations/{slug?}", name: "present")]
     public function present(Request $request, string $slug = null): Response
     {
 

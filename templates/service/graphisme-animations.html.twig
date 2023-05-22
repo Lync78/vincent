@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Xunidesign - Graphisme d'entreprise
+    Xunidesign - Graphisme d'animation
 {% endblock %}
 
 {% block stylesheets %}
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block main %}
-    <section class="entreprise img"></section>
+    <section class="animation img"></section>
     <section class="section-first-presentation-service">
         {% include "layout/layout-presentation-services.html.twig" %}
     </section>
@@ -33,7 +33,7 @@
                     <hr>
                 </div>
             </article>
-            {{ render(controller('App\\Controller\\ServicesController::getServicePrice',{'id':4})) }}
+            {{ render(controller('App\\Controller\\ServicesController::getServicePrice',{'id':3})) }}
             <article class="bottom d-flex justify-end">
                 {% include "layout/layout-buttom-for-top.html.twig" %}
             </article>
