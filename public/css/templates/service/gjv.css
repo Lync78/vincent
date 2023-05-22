@@ -273,9 +273,6 @@
         height: 1126px;
     }
 
-    .tableau:nth-of-type(4) {
-        margin-left: 25px;
-    }
 
     .two {
         height: 1650px;
@@ -342,24 +339,7 @@
     .box-grid.mini-tableau {
         width: 1288px;
     }
-
-    .tableau:nth-of-type(4){
-        margin-left: 0;
-    }
-
-    .format-gjv .tableau, .tableau-option  {
-        width: 1288px;
-    }
-
-    .format-gav .tableau {
-        width: 1359px;
-    }
-
-    .format-gav .tableau h3 {
-        width: 321px;
-        margin-right: 25px;
-    }
-
+    
     .largeur {
         width: 725px !important;
     }
