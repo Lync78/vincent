@@ -55,23 +55,23 @@
     grid-column: 1/2;
 }
 
-.block-grid .color-1 {
+.block-grid .creations {
     background: transparent linear-gradient(180deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
 }
 
-.block-grid .color-2 {
+.block-grid .graphisme-animation {
     background: transparent linear-gradient(180deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
 }
 
-.block-grid .color-3 {
+.block-grid .option {
     background: transparent linear-gradient(180deg, #00FF44 0%, #015710 100%) 0 0 no-repeat padding-box;
 }
 
-.block-grid .color-4 {
+.block-grid .graphisme-entreprise {
     background: transparent linear-gradient(180deg, #7EA2AF 0%, #314757 100%) 0 0 no-repeat padding-box;
 }
 
-.block-grid .color-5 {
+.block-grid .graphisme-gaming {
     background: transparent linear-gradient(180deg, #01ACF8 0%, #005D80 100%) 0 0 no-repeat padding-box;
 }
 
