@@ -18,8 +18,11 @@ class Price extends EntityAbstract
     #[ORM\Column(type: "integer")]
     private ?int $price;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    #[ORM\Column(type: "string", length: 255)]
     private ?string $color;
+
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $argu1;
 
     public function getName(): ?string
     {
@@ -71,6 +74,22 @@ class Price extends EntityAbstract
     public function setColor(?string $color): void
     {
         $this->color = $color;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getArgu1(): ?string
+    {
+        return $this->argu1;
+    }
+
+    /**
+     * @param string|null $argu1
+     */
+    public function setArgu1(?string $argu1): void
+    {
+        $this->argu1 = $argu1;
     }
 
     public function affichage(): string
