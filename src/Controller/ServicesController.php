@@ -81,9 +81,7 @@ class ServicesController extends AbstractController
         else {
             $j = 1;
         }
-
-        dump($j);
-
+        
         return $this->render("service/layout-service.html.twig",["prices" => $donnees,"ligne" => $j]);
     }
 
