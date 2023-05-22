@@ -1,12 +1,3 @@
-.img{
-    height: 327px;
-    background-image: url("../../../image/header/header-graphisme-entreprise.png");
-    border-bottom: 2px white solid;
-}
-
-.section-second-graphisme-entreprise{
-    background: transparent linear-gradient(270deg, #004C6E 0%, #001224 100%) 0 0 no-repeat padding-box;
-}
 
 .title-perso{
     width: 700px !important;

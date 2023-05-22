@@ -8,11 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * Class ServicesController
- * @package App\Controller
- */
-
 #[Route("/services")]
 class ServicesController extends AbstractController
 {
@@ -49,18 +44,47 @@ class ServicesController extends AbstractController
 
         $gav = $this->priceRepository->findBy(["category_id" => 3]);
 
-        //dump($gav);
-
         return $this->render("service/graphisme-jeux-videos.html.twig", ["prices" => $gjv, 'gav' => $gav]);
-
-
     }
 
     #[Route("/graphisme-entreprise", name:"graphisme-entreprise")]
     public function serviceGraphismeEntreprise():Response
     {
-
         return $this->render("service/graphisme-entreprise.html.twig");
+    }
+
+
+
+    #[Route("/graphisme-animation", name: "graphisme-animation")]
+    public function serviceGraphismeAnimation(): Response
+    {
+        return $this->render("service/graphisme-animations.html.twig");
+    }
+
+    public function getServicePrice(int $id): Response
+    {
+
+        # id = 1 => creations
+        # id = 2 => gaming
+        # id = 3 => animation
+        # id = 4 => entreprise
+        $donnees = $this->priceRepository->findBy(["category_id" => $id]);
+
+        $i = 0;
+        $j = 0;
+        if (count($donnees) > 1){
+            while($i < count($donnees)){
+                $i += 3;
+                $j++;
+            }
+        }
+        else {
+            $j = 1;
+        }
+
+        dump($j);
+
+        return $this->render("service/layout-service.html.twig",["prices" => $donnees,"ligne" => $j]);
     }
 
 }

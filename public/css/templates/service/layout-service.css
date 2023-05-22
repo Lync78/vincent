@@ -1,0 +1,173 @@
+.tableau hr {
+    width: 5px;
+    border: none;
+    height: 117px;
+    background-color: white;
+}
+
+.tableau_grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 1677px;
+}
+
+.tableau_grid .block:nth-child(1n+2) {
+    margin-left: 13px;
+}
+
+.tableau_grid .block:nth-of-type(1){
+    margin-left: 20px;
+}
+
+.tableau_grid .block {
+    display: flex;
+    width: 520px;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.grid-prix{
+    position: relative;
+    margin: 0 auto 18px;
+    width: 1778px;
+    background: transparent linear-gradient(270deg, #3B535E 0%, #2B363A 100%) 0 0 no-repeat padding-box;
+    box-shadow: 15px 15px 20px #00000029;
+}
+
+.tableau {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.tableau:nth-of-type(1){
+    margin-top: 25px;
+}
+
+.block-grid {
+    grid-template-rows: 117px;
+    grid-template-columns: 17px 243px 260px;
+}
+
+.block-grid .color {
+    grid-column: 1/2;
+}
+
+.block-grid .color-1 {
+    background: transparent linear-gradient(180deg, #00FFB9 0%, #0BA4DE 100%) 0 0 no-repeat padding-box;
+}
+
+.block-grid .color-2 {
+    background: transparent linear-gradient(180deg, #FF00D5 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.block-grid .color-3 {
+    background: transparent linear-gradient(180deg, #00FF44 0%, #015710 100%) 0 0 no-repeat padding-box;
+}
+
+.block-grid .color-4 {
+    background: transparent linear-gradient(180deg, #7EA2AF 0%, #314757 100%) 0 0 no-repeat padding-box;
+}
+
+.block-grid .color-5 {
+    background: transparent linear-gradient(180deg, #01ACF8 0%, #005D80 100%) 0 0 no-repeat padding-box;
+}
+
+.block-grid .block-text {
+    grid-column: 2/3;
+    background: #253841 0 0 no-repeat padding-box;
+}
+
+.block-grid .block-price {
+    grid-column: 3/4;
+    background: #252F34 0 0 no-repeat padding-box;
+}
+
+.block-text h3 {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 3.6px;
+    font-family: Nexa-Bold, sans-serif;
+    text-transform: uppercase;
+    width: 210px;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: white;
+}
+
+.purchase-paypal {
+    margin-top: 39px;
+    margin-left: 13px;
+    color: #01ACF8;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    font-family: Nexa-Light, sans-serif;
+    margin-bottom: 5px;
+}
+
+.a-partir-de {
+    font-size: 15px;
+    font-family: Nexa-Bold, sans-serif;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 19px;
+    margin-left: 13px;
+}
+
+.a-partir-de span {
+    background-color: #324047;
+    padding: 2px 1px;
+}
+
+.information-complementaire {
+    width: 1778px;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+}
+
+.information-complementaire p {
+    align-self: flex-end;
+    text-transform: uppercase;
+    color:#00BAFF;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 3.6px;
+}
+
+.information-complementaire p:first-child {
+    font-family: Nexa-Bold, sans-serif;
+}
+
+.information-complementaire p:last-child {
+    font-family: Nexa-Light, sans-serif;
+}
+
+
+.img{
+    height: 327px;
+    border-bottom: 2px white solid;
+}
+.gaming.img {
+    background-image: url("../../../image/header/header-graphisme-jeux-videos.png");
+}
+
+.animation.img {
+    background-image: url("../../../image/header/header-graphisme-animation.png");
+}
+
+.creation.img {
+    background-image: url("../../../image/header/header-creations.png");
+}
+
+.entreprise.img {
+    background-image: url("../../../image/header/header-graphisme-entreprise.png");
+}
+
+.section-service{
+    background: transparent linear-gradient(270deg, #4A5D6A 0%, #2B363A 100%) 0 0 no-repeat padding-box;
+}
