@@ -11,7 +11,9 @@
                                 <div class="color {{ prices[j].color }}"></div>
                                 <div class="block-text">
                                     <h3>{{ prices[j].name }}</h3>
-                                    <p>{{ "(" ~ prices[j].argu1 ~ ")" }}</p>
+                                    {% if prices[j].argu1 is defined and prices[j].argu1 is not null %}
+                                        <p>{{ "(" ~ prices[j].argu1 ~ ")" }}</p>
+                                    {% endif %}
                                 </div>
                                 <div class="block-price">
                                     <p class="purchase-paypal">paiement par paiment</p>
