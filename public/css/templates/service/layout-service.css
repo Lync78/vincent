@@ -121,7 +121,7 @@
 
 .a-partir-de {
     font-size: 15px;
-    font-family: Nexa-Light, sans-serif;
+    font-family: Nexa-Bold, sans-serif;
     letter-spacing: 3px;
     color: #fff;
     text-transform: uppercase;
@@ -132,6 +132,7 @@
 .a-partir-de span {
     background-color: #324047;
     padding: 2px 1px;
+    font-family: Nexa-Light, sans-serif;
 }
 
 .information-complementaire {
