@@ -43,8 +43,13 @@ class PacksController extends AbstractController
      * @return Response
      */
     #[Route("/present/{slug}", name: "present")]
-    public function clientPack(Pack $pack): Response
+    public function clientPack(string $slug): Response
     {
+        $pack = $this->packRepository->findOneBy(["slug" => $slug]);
+
+        if(!$pack instanceof Pack){
+            throw $this->createNotFoundException('La ressource n\'existe pas.');
+        }
 
         return $this->render("packs/contenu.html.twig", ["pack"=>$pack]);
     }

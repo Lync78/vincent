@@ -11,7 +11,7 @@ class BookController extends AbstractController
 {
 
     #[Route(path: "/book-creations/{slug?}", name: "present")]
-    public function present(Request $request, string $slug = null): Response
+    public function present(Request $request, ?string $slug = null): Response
     {
 
         $form = $this->createForm(FormBookType::class);

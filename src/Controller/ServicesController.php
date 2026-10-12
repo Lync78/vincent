@@ -64,10 +64,10 @@ class ServicesController extends AbstractController
     public function getServicePrice(int $id): Response
     {
 
-        # id = 1 => creations
-        # id = 2 => gaming
-        # id = 3 => animation
-        # id = 4 => entreprise
+        //# id = 1 => creations
+        //# id = 2 => gaming
+        //# id = 3 => animation
+        //# id = 4 => entreprise
         $donnees = $this->priceRepository->findBy(["category_id" => $id]);
 
         $i = 0;
